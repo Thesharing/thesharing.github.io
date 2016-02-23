@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>用Hexo搭建一个Github个人Blog | Zhilong&#39;s Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Hexo搭建一个Github个人Blog">
+<meta property="og:url" content="http://thesharing.github.io/2016/02/23/Buld-a-Github-Blog-with-Hexo/index.html">
+<meta property="og:site_name" content="Zhilong's Tech Blog">
+<meta property="og:description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
+<meta property="og:updated_time" content="2016-02-23T13:53:03.155Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用Hexo搭建一个Github个人Blog">
+<meta name="twitter:description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/open-sans/styles.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74183669-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?631ec0463314a38fa28346d593dadbed";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Zhilong&#39;s Tech Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
+    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
+    <button type="submit" class="search-form-submit"></button>
+</form>
+<script>
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:thesharing.github.io ' + keyword;
+        return false;
+    });
+})(jQuery);
+</script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
+    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
+    <button type="submit" class="search-form-submit"></button>
+</form>
+<script>
+(function ($) {
+    $('.search-form').on('submit', function (e) {
+        var keyword = $('.search-form-input[name="wd"]').val();
+        window.location = 'https://www.baidu.com/s?wd=site:thesharing.github.io ' + keyword;
+        return false;
+    });
+})(jQuery);
+</script>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">Zhilong</h2>
+            <h3 id="title">A CS Student</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>北京, 中国</span>
+            <a id="follow" target="_blank" href="http://weibo.com/sharinginworld/">进入微博</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                1
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                1
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    <td><a href="http://github.com/thesharing/" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+                    
+                    <td><a href="http://twitter.com/cyprestar/" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+                    
+                    <td><a href="https://www.facebook.com/cyprestar/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+                    
+                    <td><a href="https://www.linkedin.com/in/%E5%BF%97%E9%BE%99-%E6%B4%AA-964252a6/" target="_blank" title="linkedin"><i class="fa fa-linkedin"></i></a></td>
+                    
+                    <td><a href="http://steamcommunity.com/profiles/76561198136146683/" target="_blank" title="steam"><i class="fa fa-steam"></i></a></td>
+                    
+                    <td><a href="http://weibo.com/sharinginworld/" target="_blank" title="weibo"><i class="fa fa-weibo"></i></a></td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-Buld-a-Github-Blog-with-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            用Hexo搭建一个Github个人Blog
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/02/23/Buld-a-Github-Blog-with-Hexo/">
+            <time datetime="2016-02-23T08:46:29.000Z" itemprop="datePublished">2月 23 2016</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Web/">Web</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Hexo/">Hexo</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。<br><a id="more"></a></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
+<li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
+<li><a href="http://markdownpad.com/" target="_blank" rel="external">Markdown Pad 2</a> - Markdown编辑器</li>
+</ul>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p>首先在GitHub上<a href="https://github.com/signup/free" target="_blank" rel="external">注册</a>免费账号。接着在账户界面选择<code>+ New repository</code>，在<code>Repository Name</code>中填入<code>用户名.github.io</code>，选择<code>Public</code>，点击<code>Create Respository</code>创建一个目录。这个目录就是你的网站的存储空间。</p>
+<p><img src="http://7xr64j.com1.z0.glb.clouddn.com/1.png" alt="创建站点的存储空间"></p>
+<p>接下来打开Git Bash，在Git Bash中输入</p>
+<pre><code>$ cd ~/. ssh
+</code></pre><p>以检查本机的ssh密钥。如果提示：’No such file or directory 说明你是第一次使用Git。</p>
+<p>生成新的SSH Key：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;此处直接回车&gt;
+</code></pre><p>这里邮箱地址要填入注册邮箱地址。</p>
+<p>然后设置密码：</p>
+<pre><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;
+Enter same passphrase again:&lt;再次输入加密串&gt;
+</code></pre><p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。注意：输入密码的时候没有*字样的，你直接输入就可以了。</p>
+<p>最后看到这样的界面，就成功设置SSH Key了：</p>
+<p><img src="http://7xr64j.com1.z0.glb.clouddn.com/2.png" alt="配置成功"></p>
+<p>在本机设置SSH Key后，需要添加SSH Key到GitHub上，为之后的从本地向GitHub上提交网站做准备。</p>
+<ol>
+<li>用文本编辑器打开C:\Users\用户名.ssh\id_rsa.pub，里面是刚才生成的密钥。</li>
+<li>登录GitHub，在右上角的头像选择Settings -&gt; SSH Key -&gt; New SSH Key，然后将文件中的内容拷贝至<code>Key</code>中即可。<code>Title</code>为这个SSH Key的名称，可以自定。</li>
+</ol>
+<p><img src="http://7xr64j.com1.z0.glb.clouddn.com/3.png" alt="SSH Keys"></p>
+<p>测试设置结果：</p>
+<pre><code>$ ssh -T git@github.com
+</code></pre><p>如果得到如下反馈：</p>
+<pre><code>The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>此时输入<code>yes</code>即可。然后会看到：</p>
+<pre><code>Hi thesharing! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>说明SSH Key已经设置成功，这台设备的Git Bash已经可以访问你的GitHub了。</p>
+<p>接下来需要设置登录信息：</p>
+<pre><code>$ git config --global user.name &quot;你的用户名&quot;
+$ git config --global user.email  &quot;你的注册邮箱&quot;
+</code></pre><p>到这一步，Git Bash就配置完毕了。</p>
+<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p><a href="https://hexo.io" target="_blank" rel="external">Hexo</a> 是一个快速、简洁且高效的博客框架。在安装完以上的软件以后，使用<code>npm</code>命令即可完成安装。</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><p>可能会有网络错误，可以重新执行命令安装。</p>
+<p>接下来执行</p>
+<pre><code>npm install
+</code></pre><p>以安装所需的依赖包。</p>
+<h2 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h2><p>指定一个文件夹作为你的博客存放的文件夹，然后从此文件夹打开命令行，开始部署：</p>
+<pre><code>hexo init
+</code></pre><p>等待一段时间，Hexo会在这个文件夹下建立工作目录。现在本地博客已经建立完毕，执行以下命令：</p>
+<pre><code>hexo generate
+hexo server
+</code></pre><p>然后在浏览器中访问<code>localhost:4000</code>即可看到初始化的博客内容。</p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>在Hexo的官方网站<a href="https://hexo.io/themes/" target="_blank" rel="external">Themes | Hexo </a>上有一些主题可供使用，在Hexo的GitHub主页<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Themes - hexojs/hexo</a>上提供了更多的主题链接可供下载。你可以选择用Git将主题<code>Clone</code>到本地，以获得主题的实时更新，也可以通过<code>Download Zip</code>将主题下载到本地的hexo文件夹/theme/使用。针对不同主题会有不同的设置项，一般主题的GitHub主页会提供Wiki来帮助设置主页。本次以PPOffice开发的Icarus为例进行主题方面的设置。</p>
+<h2 id="个性化你的博客"><a href="#个性化你的博客" class="headerlink" title="个性化你的博客"></a>个性化你的博客</h2><p>首先要配置你的站点信息，用Sublime Text等文本编辑器（不推荐使用记事本，存在一些格式上的问题）打开<code>hexo文件夹\_config.yml</code>开始配置。</p>
+<pre><code># Site 站点信息设置
+title: Zhilong&apos;s Tech Blog # 站点标题
+subtitle: Have a try # 副标题
+description: Zhilong&apos;s personal blog on github # 给搜索引擎看的，对站点的描述，可以自定义
+author: Thesharing # 网站作者：在站点下方可以看到
+email: thesharing@163.com# 你的联系邮箱
+language: zh-CN # 语言：简体中文
+
+# URL
+## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;
+url: http://thesharing.github.io/ #站点地址
+root: / #站点的根目录
+permalink: :year/:month/:day/:title/ #文章默认存放位置的格式，这里表示目录结构为：year/month/day/title.md。
+tag_dir: tags # 标签页的文件夹位置
+archive_dir: archives # 归档页的文件夹位置
+category_dir: categories # 目录页的文件夹位置
+
+# Writing 文章布局、写作格式的定义
+new_post_name: :title.md # 新文章的文章名，这里是用文章标题作为文件名
+default_layout: post # 默认的布局，详情查看https://hexo.io/zh-cn/docs/writing.html以获得更多信息
+auto_spacing: true # 是否在中文字符和英文字符之间自动添加空格
+titlecase: false # 是否将标题大写
+max_open_file: 100
+filename_case: 0
+highlight: #语法高亮
+  enable: true
+  backtick_code_block: true
+  line_number: true
+  tab_replace:
+
+# 目录和标签
+default_category: uncategorized # 默认目录
+category_map:
+tag_map:
+
+# Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Server 本地服务器信息
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+logger: false
+logger_format:
+
+# Date / Time format 日期、时间格式
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMM D YYYY
+time_format: H:mm:ss
+
+# Pagination 每页显示文章数，可以自定义
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Disqus Disqus插件设置
+disqus_shortname: thesharing # 这里填入讨论区名即可
+
+# Extensions 配置站点所用主题和插件
+## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
+## Themes: https://github.com/tommy351/hexo/wiki/Themes
+theme: icarus # 主题
+exclude_generator:
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+# Deployment 站点部署到github的设置
+## 官方文档：https://hexo.io/zh-cn/docs/deployment.html
+deploy:
+  type: git
+  repository: https://github.com/thesharing/thesharing.github.io.git # Repository地址
+  branch: master
+</code></pre><p>可以将其直接复制入你的<code>_config.yml</code>文件中使用。下面解释各项如何修改。</p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><p>按照说明修改即可。</p>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>将url改为你的博客首地址，可以到<a href="https://www.godaddy.com/" target="_blank" rel="external">GoDaddy</a>上购买域名进行绑定，那么这里就应该改成你的域名而非GitHub.io地址。</p>
+<h3 id="Writing-Pagination"><a href="#Writing-Pagination" class="headerlink" title="Writing - Pagination"></a>Writing - Pagination</h3><p>均不必修改，如自定义请参考官方Doc进行修改。</p>
+<h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><p>将Theme修改为你下载的主题的主题名，要注意，<code>theme</code>文件夹下的主题文件夹也要对应名称。</p>
+<h3 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h3><p>将<code>repository</code>改为<a href="https://github.com/你的用户名/你的用户名.github.io.git，`branch`不变。" target="_blank" rel="external">https://github.com/你的用户名/你的用户名.github.io.git，`branch`不变。</a></p>
+<p>此时第一个配置文件设置结束，我们打开第二个，主题的配置文件来配置主题样式。这里以我使用的Icarus为例：<code>hexo文件夹\themes\icarus\_config.yml</code></p>
+<pre><code># Menus
+menu:
+  首页: .
+  归档: archives
+  关于: about
+
+# Customize
+customize:
+    logo:
+        enabled: true
+        width: 40
+        height: 40
+        url: images/logo.png
+    profile:
+        enabled: true # Whether to show profile bar
+        avatar: css/images/avatar.png
+        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: Zhilong
+        author_title: A CS Student
+        location: 北京, 中国
+        follow: http://weibo.com/sharinginworld/
+    highlight: monokai
+    sidebar: left # sidebar position, options: left, right
+    thumbnail: false # enable posts thumbnail, options: true, false
+    favicon: css/images/favicon.png # path to favicon
+    social_links:
+        github: http://github.com/thesharing/
+        twitter: http://twitter.com/cyprestar/
+        facebook: https://www.facebook.com/cyprestar/
+        linkedin: https://www.linkedin.com/in/%E5%BF%97%E9%BE%99-%E6%B4%AA-964252a6/
+        steam: http://steamcommunity.com/profiles/76561198136146683/
+        weibo: http://weibo.com/sharinginworld/
+
+# Widgets
+widgets:
+    - recent_posts
+    - category
+    - archive
+    - tag
+    - tagcloud
+    - links
+
+# Search
+search:
+    swiftype: # enter swiftype install key here
+    baidu: true # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus: thesharing # enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+
+# Share
+share: default # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    fancybox: true # options: true, false
+    google_analytics: UA-74183669-1 # enter the tracking ID for your Google Analytics
+    google_site_verification: # enter Google site verification code
+    baidu_analytics: 631ec0463314a38fa28346d593dadbed # enter Baidu Analytics hash key
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Github: http://github.com/thesharing/
+</code></pre><h3 id="可配置项"><a href="#可配置项" class="headerlink" title="可配置项"></a>可配置项</h3><ul>
+<li>在配置中按照<code>页面名: 页面目录</code>的格式可以自行添加页面。</li>
+<li><code>logo</code>中可以设置Logo以及Logo大小。建议直接替换而非自定目录。</li>
+<li><code>avatar</code>中设置资料页的头像，<code>author</code>为作者名，<code>author_title</code>为作者介绍，<code>location</code>为地区，<code>follow</code>为“关注我”指向的地址。</li>
+<li><code>highlight</code>为语法高亮的主题</li>
+<li><code>sidebar</code>为资料页的位置（左、右）</li>
+<li><code>thumbnail</code>设置是否显示缩略图</li>
+<li><code>favicon</code>设置网站图标</li>
+<li><code>social_links</code>设置社交图标</li>
+<li><code>comment</code>设置评论系统，<code>disqus</code>后填入论坛名即可</li>
+<li><code>plugin</code>中设置谷歌站长分析等插件信息</li>
+</ul>
+<h3 id="Disqus"><a href="#Disqus" class="headerlink" title="Disqus"></a>Disqus</h3><p>事实上Disqus在国内并不好用，载入速度有点慢。网上有人推荐“多说”，不过我还是用Disqus。进入<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>完成注册以后，点击右上角的“设置”，选择“Add Disqus To Site”，然后按照向导进行设置即可。这里要注意，<code>Disqus URL</code>中填写的就是上面设置文件中要填写的论坛名。</p>
+<p><img src="http://7xr64j.com1.z0.glb.clouddn.com/4.png" alt="Disqus 设置"></p>
+<p><img src="http://7xr64j.com1.z0.glb.clouddn.com/5.png" alt="Disqus 设置"></p>
+<h3 id="生成并预览"><a href="#生成并预览" class="headerlink" title="生成并预览"></a>生成并预览</h3><p>设置完成后，在hexo文件夹下打开命令行输入</p>
+<pre><code>hexo generate
+hexo server
+</code></pre><p>如果运行成功，那么输入<code>localhost:4000</code>即可打开你的博客。</p>
+<h2 id="部署你的Blog"><a href="#部署你的Blog" class="headerlink" title="部署你的Blog"></a>部署你的Blog</h2><p>之前我们一直在本地运行，接下来我们要把这个博客部署到GitHub上去。在每一次对设置的修改以及写文章之后都要用<code>hexo generate</code>命令重新生成一次。然后右击hexo文件夹，选择<code>Git Bash Here</code>，打开Git Bash，在Git Bash中输入</p>
+<pre><code>$ npm install hexo-deployer-git --save
+</code></pre><p>等待安装完成以后，再执行：</p>
+<pre><code>$ hexo deploy
+</code></pre><p>有可能会提示输入邮箱和密码，按照之前设置的输入即可。如果失败可能是网络问题，重新尝试一下。</p>
+<p>提示成功以后可以在你的GitHub的该Repository下看到Commit成功+1，说明服务器已经接受了你的提交，一般等待3-5分钟以后，你的Blog便会被刷新。此时用<code>你的用户名.github.io</code>即可访问到你的Blog，怎么样，是不是很Coooool？</p>
+<h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>那么说了这么多，Blog已经建好，接下来就是充实内容了。内容怎么充实呢？写文章咯。</p>
+<p>在hexo文件夹下打开命令行，输入：</p>
+<pre><code>hexo new hexo new [layout] &lt;title&gt;
+</code></pre><p>这里<code>[layout]</code>是指你所用的模板名称，所有模板都在<code>hexo\scaffolds\</code>文件夹下存放，关于模板的更多信息，请访问<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">官方Doc</a>，里面有很详尽的解释。</p>
+<p><code>title</code>则是文章的标题，可以为中文。 在执行完命令后，到<code>hexo\source\_posts\</code>文件夹下可以找到生成的Markdown文件。打开Markdown文件即可开始书写你的文章，正如我现在所做的。至于Markdown文法，又是一个大坑。</p>
+<p>在写完博客以后，再次<code>hexo generate</code>然后部署就可以了。</p>
+<h2 id="推荐阅读-与-参考资料"><a href="#推荐阅读-与-参考资料" class="headerlink" title="推荐阅读 与 参考资料"></a>推荐阅读 与 参考资料</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">文档 | Hexo</a></p>
+<p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">hexo系列教程-2</a></p>
+<p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+<p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></p>
+<p><a href="https://github.com/hexojs/hexo/wiki/" target="_blank" rel="external">Hexo的GitHub文档（英文）</a></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li><p>Markdown Pad 2 无法正常预览怎么办？</p>
+<p> 按照官网提示，安装<a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe" target="_blank" rel="external">Awesomium 1.6.6 SDK</a>以及<a href="http://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="external">Microsoft’s DirectX End-User Runtimes (June 2010)</a>以后可以解决。</p>
+</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://thesharing.github.io/2016/02/23/Buld-a-Github-Blog-with-Hexo/" data-id="cikzfshnq0000q4u3aybs21az" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://thesharing.github.io/2016/02/23/Buld-a-Github-Blog-with-Hexo/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://thesharing.github.io/2016/02/23/Buld-a-Github-Blog-with-Hexo/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>
+                            <p class="item-title"><a href="/2016/02/23/Buld-a-Github-Blog-with-Hexo/" class="title">用Hexo搭建一个Github个人Blog</a></p>
+                            <p class="item-date"><time datetime="2016-02-23T08:46:29.000Z" itemprop="datePublished">2月 23 2016</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://github.com/thesharing/">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2016 Thesharing<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'thesharing';
+    
+    
+    var disqus_url = 'http://thesharing.github.io/2016/02/23/Buld-a-Github-Blog-with-Hexo/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js" type="text/javascript"></script>
+
+    </div>
+</body>
+</html>
