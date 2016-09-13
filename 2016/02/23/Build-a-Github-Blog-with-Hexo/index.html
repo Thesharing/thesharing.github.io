@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>用Hexo搭建一个Github个人Blog | Zhilong&#39;s Tech Blog</title>
+    <title>用Hexo搭建一个Github个人Blog | Zhilong 的个人主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+    <meta name="description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Hexo搭建一个Github个人Blog">
 <meta property="og:url" content="http://thesharing.github.io/2016/02/23/Build-a-Github-Blog-with-Hexo/index.html">
-<meta property="og:site_name" content="Zhilong's Tech Blog">
-<meta property="og:description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+<meta property="og:site_name" content="Zhilong 的个人主页">
+<meta property="og:description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
 <meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
-<meta property="og:updated_time" content="2016-08-29T11:05:41.575Z">
+<meta property="og:updated_time" content="2016-09-13T17:18:54.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Hexo搭建一个Github个人Blog">
-<meta name="twitter:description" content="简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。">
+<meta name="twitter:description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
     
 
     
@@ -69,7 +69,7 @@ var _hmt = _hmt || [];
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">Zhilong&#39;s Tech Blog</span>
+                <span class="site-title">Zhilong 的个人主页</span>
             </a>
             <nav id="main-nav">
                 
@@ -232,11 +232,14 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>简单又美观，1小时即可用Hexo搭建一个属于自己的GitHub博客。<br><a id="more"></a></p>
+            <p>不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。<br><a id="more"></a></p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
 <li><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a></li>
 <li><a href="http://git-scm.com/" target="_blank" rel="external">Git</a></li>
+</ul>
+<h4 id="选装"><a href="#选装" class="headerlink" title="选装"></a>选装</h4><ul>
 <li><a href="http://markdownpad.com/" target="_blank" rel="external">Markdown Pad 2</a> - Markdown编辑器</li>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="external">Visual Studio Code</a> - Markdown编辑器</li>
 </ul>
 <h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p>首先在GitHub上<a href="https://github.com/signup/free" target="_blank" rel="external">注册</a>免费账号。接着在账户界面选择<code>+ New repository</code>，在<code>Repository Name</code>中填入<code>用户名.github.io</code>，选择<code>Public</code>，点击<code>Create Respository</code>创建一个目录。这个目录就是你的网站的存储空间。</p>
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/1.png" alt="创建站点的存储空间"></p>
@@ -306,24 +309,26 @@ var _hmt = _hmt || [];
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/5.png" alt="Disqus 设置"></p>
 <h3 id="生成并预览"><a href="#生成并预览" class="headerlink" title="生成并预览"></a>生成并预览</h3><p>设置完成后，在hexo文件夹下打开命令行输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate&#10;hexo server</span><br></pre></td></tr></table></figure>
-<p>如果运行成功，那么输入<code>localhost:4000</code>即可打开你的博客。</p>
-<h2 id="部署你的Blog"><a href="#部署你的Blog" class="headerlink" title="部署你的Blog"></a>部署你的Blog</h2><p>之前我们一直在本地运行，接下来我们要把这个博客部署到GitHub上去。在每一次对设置的修改以及写文章之后都要用<code>hexo generate</code>命令重新生成一次。然后右击hexo文件夹，选择<code>Git Bash Here</code>，打开Git Bash，在Git Bash中输入</p>
+<p>如果运行成功，那么输入<code>localhost:4000</code>即可打开你的个人主页。</p>
+<h2 id="部署你的Blog"><a href="#部署你的Blog" class="headerlink" title="部署你的Blog"></a>部署你的Blog</h2><p>之前我们一直在本地运行，接下来我们要把这个个人主页部署到GitHub上去。在每一次对设置的修改以及写文章之后都要用<code>hexo generate</code>命令重新生成一次。然后右击hexo文件夹，选择<code>Git Bash Here</code>，打开Git Bash，在Git Bash中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>等待安装完成以后，再执行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>有可能会提示输入邮箱和密码，按照之前设置的输入即可。如果失败可能是网络问题，重新尝试一下。</p>
 <p>提示成功以后可以在你的GitHub的该Repository下看到Commit成功+1，说明服务器已经接受了你的提交，一般等待3-5分钟以后，你的Blog便会被刷新。此时用<code>你的用户名.github.io</code>即可访问到你的Blog，怎么样，是不是很Coooool？</p>
-<h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>那么说了这么多，Blog已经建好，接下来就是充实内容了。内容怎么充实呢？写文章咯。</p>
+<h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>那么说了这么多，个人主页已经建好，接下来就是充实内容了。内容怎么充实呢？写文章咯。</p>
 <p>在hexo文件夹下打开命令行，输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &#60;title&#62;</span><br></pre></td></tr></table></figure>
 <p>这里<code>[layout]</code>是指你所用的模板名称，所有模板都在<code>hexo\scaffolds\</code>文件夹下存放，关于模板的更多信息，请访问<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">官方Doc</a>，里面有很详尽的解释。</p>
-<p><code>title</code>则是文章的标题，可以为中文。 在执行完命令后，到<code>hexo\source\_posts\</code>文件夹下可以找到生成的Markdown文件。打开Markdown文件即可开始书写你的文章，正如我现在所做的。至于Markdown文法，又是一个大坑。</p>
-<p>在写完博客以后，再次<code>hexo generate</code>然后部署就可以了。</p>
+<p><code>title</code>则是文章的标题，可以为中文。 在执行完命令后，到<code>hexo\source\_posts\</code>文件夹下可以找到生成的Markdown文件。用MarkdownPad 2或者Visual Studio Code打开Markdown文件即可开始书写你的文章，正如我现在所做。至于<a href="https://gist.github.com/Thesharing/5e5f5842ede0cb6d95d38ea39d9e0234" target="_blank" rel="external">Markdown文法</a>，又是一个大坑。</p>
+<p>对于图片，我们需要将文章中要用到的图片上传至图床然后引用外链。图床是指存放图片的云存储空间，我个人正在使用的是<a href="www.qiniu.com">七牛</a>，可以找一个适合自己的图床一直用下去。</p>
+<p>在写完文章以后，再次<code>hexo generate</code>然后部署就可以了。</p>
 <h2 id="推荐阅读-与-参考资料"><a href="#推荐阅读-与-参考资料" class="headerlink" title="推荐阅读 与 参考资料"></a>推荐阅读 与 参考资料</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">文档 | Hexo</a></p>
-<p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">hexo系列教程-2</a></p>
+<p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">Hexo系列教程 - 2</a></p>
 <p><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
-<p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></p>
+<p><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">Hexo你的博客</a></p>
 <p><a href="https://github.com/hexojs/hexo/wiki/" target="_blank" rel="external">Hexo的GitHub文档（英文）</a></p>
+<p><a href="https://gist.github.com/Thesharing/5e5f5842ede0cb6d95d38ea39d9e0234" target="_blank" rel="external">Markdown 语法</a></p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
 <li><p>Markdown Pad 2 无法正常预览怎么办？</p>
 <p> 按照官网提示，安装<a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe" target="_blank" rel="external">Awesomium 1.6.6 SDK</a>以及<a href="http://www.microsoft.com/en-us/download/details.aspx?id=8109" target="_blank" rel="external">Microsoft’s DirectX End-User Runtimes (June 2010)</a>以后可以解决。</p>
@@ -339,7 +344,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://thesharing.github.io/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cisnc91sa0008vsru2i8l7p6g" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://thesharing.github.io/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cit1qlotn0008joruhplwmzpe" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -592,7 +597,7 @@ var _hmt = _hmt || [];
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Thesharing<br>
+            &copy; 2016 Zhilong<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
