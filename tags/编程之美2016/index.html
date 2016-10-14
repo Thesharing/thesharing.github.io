@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
     <meta charset="utf-8">
     
@@ -31,7 +31,6 @@
     <script src="/vendor/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css" type="text/css">
     
     
         <script type="text/javascript">
@@ -59,7 +58,9 @@ var _hmt = _hmt || [];
 
     
 
+
 </head>
+
 <body>
     <div id="container">
         <header id="header">
@@ -143,6 +144,7 @@ var _hmt = _hmt || [];
         <div class="outer">
             
                 
+
 <aside id="profile">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
@@ -167,15 +169,36 @@ var _hmt = _hmt || [];
             <table>
                 <tr>
                     
-                    <td><a href="http://github.com/thesharing/" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
                     
-                    <td><a href="http://weibo.com/sharinginworld/" target="_blank" title="weibo"><i class="fa fa-weibo"></i></a></td>
+                    <td>
+                        <a href="http://github.com/thesharing/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
                     
-                    <td><a href="http://www.instagram.com/cyprestar/" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></td>
+                    <td>
+                        <a href="http://weibo.com/sharinginworld/" target="_blank" title="weibo" class=tooltip>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </td>
                     
-                    <td><a href="https://www.facebook.com/cyprestar/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+                    <td>
+                        <a href="http://www.instagram.com/cyprestar/" target="_blank" title="instagram" class=tooltip>
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </td>
                     
-                    <td><a href="http://twitter.com/cyprestar/" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+                    <td>
+                        <a href="https://www.facebook.com/cyprestar/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://twitter.com/cyprestar/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
                     
                 </tr>
             </table>
@@ -186,25 +209,24 @@ var _hmt = _hmt || [];
 
             
             <section id="main">
-        <section class="archives-wrap">
-        <div class="archive-tag-wrap">
-            <span class="archive-tag">#编程之美2016</span>
-        </div>
-        <div class="archives">
-        
-            <article class="archive-article archive-type-summary">
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-tag"></i></span>
+        <h1 class="title">#编程之美2016</h1>
+    </div>
     
-    <div class="archive-article-content">
-        <header class="archive-article-header">
-            
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                
     
         <h1 itemprop="name">
-            <a class="archive-article-title" href="/2016/04/30/BoP/">用编程展现绘画之美</a>
+            <a class="timeline-article-title" href="/2016/04/30/BoP/">用编程展现绘画之美</a>
         </h1>
     
 
-            <div class="article-meta">
-                
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2016/04/30/BoP/">
@@ -213,37 +235,22 @@ var _hmt = _hmt || [];
     </div>
 
 
-                
-                
+                    
+                    
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/编程之美2016/">编程之美2016</a>
     </div>
 
+                </div>
             </div>
-        </header>
-        <div class="article-entry">
-            <p>用编程展现绘画之美概述我们都知道，编程可以帮助我们更好地去探索动听的旋律：
-
-我们也知道，编程可以帮助我们更好地吟诗作对，探索语言的魅力：
-
-那么，编程可以帮助我们更好地去一览色彩的神奇吗？
-
-不妨和我一起试试，用Xaml语言来作一幅画吧。
-教程首先，打开Visual Studio 2020，然后选择新建项目，在“新建项目”的对话框中选择“绘画”，在这里我们把作品命名为 Starry Night
-</p>
-            <p class="article-more-link">
-                <a href="/2016/04/30/BoP/#more">查看更多</a>
-            </p>
         </div>
-    </div>
-</article>
-        
-        </div></section>
-        </section>
+    
+</div>
+</section>
             
                 <aside id="sidebar">
-    
+   
         
     <div class="widget-wrap">
         <h3 class="widget-title">最新文章</h3>
@@ -359,7 +366,7 @@ var _hmt = _hmt || [];
 
 
     
-    <div id="toTop" class="fa fa-chevron-up"></div>
+    <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
         </div>
@@ -388,8 +395,8 @@ var _hmt = _hmt || [];
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
     
+
 
 
 <!-- Custom Scripts -->
