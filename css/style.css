@@ -168,13 +168,13 @@ code {
   clear: both;
 }
 .logo {
-  width: 40px;
+  width: 120px;
   height: 40px;
   background-repeat: no-repeat;
   background-image: url("images/logo.png");
-  -webkit-background-size: 40px 40px;
-  -moz-background-size: 40px 40px;
-  background-size: 40px 40px;
+  -webkit-background-size: 120px 40px;
+  -moz-background-size: 120px 40px;
+  background-size: 120px 40px;
 }
 #container {
   position: relative;
@@ -614,7 +614,7 @@ code {
 }
 @media screen and (max-width: 559px) {
   #main-nav-mobile .menu .search-form-input {
-    display: block;
+    display: none;
   }
 }
 #main-nav-mobile .menu .search-form-input::-webkit-search-results-decoration,
