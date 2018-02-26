@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="这是弹幕派开发文档系列的第一篇！在开发弹幕派的过程中，通过网上的资料、MSDN学习到了很多WPF和C#的相关知识，在这里一并写出来，希望能够帮助到C#特别是WPF开发者。弹幕派是我们开发的一个桌面弹幕小程序，说它小，但是它的开发周期可不短，在开发过程中学到了很多东西，今天我要说的便是第一个，如何运用后台进程连接网络。">
 <meta property="og:image" content="https://i-msdn.sec.s-msft.com/dynimg/IC110371.jpeg">
-<meta property="og:updated_time" content="2016-08-29T16:23:17.824Z">
+<meta property="og:updated_time" content="2016-08-29T16:23:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈BackgroundWorker的使用">
 <meta name="twitter:description" content="这是弹幕派开发文档系列的第一篇！在开发弹幕派的过程中，通过网上的资料、MSDN学习到了很多WPF和C#的相关知识，在这里一并写出来，希望能够帮助到C#特别是WPF开发者。弹幕派是我们开发的一个桌面弹幕小程序，说它小，但是它的开发周期可不短，在开发过程中学到了很多东西，今天我要说的便是第一个，如何运用后台进程连接网络。">
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/" data-id="cix5pzjha0001woru0mhw1kn3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/" data-id="cje3yuypt0004z8fn9rzoup38" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -374,7 +374,7 @@ var _hmt = _hmt || [];
 
             
     
-        <a href="http://www.cyprestar.com/2016/08/29/BackgroundWorker/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://www.cyprestar.com/2016/08/29/BackgroundWorker/">评论</a>
+        <a href="http://www.cyprestar.com/2016/08/29/BackgroundWorker/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/">评论</a>
     
 
         </footer>
@@ -409,44 +409,9 @@ var _hmt = _hmt || [];
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/08/29/BackgroundWorker/" data-title="浅谈BackgroundWorker的使用" data-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 3px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
     
     </section>
@@ -581,24 +546,27 @@ var _hmt = _hmt || [];
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Zhilong<br>
+            &copy; 2018 Zhilong<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
 </footer>
         
     
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'thesharing'};
-    (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://www.cyprestar.com/2016/08/29/BackgroundWorker/';
+        
+        this.page.identifier = 'BackgroundWorker';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
+</script>
 
 
 

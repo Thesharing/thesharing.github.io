@@ -391,24 +391,25 @@ var _hmt = _hmt || [];
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Zhilong<br>
+            &copy; 2018 Zhilong<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
 </footer>
         
     
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'thesharing'};
-    (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    <script>
+    var disqus_config = function () {
+        
+        this.page.identifier = 'undefined';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/count.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
-    </script>
+</script>
 
 
 
