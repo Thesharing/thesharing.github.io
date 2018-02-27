@@ -1,3 +1,3 @@
 # Cyprestar Blog
 
-Visit [www.cyprestar.com](www.cyprestar.com).
+Visit [www.cyprestar.com](http://www.cyprestar.com).
