@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/</loc>
+    <lastmod>2018-08-15T14:23:59.680Z</lastmod>
+    <data>
+        <display>
+        <title>在Ubuntu Server上配置CUDA环境</title>
+        <pubTime>2018-08-15T03:00:09.000Z</pubTime>
+        
+        <tag>Configuration</tag>
+         
+         
+           
+             
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cyprestar.com/2016/04/30/BoP/</loc>
     <lastmod>2018-08-15T03:41:42.889Z</lastmod>
     <data>
@@ -72,26 +92,6 @@
         <pubTime>2018-02-26T09:55:09.000Z</pubTime>
         
         <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/</loc>
-    <lastmod>2018-08-15T03:32:39.805Z</lastmod>
-    <data>
-        <display>
-        <title>在Ubuntu Server上配置CUDA环境</title>
-        <pubTime>2018-08-15T03:00:09.000Z</pubTime>
-        
-        <tag>Configuration</tag>
          
          
            

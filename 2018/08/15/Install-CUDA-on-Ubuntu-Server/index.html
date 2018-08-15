@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。">
-<meta property="og:updated_time" content="2018-08-15T03:32:39.805Z">
+<meta property="og:updated_time" content="2018-08-15T14:23:59.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Ubuntu Server上配置CUDA环境">
 <meta name="twitter:description" content="在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。">
@@ -273,6 +273,7 @@ var _hmt = _hmt || [];
 <li>Ubuntu 16.04 LTS</li>
 <li>CUDA 9.0</li>
 <li>cuDNN v7</li>
+<li>Python 3.6</li>
 <li>TensorFlow r1.10</li>
 <li>PyTorch 0.4.1</li>
 </ul>
@@ -286,21 +287,21 @@ var _hmt = _hmt || [];
 <p>然后需要安装对应版本的Kernel Header：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install linux-headers-$(uname -r)</div></pre></td></tr></table></figure>
 <h3 id="1-4-安装对应的库"><a href="#1-4-安装对应的库" class="headerlink" title="1.4 安装对应的库"></a>1.4 安装对应的库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev \ </div><div class="line">libboost-all-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev \ </div><div class="line">protobuf-compiler g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev \ </div><div class="line">libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev</div></pre></td></tr></table></figure>
-<h2 id="2-安装CUDA"><a href="#2-安装CUDA" class="headerlink" title="2 安装CUDA"></a>2 安装CUDA</h2><h3 id="2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"><a href="#2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）" class="headerlink" title="2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"></a>2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）</h3><h4 id="1-禁用Nouveau"><a href="#1-禁用Nouveau" class="headerlink" title="(1) 禁用Nouveau"></a>(1) 禁用Nouveau</h4><p>运行</p>
+<h2 id="2-安装CUDA"><a href="#2-安装CUDA" class="headerlink" title="2 安装CUDA"></a>2 安装CUDA</h2><h3 id="2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"><a href="#2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）" class="headerlink" title="2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"></a>2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）</h3><h4 id="1-禁用Nouveau"><a href="#1-禁用Nouveau" class="headerlink" title="(1) 禁用Nouveau"></a>(1) 禁用Nouveau</h4><p>运行命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsmod | grep nouveau</div></pre></td></tr></table></figure>
 <p>如果有显示内容，则说明Nouveau驱动正在运行，需要根据<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile-nouveau-ubuntu" target="_blank" rel="external">教程</a>关闭Nouveau。</p>
-<h4 id="2-卸载之前的显卡驱动"><a href="#2-卸载之前的显卡驱动" class="headerlink" title="(2) 卸载之前的显卡驱动"></a>(2) 卸载之前的显卡驱动</h4><h4 id="3-下载并安装驱动"><a href="#3-下载并安装驱动" class="headerlink" title="(3) 下载并安装驱动"></a>(3) 下载并安装驱动</h4><p>在<a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="external">NVIDIA驱动下载</a>页面按照自己的GPU型号、系统以及CUDA版本选择驱动并进行下载，得到诸如nvidia-diag-driver-local-repo-ubuntu1604_3XY.AB-1_amd64.deb的文件/</p>
+<h4 id="2-卸载之前的显卡驱动"><a href="#2-卸载之前的显卡驱动" class="headerlink" title="(2) 卸载之前的显卡驱动"></a>(2) 卸载之前的显卡驱动</h4><h4 id="3-下载并安装驱动"><a href="#3-下载并安装驱动" class="headerlink" title="(3) 下载并安装驱动"></a>(3) 下载并安装驱动</h4><p>在<a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="external">NVIDIA驱动下载</a>页面按照自己的GPU型号、系统以及CUDA版本选择驱动并进行下载，得到诸如nvidia-diag-driver-local-repo-ubuntu1604_3XY.AB-1_amd64.deb的文件（XY.AB需要根据下载版本进行修改）。</p>
 <p>然后运行以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i nvidia-diag-driver-local-repo-ubuntu1604_3XY.AB-1_amd64.deb（XY.AB需要根据下载版本进行修改）</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install cuda-drivers</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
-<p>完成后系统会进行重启，在重启前请保存所有运行的工作。</p>
-<p>重启后运行</p>
+<p>运行后系统会进行重启，在运行命令前请保存所有正在运行的工作。</p>
+<p>重启后运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nvidia-smi</div></pre></td></tr></table></figure>
 <p>如果正常输出显卡状态说民驱动安装成功。</p>
-<h3 id="2-2-安装CUDA"><a href="#2-2-安装CUDA" class="headerlink" title="2.2 安装CUDA"></a>2.2 安装CUDA</h3><p>在<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">CUDA下载页面</a>下载Runfile形式的CUDA安装包，形式为cuda_9.0.176_384.81_linux.run</p>
+<h3 id="2-2-安装CUDA"><a href="#2-2-安装CUDA" class="headerlink" title="2.2 安装CUDA"></a>2.2 安装CUDA</h3><p>在<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">CUDA下载页面</a>下载Runfile形式的CUDA安装包，形式为cuda_9.0.176_384.81_linux.run。</p>
 <p>具体CUDA和cuDNN版本参考<a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn" target="_blank" rel="external">TensorFlow安装要求</a>，对于r1.10版本来说支持的CUDA版本为9.0。</p>
 <hr>
-<p>（选做）</p>
-<p>对于有GUI的系统来说，需要在启动时按下<code>Ctrl + Alt + F1/F4</code>进入tty1/tty4模式，然后输入：</p>
+<p>(Optional)</p>
+<p>对于有GUI的系统来说，需要在启动时按下<code>Ctrl + Alt + F1/F4</code>进入tty1/tty4模式，然后运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
 <p>停止GUI运行。</p>
 <hr>
@@ -311,8 +312,8 @@ var _hmt = _hmt || [];
 <li>安装程序询问是否安装驱动，输入<code>no</code></li>
 <li>询问是否安装CUDA Toolkit，输入<code>yes</code></li>
 <li>更改CUDA Toolkit安装位置，这里不作修改</li>
-<li>是否创建/usr/local/cuda符号链接，如果只安装一个CUDA版本，输入’yes’</li>
-<li>询问是否安装CUDA Samples，输入’yes’</li>
+<li>是否创建/usr/local/cuda符号链接，如果只安装一个CUDA版本，输入<code>yes</code></li>
+<li>询问是否安装CUDA Samples，输入<code>yes</code></li>
 <li>更改CUDA Samples安装位置，这里不作修改</li>
 </ul>
 <p>如果没有报错，则说明安装成功。如果提示：</p>
@@ -326,16 +327,16 @@ var _hmt = _hmt || [];
 <p>则需要安装依赖库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev</div></pre></td></tr></table></figure>
 <p>然后重新运行CUDA安装程序即可。</p>
-<h3 id="2-3-配置环境变量"><a href="#2-3-配置环境变量" class="headerlink" title="2.3 配置环境变量"></a>2.3 配置环境变量</h3><p>运行</p>
+<h3 id="2-3-配置环境变量"><a href="#2-3-配置环境变量" class="headerlink" title="2.3 配置环境变量"></a>2.3 配置环境变量</h3><p>运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/profile</div></pre></td></tr></table></figure>
 <p>用vi编辑启动脚本。用方向键将光标定位至文件末尾然后按<code>i</code>插入以下内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH:/usr/local/cuda-9.0/bin</div><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/extras/CUPTI/lib64</div></pre></td></tr></table></figure>
 <p>在Shell中运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH:/usr/local/cuda-9.0/bin</div><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/extras/CUPTI/lib64</div></pre></td></tr></table></figure>
-<h3 id="2-4-验证CUDA是否安装成功"><a href="#2-4-验证CUDA是否安装成功" class="headerlink" title="2.4 验证CUDA是否安装成功"></a>2.4 验证CUDA是否安装成功</h3><h4 id="1-验证驱动版本"><a href="#1-验证驱动版本" class="headerlink" title="(1) 验证驱动版本"></a>(1) 验证驱动版本</h4><p>运行</p>
+<h3 id="2-4-验证CUDA是否安装成功"><a href="#2-4-验证CUDA是否安装成功" class="headerlink" title="2.4 验证CUDA是否安装成功"></a>2.4 验证CUDA是否安装成功</h3><h4 id="1-验证驱动版本"><a href="#1-验证驱动版本" class="headerlink" title="(1) 验证驱动版本"></a>(1) 验证驱动版本</h4><p>运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /proc/driver/nvidia/version</div></pre></td></tr></table></figure>
 <p>查看驱动版本。</p>
-<h4 id="2-查看nvcc版本"><a href="#2-查看nvcc版本" class="headerlink" title="(2) 查看nvcc版本"></a>(2) 查看nvcc版本</h4><p>运行</p>
+<h4 id="2-查看nvcc版本"><a href="#2-查看nvcc版本" class="headerlink" title="(2) 查看nvcc版本"></a>(2) 查看nvcc版本</h4><p>运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvcc -V i</div></pre></td></tr></table></figure>
 <p>查看nvcc版本。</p>
 <h4 id="3-运行示例（选做）"><a href="#3-运行示例（选做）" class="headerlink" title="(3) 运行示例（选做）"></a>(3) 运行示例（选做）</h4><p>按照<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#compiling-examples" target="_blank" rel="external">教程</a>运行示例。</p>
@@ -352,20 +353,20 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python3-pip python3-dev</div></pre></td></tr></table></figure>
 <p>然后尝试从官方源下载安装TensorFlow：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip3 install tensorflow-gpu</div></pre></td></tr></table></figure>
-<p>如果安装缓慢或者网络错误，请尝试将源切换至清华大学提供的：</p>
+<p>如果安装缓慢或者网络错误，请尝试切换至清华大学提供的镜像源：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip3 install tensorflow-gpu -i https://pypi.tuna.tsinghua.edu.cn/simple</div></pre></td></tr></table></figure>
-<p>接下来验证安装：</p>
-<p>在Shell或者IDE中运行代码：</p>
+<p>接下来验证安装，在Shell或者IDE中运行代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Python Code</span></div><div class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div><div class="line">hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</div><div class="line">sess = tf.Session()</div><div class="line">print(sess.run(hello))</div></pre></td></tr></table></figure>
 <p>等待，如果能够正常输出</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello, TensorFlow!</div></pre></td></tr></table></figure>
 <p>说明安装成功。如果输出错误信息，可以参考<a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn#common_installation_problems" target="_blank" rel="external">官方文档</a>解决。</p>
 <hr>
-<h2 id="5-安装PyTorch"><a href="#5-安装PyTorch" class="headerlink" title="5 安装PyTorch"></a>5 安装PyTorch</h2><p>运行</p>
+<h2 id="5-安装PyTorch"><a href="#5-安装PyTorch" class="headerlink" title="5 安装PyTorch"></a>5 安装PyTorch</h2><p>运行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install pytorch torchvision -c pytorch</div></pre></td></tr></table></figure>
 <p>安装完成后，在Shell或者IDE里运行：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Python Code</span></div><div class="line"><span class="keyword">import</span> torch</div><div class="line">print(<span class="string">'CUDA support for Pytorch: '</span>, torch.cuda.is_available())</div><div class="line">print(<span class="string">'You are using device: '</span>, torch.cuda.get_device_name(<span class="number">0</span>))</div></pre></td></tr></table></figure>
 <hr>
+<p>如果看到<code>True</code>和显卡名称，说明安装成功。</p>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://blog.csdn.net/wuguangbin1230/article/details/74161127" target="_blank" rel="external">ubuntu16.04安装nvidia driver + cuda + cudnn (1)</a></p>
 <p><a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn" target="_blank" rel="external">TensorFlow官方文档</a></p>
 <p><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#abstract" target="_blank" rel="external">CUDA安装文档（英文）</a></p>
@@ -381,7 +382,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/" data-id="cjkul3vs90009fsfnjupqdwsr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/" data-id="cjkv88h5k000648fnuj8kiway" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
