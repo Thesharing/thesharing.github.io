@@ -4,58 +4,20 @@
 
     
   <url>
-    <loc>http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/</loc>
-    <lastmod>2018-02-26T16:21:23.867Z</lastmod>
-    <data>
-        <display>
-        <title>用Markdown写公式</title>
-        <pubTime>2018-02-26T09:55:09.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.cyprestar.com/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://www.cyprestar.com/2016/11/01/How-to-Write-Markdown/</loc>
-    <lastmod>2016-12-25T06:20:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何快速掌握Markdown语法？</title>
-        <pubTime>2016-11-01T03:25:25.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.cyprestar.com/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.cyprestar.com/2016/04/30/BoP/</loc>
-    <lastmod>2016-11-02T13:52:50.000Z</lastmod>
+    <lastmod>2018-08-15T03:41:42.889Z</lastmod>
     <data>
         <display>
         <title>用编程展现绘画之美</title>
         <pubTime>2016-04-30T15:59:41.000Z</pubTime>
         
-        <tag>编程之美2016</tag>
+        <tag>BoP2016</tag>
          
          
            
+             
+              <breadCrumb title="Creative" url="http://www.cyprestar.com/categories/Creative/"/>
+          
         </display>
     </data>
     </url>
@@ -63,7 +25,7 @@
     
   <url>
     <loc>http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/</loc>
-    <lastmod>2016-10-14T04:42:50.000Z</lastmod>
+    <lastmod>2018-08-15T03:41:20.737Z</lastmod>
     <data>
         <display>
         <title>用Hexo搭建一个Github个人Blog</title>
@@ -74,12 +36,73 @@
          
            
              
-              <breadCrumb title="Web" url="http://www.cyprestar.com/categories/Web/"/>
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
           
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://www.cyprestar.com/2016/11/01/How-to-Write-Markdown/</loc>
+    <lastmod>2018-08-15T03:40:08.037Z</lastmod>
+    <data>
+        <display>
+        <title>如何快速掌握Markdown语法？</title>
+        <pubTime>2016-11-01T03:25:25.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/</loc>
+    <lastmod>2018-08-15T03:40:04.117Z</lastmod>
+    <data>
+        <display>
+        <title>用Markdown写公式</title>
+        <pubTime>2018-02-26T09:55:09.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/</loc>
+    <lastmod>2018-08-15T03:32:39.805Z</lastmod>
+    <data>
+        <display>
+        <title>在Ubuntu Server上配置CUDA环境</title>
+        <pubTime>2018-08-15T03:00:09.000Z</pubTime>
+        
+        <tag>Configuration</tag>
+         
+         
+           
+             
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://www.cyprestar.com/2016/08/29/BackgroundWorker/</loc>

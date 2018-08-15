@@ -158,11 +158,11 @@ var _hmt = _hmt || [];
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                6
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                4
+                5
                 <span>标签</span>
             </div>
         </div>
@@ -223,6 +223,139 @@ var _hmt = _hmt || [];
 
             
             <section id="main">
+    <article id="post-Install-CUDA-on-Ubuntu-Server" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/">在Ubuntu Server上配置CUDA环境</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/">
+            <time datetime="2018-08-15T03:00:09.000Z" itemprop="datePublished">2018-08-15</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Basic/">Basic</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Configuration/">Configuration</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。</p></p>
+            <p class="article-more-link">
+                <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/" data-id="cjkul3vs90009fsfnjupqdwsr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Write-Markdown-with-Formulas" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -249,7 +382,7 @@ var _hmt = _hmt || [];
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Web/">Web</a>
+        <a class="article-category-link" href="/categories/Basic/">Basic</a>
     </div>
 
                         
@@ -265,7 +398,7 @@ var _hmt = _hmt || [];
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>在Markdown中使用Mathjax参考LaTeX语法来书写公式。</p></p>
+            <p><p>在写课堂报告的时候，用Latex会比较笨重，用Word插入公式又太麻烦，用Markdown则恰如其分，因此这篇文章主要涉及如何在Markdown中使用Mathjax，参考LaTeX语法来书写公式。公式可以在Typora里导出成PDF文档。</p></p>
             <p class="article-more-link">
                 <a href="/2018/02/26/Write-Markdown-with-Formulas/#more">查看更多</a>
             </p>
@@ -278,7 +411,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/" data-id="cje5x5tmn0009p4fnegdw91ur" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/" data-id="cjkul3vsa000dfsfnsxkd2493" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -382,7 +515,7 @@ var _hmt = _hmt || [];
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Web/">Web</a>
+        <a class="article-category-link" href="/categories/Basic/">Basic</a>
     </div>
 
                         
@@ -398,10 +531,7 @@ var _hmt = _hmt || [];
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>Markdown 是一种轻量级标记语言。</p>
-<p>它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档。</p>
-<p>这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
-<p>掌握Markdown语法的基本语法，只需要十点就够了。</p></p>
+            <p><p>Markdown 是一种轻量级标记语言。<br>它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档。<br>这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>掌握Markdown语法的基本语法，只需要十点就够了。</p></p>
             <p class="article-more-link">
                 <a href="/2016/11/01/How-to-Write-Markdown/#more">查看更多</a>
             </p>
@@ -414,7 +544,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/11/01/How-to-Write-Markdown/" data-id="cje5x5tmn0005p4fnbjq60b4t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/11/01/How-to-Write-Markdown/" data-id="cjkul3vs30002fsfno9redz91" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -547,7 +677,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/" data-id="cje5x5tmn0008p4fn0jl2uexv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/08/29/BackgroundWorker/" data-id="cjkul3vs00000fsfn2w07vhde" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -649,10 +779,15 @@ var _hmt = _hmt || [];
 
 
                         
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Creative/">Creative</a>
+    </div>
+
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/编程之美2016/">编程之美2016</a>
+        <a class="tag-link" href="/tags/BoP2016/">BoP2016</a>
     </div>
 
                     </div>
@@ -676,7 +811,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/04/30/BoP/" data-id="cje5x5tm70000p4fngzqrg7m2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/04/30/BoP/" data-id="cjkul3vs80008fsfn9b08vj9w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -780,7 +915,7 @@ var _hmt = _hmt || [];
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Web/">Web</a>
+        <a class="article-category-link" href="/categories/Basic/">Basic</a>
     </div>
 
                         
@@ -809,7 +944,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cje5x5tm70002p4fn1fy1jsp6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cjkul3vs70006fsfnd89uatmi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -900,7 +1035,16 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
+                            <p class="item-title"><a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="title">在Ubuntu Server上配置CUDA环境</a></p>
+                            <p class="item-date"><time datetime="2018-08-15T03:00:09.000Z" itemprop="datePublished">2018-08-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
                             <p class="item-title"><a href="/2018/02/26/Write-Markdown-with-Formulas/" class="title">用Markdown写公式</a></p>
                             <p class="item-date"><time datetime="2018-02-26T09:55:09.000Z" itemprop="datePublished">2018-02-26</time></p>
                         </div>
@@ -909,7 +1053,7 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
                             <p class="item-title"><a href="/2016/11/01/How-to-Write-Markdown/" class="title">如何快速掌握Markdown语法？</a></p>
                             <p class="item-date"><time datetime="2016-11-01T03:25:25.000Z" itemprop="datePublished">2016-11-01</time></p>
                         </div>
@@ -927,18 +1071,9 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Creative/">Creative</a></p>
                             <p class="item-title"><a href="/2016/04/30/BoP/" class="title">用编程展现绘画之美</a></p>
                             <p class="item-date"><time datetime="2016-04-30T15:59:41.000Z" itemprop="datePublished">2016-04-30</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a></p>
-                            <p class="item-title"><a href="/2016/02/23/Build-a-Github-Blog-with-Hexo/" class="title">用Hexo搭建一个Github个人Blog</a></p>
-                            <p class="item-date"><time datetime="2016-02-23T08:46:29.000Z" itemprop="datePublished">2016-02-23</time></p>
                         </div>
                     </li>
                 
@@ -951,7 +1086,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DanmakuPie/">DanmakuPie</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">3</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Basic/">Basic</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Creative/">Creative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DanmakuPie/">DanmakuPie</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -960,7 +1095,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -969,7 +1104,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/">WPF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程之美2016/">编程之美2016</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BoP2016/">BoP2016</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Configuration/">Configuration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/">WPF</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -978,7 +1113,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a> <a href="/tags/编程之美2016/" style="font-size: 10px;">编程之美2016</a>
+            <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
         </div>
     </div>
 

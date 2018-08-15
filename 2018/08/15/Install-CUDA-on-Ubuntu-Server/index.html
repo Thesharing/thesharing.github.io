@@ -3,29 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>用编程展现绘画之美 | Blog</title>
+    <title>在Ubuntu Server上配置CUDA环境 | Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="一个想法——通过Coding来画画。
-这篇文章用于参加2016编程之美设计赛。">
+    <meta name="description" content="在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用编程展现绘画之美">
-<meta property="og:url" content="http://www.cyprestar.com/2016/04/30/BoP/index.html">
+<meta property="og:title" content="在Ubuntu Server上配置CUDA环境">
+<meta property="og:url" content="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="一个想法——通过Coding来画画。
-这篇文章用于参加2016编程之美设计赛。">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic1.jpg">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic2.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic3.jpg">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic4.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic5.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic6.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic8.png">
-<meta property="og:updated_time" content="2018-08-15T03:41:42.889Z">
+<meta property="og:description" content="在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。">
+<meta property="og:updated_time" content="2018-08-15T03:32:39.805Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用编程展现绘画之美">
-<meta name="twitter:description" content="一个想法——通过Coding来画画。
-这篇文章用于参加2016编程之美设计赛。">
-<meta name="twitter:image" content="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic1.jpg">
+<meta name="twitter:title" content="在Ubuntu Server上配置CUDA环境">
+<meta name="twitter:description" content="在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。">
     
 
     
@@ -234,7 +223,7 @@ var _hmt = _hmt || [];
 </aside>
 
             
-            <section id="main"><article id="post-BoP" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Install-CUDA-on-Ubuntu-Server" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -242,7 +231,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 class="article-title" itemprop="name">
-            用编程展现绘画之美
+            在Ubuntu Server上配置CUDA环境
         </h1>
     
 
@@ -251,8 +240,8 @@ var _hmt = _hmt || [];
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/04/30/BoP/">
-            <time datetime="2016-04-30T15:59:41.000Z" itemprop="datePublished">2016-04-30</time>
+        <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/">
+            <time datetime="2018-08-15T03:00:09.000Z" itemprop="datePublished">2018-08-15</time>
         </a>
     </div>
 
@@ -260,13 +249,13 @@ var _hmt = _hmt || [];
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Creative/">Creative</a>
+        <a class="article-category-link" href="/categories/Basic/">Basic</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/BoP2016/">BoP2016</a>
+        <a class="tag-link" href="/tags/Configuration/">Configuration</a>
     </div>
 
                     </div>
@@ -277,25 +266,111 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>一个想法——通过Coding来画画。</p>
-<p>这篇文章用于参加2016编程之美设计赛。</p>
+            <p>在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。</p>
 <a id="more"></a>
-<h2 id="用编程展现绘画之美"><a href="#用编程展现绘画之美" class="headerlink" title="用编程展现绘画之美"></a>用编程展现绘画之美</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>我们都知道，编程可以帮助我们更好地去探索动听的旋律：</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic1.jpg" alt="用音乐编辑软件来合成动听的旋律"></p>
-<p>我们也知道，编程可以帮助我们更好地吟诗作对，探索语言的魅力：</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic2.png" alt="微软亚洲研究院的“律诗绝句”"></p>
-<p>那么，编程可以帮助我们更好地去一览色彩的神奇吗？</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic3.jpg" alt="星空-达芬奇"></p>
-<p>不妨和我一起试试，用Xaml语言来作一幅画吧。</p>
-<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><p>首先，打开Visual Studio 2020，然后选择<code>新建项目</code>，在“新建项目”的对话框中选择“绘画”，在这里我们把作品命名为 <em>Starry Night</em></p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic4.png" alt="新建绘画"></p>
-<p>在绘画之前，我们要准备好绘画用的材料以及想好自己想画的内容，跟着向导我们可以设定画的基本属性：</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic5.png" alt="初始化我们的画作"></p>
-<p>跟着向导完成初始化操作以后，我们可以看到接下来让我们挥洒灵感的地方：</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic6.png" alt="绘画工作区"></p>
-<p>而作品的标题、风格等信息已经定义好。</p>
-<p>当然我们可以通过编写Xaml来绘画————例如，我们将画布涂上蓝色，再将整幅画按照黄金分割比例进行分隔：</p>
-<p><img src="http://7xr64j.com1.z0.glb.clouddn.com//bop2016/pic8.png" alt="用Xaml来绘画"></p>
+<p>版本要求：</p>
+<ul>
+<li>Ubuntu 16.04 LTS</li>
+<li>CUDA 9.0</li>
+<li>cuDNN v7</li>
+<li>TensorFlow r1.10</li>
+<li>PyTorch 0.4.1</li>
+</ul>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1 准备工作"></a>1 准备工作</h2><h3 id="1-1-检查GPU是否符合CUDA运行要求"><a href="#1-1-检查GPU是否符合CUDA运行要求" class="headerlink" title="1.1 检查GPU是否符合CUDA运行要求"></a>1.1 检查GPU是否符合CUDA运行要求</h3><p>在Shell中运行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci | grep -i nvidia</div></pre></td></tr></table></figure>
+<p>查看GPU型号，然后在<a href="https://developer.nvidia.com/cuda-gpus" target="_blank" rel="external">https://developer.nvidia.com/cuda-gpus</a>页面中查找设备的GPU是否在支持CUDA的列表中。</p>
+<h3 id="1-2-检查GCC版本"><a href="#1-2-检查GCC版本" class="headerlink" title="1.2 检查GCC版本"></a>1.2 检查GCC版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gcc --version</div></pre></td></tr></table></figure>
+<p>对于Ubuntu 16.04来说，gcc版本需要&gt;5.4.0。</p>
+<h3 id="1-3-检查Kernel版本"><a href="#1-3-检查Kernel版本" class="headerlink" title="1.3 检查Kernel版本"></a>1.3 检查Kernel版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname -r</div></pre></td></tr></table></figure>
+<p>对于Ubuntu 16.04来说，内核版本需要&gt;4.4.0。</p>
+<p>然后需要安装对应版本的Kernel Header：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install linux-headers-$(uname -r)</div></pre></td></tr></table></figure>
+<h3 id="1-4-安装对应的库"><a href="#1-4-安装对应的库" class="headerlink" title="1.4 安装对应的库"></a>1.4 安装对应的库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev \ </div><div class="line">libboost-all-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev \ </div><div class="line">protobuf-compiler g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev \ </div><div class="line">libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev</div></pre></td></tr></table></figure>
+<h2 id="2-安装CUDA"><a href="#2-安装CUDA" class="headerlink" title="2 安装CUDA"></a>2 安装CUDA</h2><h3 id="2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"><a href="#2-1-首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）" class="headerlink" title="2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）"></a>2.1 首先安装显卡驱动（选做，CUDA自带的驱动可能会无法正常运行）</h3><h4 id="1-禁用Nouveau"><a href="#1-禁用Nouveau" class="headerlink" title="(1) 禁用Nouveau"></a>(1) 禁用Nouveau</h4><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lsmod | grep nouveau</div></pre></td></tr></table></figure>
+<p>如果有显示内容，则说明Nouveau驱动正在运行，需要根据<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#runfile-nouveau-ubuntu" target="_blank" rel="external">教程</a>关闭Nouveau。</p>
+<h4 id="2-卸载之前的显卡驱动"><a href="#2-卸载之前的显卡驱动" class="headerlink" title="(2) 卸载之前的显卡驱动"></a>(2) 卸载之前的显卡驱动</h4><h4 id="3-下载并安装驱动"><a href="#3-下载并安装驱动" class="headerlink" title="(3) 下载并安装驱动"></a>(3) 下载并安装驱动</h4><p>在<a href="http://www.nvidia.com/Download/index.aspx" target="_blank" rel="external">NVIDIA驱动下载</a>页面按照自己的GPU型号、系统以及CUDA版本选择驱动并进行下载，得到诸如nvidia-diag-driver-local-repo-ubuntu1604_3XY.AB-1_amd64.deb的文件/</p>
+<p>然后运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i nvidia-diag-driver-local-repo-ubuntu1604_3XY.AB-1_amd64.deb（XY.AB需要根据下载版本进行修改）</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install cuda-drivers</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
+<p>完成后系统会进行重启，在重启前请保存所有运行的工作。</p>
+<p>重启后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nvidia-smi</div></pre></td></tr></table></figure>
+<p>如果正常输出显卡状态说民驱动安装成功。</p>
+<h3 id="2-2-安装CUDA"><a href="#2-2-安装CUDA" class="headerlink" title="2.2 安装CUDA"></a>2.2 安装CUDA</h3><p>在<a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">CUDA下载页面</a>下载Runfile形式的CUDA安装包，形式为cuda_9.0.176_384.81_linux.run</p>
+<p>具体CUDA和cuDNN版本参考<a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn" target="_blank" rel="external">TensorFlow安装要求</a>，对于r1.10版本来说支持的CUDA版本为9.0。</p>
+<hr>
+<p>（选做）</p>
+<p>对于有GUI的系统来说，需要在启动时按下<code>Ctrl + Alt + F1/F4</code>进入tty1/tty4模式，然后输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
+<p>停止GUI运行。</p>
+<hr>
+<p>开始安装CUDA。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo sh cuda_9.0.176_384.81_linux.run</div></pre></td></tr></table></figure>
+<ul>
+<li>一路按空格，输入<code>accept</code>同意用户协议</li>
+<li>安装程序询问是否安装驱动，输入<code>no</code></li>
+<li>询问是否安装CUDA Toolkit，输入<code>yes</code></li>
+<li>更改CUDA Toolkit安装位置，这里不作修改</li>
+<li>是否创建/usr/local/cuda符号链接，如果只安装一个CUDA版本，输入’yes’</li>
+<li>询问是否安装CUDA Samples，输入’yes’</li>
+<li>更改CUDA Samples安装位置，这里不作修改</li>
+</ul>
+<p>如果没有报错，则说明安装成功。如果提示：</p>
+<blockquote>
+<p>Installing the CUDA Toolkit in /usr/local/cuda-8.0 … </p>
+<p>Missing recommended library: libGLU.so </p>
+<p>Missing recommended library: libX11.so </p>
+<p>Missing recommended library: libXi.so </p>
+<p>Missing recommended library: libXmu.so</p>
+</blockquote>
+<p>则需要安装依赖库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev</div></pre></td></tr></table></figure>
+<p>然后重新运行CUDA安装程序即可。</p>
+<h3 id="2-3-配置环境变量"><a href="#2-3-配置环境变量" class="headerlink" title="2.3 配置环境变量"></a>2.3 配置环境变量</h3><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/profile</div></pre></td></tr></table></figure>
+<p>用vi编辑启动脚本。用方向键将光标定位至文件末尾然后按<code>i</code>插入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH:/usr/local/cuda-9.0/bin</div><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/extras/CUPTI/lib64</div></pre></td></tr></table></figure>
+<p>在Shell中运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export PATH=$PATH:/usr/local/cuda-9.0/bin</div><div class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/extras/CUPTI/lib64</div></pre></td></tr></table></figure>
+<h3 id="2-4-验证CUDA是否安装成功"><a href="#2-4-验证CUDA是否安装成功" class="headerlink" title="2.4 验证CUDA是否安装成功"></a>2.4 验证CUDA是否安装成功</h3><h4 id="1-验证驱动版本"><a href="#1-验证驱动版本" class="headerlink" title="(1) 验证驱动版本"></a>(1) 验证驱动版本</h4><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /proc/driver/nvidia/version</div></pre></td></tr></table></figure>
+<p>查看驱动版本。</p>
+<h4 id="2-查看nvcc版本"><a href="#2-查看nvcc版本" class="headerlink" title="(2) 查看nvcc版本"></a>(2) 查看nvcc版本</h4><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvcc -V i</div></pre></td></tr></table></figure>
+<p>查看nvcc版本。</p>
+<h4 id="3-运行示例（选做）"><a href="#3-运行示例（选做）" class="headerlink" title="(3) 运行示例（选做）"></a>(3) 运行示例（选做）</h4><p>按照<a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#compiling-examples" target="_blank" rel="external">教程</a>运行示例。</p>
+<h2 id="3-安装cuDNN"><a href="#3-安装cuDNN" class="headerlink" title="3 安装cuDNN"></a>3 安装cuDNN</h2><p>在<a href="http://developer.nvidia.com/cudnn" target="_blank" rel="external">cuDNN下载页面</a>下载TensorFlow支持的cuDNN版本，目前支持的是cuDNN v7。在下载时需要注册NVIDIA账号和开发者账号。</p>
+<p>下载后得到一个诸如cudnn-9.0-linux-x64-v7.tgz的压缩包。</p>
+<p>运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -xvzf cudnn-9.0-linux-x64-v7.tgz</div></pre></td></tr></table></figure>
+<p>进行解压，在当前目录得到cuda文件夹。</p>
+<p>然后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda/include</div><div class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64</div><div class="line">sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</div></pre></td></tr></table></figure>
+<p>将cuDNN拷贝至CUDA目录中。</p>
+<p>可以按照<a href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/#verify" target="_blank" rel="external">官方教程</a>来验证cuDNN的安装。</p>
+<h2 id="4-安装Tensorflow"><a href="#4-安装Tensorflow" class="headerlink" title="4 安装Tensorflow"></a>4 安装Tensorflow</h2><p>如果没安装pip，则需要安装pip：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install python3-pip python3-dev</div></pre></td></tr></table></figure>
+<p>然后尝试从官方源下载安装TensorFlow：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip3 install tensorflow-gpu</div></pre></td></tr></table></figure>
+<p>如果安装缓慢或者网络错误，请尝试将源切换至清华大学提供的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip3 install tensorflow-gpu -i https://pypi.tuna.tsinghua.edu.cn/simple</div></pre></td></tr></table></figure>
+<p>接下来验证安装：</p>
+<p>在Shell或者IDE中运行代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Python Code</span></div><div class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div><div class="line">hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</div><div class="line">sess = tf.Session()</div><div class="line">print(sess.run(hello))</div></pre></td></tr></table></figure>
+<p>等待，如果能够正常输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello, TensorFlow!</div></pre></td></tr></table></figure>
+<p>说明安装成功。如果输出错误信息，可以参考<a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn#common_installation_problems" target="_blank" rel="external">官方文档</a>解决。</p>
+<hr>
+<h2 id="5-安装PyTorch"><a href="#5-安装PyTorch" class="headerlink" title="5 安装PyTorch"></a>5 安装PyTorch</h2><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda install pytorch torchvision -c pytorch</div></pre></td></tr></table></figure>
+<p>安装完成后，在Shell或者IDE里运行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Python Code</span></div><div class="line"><span class="keyword">import</span> torch</div><div class="line">print(<span class="string">'CUDA support for Pytorch: '</span>, torch.cuda.is_available())</div><div class="line">print(<span class="string">'You are using device: '</span>, torch.cuda.get_device_name(<span class="number">0</span>))</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://blog.csdn.net/wuguangbin1230/article/details/74161127" target="_blank" rel="external">ubuntu16.04安装nvidia driver + cuda + cudnn (1)</a></p>
+<p><a href="https://www.tensorflow.org/install/install_linux?hl=zh-cn" target="_blank" rel="external">TensorFlow官方文档</a></p>
+<p><a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#abstract" target="_blank" rel="external">CUDA安装文档（英文）</a></p>
+<p><a href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/" target="_blank" rel="external">cuDNN安装文档（英文）</a></p>
+<p><a href="https://blog.csdn.net/masa_fish/article/details/51882183" target="_blank" rel="external">Ubuntu 14.04 上安装 CUDA 7.5/8.0 超详细教程</a></p>
 
         
         </div>
@@ -306,7 +381,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/04/30/BoP/" data-id="cjkul3vs80008fsfn9b08vj9w" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/" data-id="cjkul3vs90009fsfnjupqdwsr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -374,7 +449,7 @@ var _hmt = _hmt || [];
 
             
     
-        <a href="http://www.cyprestar.com/2016/04/30/BoP/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://www.cyprestar.com/2016/04/30/BoP/">评论</a>
+        <a href="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/">评论</a>
     
 
         </footer>
@@ -383,19 +458,10 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
-        <a href="/2016/08/29/BackgroundWorker/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    浅谈BackgroundWorker的使用
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/02/23/Build-a-Github-Blog-with-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/02/26/Write-Markdown-with-Formulas/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">用Hexo搭建一个Github个人Blog</div>
+            <div class="article-nav-title">用Markdown写公式</div>
         </a>
     
 </nav>
@@ -565,9 +631,9 @@ var _hmt = _hmt || [];
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://www.cyprestar.com/2016/04/30/BoP/';
+            this.page.url = 'http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/';
         
-        this.page.identifier = 'BoP';
+        this.page.identifier = 'Install-CUDA-on-Ubuntu-Server';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
