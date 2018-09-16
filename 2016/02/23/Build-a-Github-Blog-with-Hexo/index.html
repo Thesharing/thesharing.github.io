@@ -6,11 +6,13 @@
     <title>用Hexo搭建一个Github个人Blog | Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Hexo搭建一个Github个人Blog">
 <meta property="og:url" content="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
 <meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/2.png">
 <meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/3.png">
@@ -29,7 +31,9 @@
         <link rel="icon" href="/css/images/favicon.png" />
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
     <link rel="stylesheet" href="/libs/open-sans/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
@@ -96,7 +100,7 @@ var _hmt = _hmt || [];
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
                             <img class="avatar" src="/css/images/avatar.png" />
-                            <i class="fa fa-caret-down"></i>
+                            <i class="fas fa-caret-down"></i>
                         </a>
                     </div>
                 </nav>
@@ -158,13 +162,13 @@ var _hmt = _hmt || [];
             
                 
 
-<aside id="profile">
+<aside id="profile" class="">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
             <img id="avatar" src="/css/images/avatar.png" />
             <h2 id="name">Zhilong</h2>
             <h3 id="title">A CS Student</h3>
-            <span id="location"><i class="fa fa-map-marker"></i>北京, 中国</span>
+            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>北京, 中国</span>
             <a id="follow" target="_blank" href="http://github.com/thesharing/">关注我</a>
         </div>
         <div class="article-info profile-block">
@@ -185,43 +189,43 @@ var _hmt = _hmt || [];
                     
                     <td>
                         <a href="http://github.com/thesharing/" target="_blank" title="github" class=tooltip>
-                            <i class="fa fa-github"></i>
+                            <i class="fab fa-github"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="http://stackoverflow.com/users/3467196/thesharing?tab=profile" target="_blank" title="stack-overflow" class=tooltip>
-                            <i class="fa fa-stack-overflow"></i>
+                            <i class="fab fa-stack-overflow"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="http://steamcommunity.com/id/cyprestar/" target="_blank" title="steam" class=tooltip>
-                            <i class="fa fa-steam"></i>
+                            <i class="fab fa-steam"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="http://www.instagram.com/cyprestar/" target="_blank" title="instagram" class=tooltip>
-                            <i class="fa fa-instagram"></i>
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="http://weibo.com/sharinginworld/" target="_blank" title="weibo" class=tooltip>
-                            <i class="fa fa-weibo"></i>
+                            <i class="fab fa-weibo"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="https://www.facebook.com/cyprestar/" target="_blank" title="facebook" class=tooltip>
-                            <i class="fa fa-facebook"></i>
+                            <i class="fab fa-facebook"></i>
                         </a>
                     </td>
                     
                     <td>
                         <a href="http://twitter.com/cyprestar/" target="_blank" title="twitter" class=tooltip>
-                            <i class="fa fa-twitter"></i>
+                            <i class="fab fa-twitter"></i>
                         </a>
                     </td>
                     
@@ -249,7 +253,7 @@ var _hmt = _hmt || [];
                     <div class="article-meta">
                         
     <div class="article-date">
-        <i class="fa fa-calendar"></i>
+        <i class="fas fa-calendar-alt"></i>
         <a href="/2016/02/23/Build-a-Github-Blog-with-Hexo/">
             <time datetime="2016-02-23T08:46:29.000Z" itemprop="datePublished">2016-02-23</time>
         </a>
@@ -258,13 +262,13 @@ var _hmt = _hmt || [];
 
                         
     <div class="article-category">
-    	<i class="fa fa-folder"></i>
+    	<i class="fas fa-folder"></i>
         <a class="article-category-link" href="/categories/Basic/">Basic</a>
     </div>
 
                         
     <div class="article-tag">
-        <i class="fa fa-tag"></i>
+        <i class="fas fa-tag"></i>
         <a class="tag-link" href="/tags/Hexo/">Hexo</a>
     </div>
 
@@ -390,7 +394,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cjlgmq37s0002mofnpux0gfxf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cjlgn5w9700062ofndg8pwcu3" class="article-share-link"><i class="fas fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -423,10 +427,10 @@ var _hmt = _hmt || [];
                     '<div id="' + id + '" class="article-share-box">',
                         '<input class="article-share-input" value="' + url + '">',
                         '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
                         '</div>',
                     '</div>'
                 ].join('');
@@ -626,7 +630,7 @@ var _hmt = _hmt || [];
 
 
     
-    <div id="toTop" class="fa fa-angle-up"></div>
+    <div id="toTop" class="fas fa-angle-up"></div>
 </aside>
 
             
@@ -665,7 +669,7 @@ var _hmt = _hmt || [];
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     
 
 
