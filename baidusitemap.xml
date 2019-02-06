@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/</loc>
+    <lastmod>2019-02-06T20:55:07.494Z</lastmod>
+    <data>
+        <display>
+        <title>用Hexo搭建一个Github个人Blog</title>
+        <pubTime>2016-02-23T08:46:29.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/</loc>
     <lastmod>2018-08-15T14:23:59.680Z</lastmod>
     <data>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="Creative" url="http://www.cyprestar.com/categories/Creative/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/</loc>
-    <lastmod>2018-08-15T03:41:20.737Z</lastmod>
-    <data>
-        <display>
-        <title>用Hexo搭建一个Github个人Blog</title>
-        <pubTime>2016-02-23T08:46:29.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
           
         </display>
     </data>
