@@ -2,15 +2,17 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    
-    <title>用Hexo搭建一个Github个人Blog | Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>用Hexo搭建一个Github个人Blog - Zhilong&#39;s Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
     <meta name="description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Hexo搭建一个Github个人Blog">
 <meta property="og:url" content="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/index.html">
-<meta property="og:site_name" content="Blog">
+<meta property="og:site_name" content="Zhilong&#39;s Blog">
 <meta property="og:description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
@@ -23,43 +25,64 @@
 <meta name="twitter:title" content="用Hexo搭建一个Github个人Blog">
 <meta name="twitter:description" content="不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。">
 <meta name="twitter:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
+
+
+
+<link rel="alternative" href="rss.xml" title="用Hexo搭建一个Github个人Blog" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/pojoaque.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
     
 
     
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
 
     
-        <link rel="icon" href="/css/images/favicon.png">
     
 
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
-    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
 
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
     
     
     
     
-        <script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-74183669-1', 'auto');
-ga('send', 'pageview');
+<link rel="stylesheet" href="/css/back-to-top.css">
 
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74183669-1');
 </script>
+
+
     
     
-        <meta name="google-site-verification" content="googleec07a47add56e5b0">
-    
-    
-        <script>
+<script>
 var _hmt = _hmt || [];
 (function() {
     var hm = document.createElement("script");
@@ -70,216 +93,99 @@ var _hmt = _hmt || [];
 </script>
 
     
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
 
 
+<link rel="stylesheet" href="/css/style.css">
 </head>
-</html>
-<body>
-    <div id="container">
-        <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">Blog</span>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="用Hexo搭建一个Github个人Blog" height="28">
+            
             </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/.">首页</a>
-                
-                    <a class="main-nav-link" href="/archives">归档</a>
-                
-                    <a class="main-nav-link" href="/about">关于</a>
-                
-                    <a class="main-nav-link" href="/rss.xml">RSS</a>
-                
-            </nav>
-            
-                
-                <nav id="sub-nav">
-                    <div class="profile" id="profile-nav">
-                        <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/avatar.png">
-                            <i class="fas fa-caret-down"></i>
-                        </a>
-                    </div>
-                </nav>
-            
-            <div id="search-form-wrap">
-
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" placeholder="搜索">
-    <button type="submit" class="search-form-submit"></button>
-</form>
-<script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:www.cyprestar.com ' + keyword;
-        return false;
-    });
-})(jQuery);
-</script>
-
-</div>
         </div>
-    </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
-        <table class="menu outer">
-            <tr>
-                
-                    <td><a class="main-nav-link" href="/.">首页</a></td>
-                
-                    <td><a class="main-nav-link" href="/archives">归档</a></td>
-                
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
-                
-                    <td><a class="main-nav-link" href="/rss.xml">RSS</a></td>
-                
-                <td>
-                    
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" placeholder="搜索">
-    <button type="submit" class="search-form-submit"></button>
-</form>
-<script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:www.cyprestar.com ' + keyword;
-        return false;
-    });
-})(jQuery);
-</script>
-
-                </td>
-            </tr>
-        </table>
-    </div>
-</header>
-
-        <div class="outer">
+        <div class="navbar-menu">
             
+            <div class="navbar-start">
                 
-
-<aside id="profile" class="">
-    <div class="inner profile-inner">
-        <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/avatar.png">
-            <h2 id="name">Zhilong</h2>
-            <h3 id="title">A CS Student</h3>
-            <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>北京, 中国</span>
-            <a id="follow" target="_blank" href="http://github.com/thesharing/">关注我</a>
-        </div>
-        <div class="article-info profile-block">
-            <div class="article-info-block">
-                6
-                <span>文章</span>
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">归档</a>
+                
+                <a class="navbar-item" href="/about">关于</a>
+                
+                <a class="navbar-item" href="/rss.xml">RSS</a>
+                
             </div>
-            <div class="article-info-block">
-                5
-                <span>标签</span>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="GitHub" href="http://github.com/thesharing/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
             </div>
         </div>
-        
-        <div class="profile-block social-links">
-            <table>
-                <tr>
-                    
-                    
-                    <td>
-                        <a href="http://github.com/thesharing/" target="_blank" title="github" class="tooltip">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://stackoverflow.com/users/3467196/thesharing?tab=profile" target="_blank" title="stack-overflow" class="tooltip">
-                            <i class="fab fa-stack-overflow"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://steamcommunity.com/id/cyprestar/" target="_blank" title="steam" class="tooltip">
-                            <i class="fab fa-steam"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://www.instagram.com/cyprestar/" target="_blank" title="instagram" class="tooltip">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://weibo.com/sharinginworld/" target="_blank" title="weibo" class="tooltip">
-                            <i class="fab fa-weibo"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="https://www.facebook.com/cyprestar/" target="_blank" title="facebook" class="tooltip">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://twitter.com/cyprestar/" target="_blank" title="twitter" class="tooltip">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </td>
-                    
-                </tr>
-            </table>
-        </div>
-        
     </div>
-</aside>
-
-            
-            <section id="main"><article id="post-Build-a-Github-Blog-with-Hexo" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
+</nav>
     
-        <h1 class="article-title" itemprop="name">
-            用Hexo搭建一个Github个人Blog
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2016-02-23T08:46:29.000Z">2016-02-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    23 分钟 读完 (大约 3408 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                用Hexo搭建一个Github个人Blog
+            
         </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2016/02/23/Build-a-Github-Blog-with-Hexo/">
-            <time datetime="2016-02-23T08:46:29.000Z" itemprop="datePublished">2016-02-23</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/Basic/">Basic</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/Hexo/">Hexo</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
+        <div class="content">
             <p>不知道有没有人像我一样，想要建立个人主页，可是对Javescript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在Github搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。那么，倒计时开始。<br><a id="more"></a></p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
 <li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
@@ -292,13 +198,13 @@ var _hmt = _hmt || [];
 <h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p>首先在GitHub上<a href="https://github.com/signup/free" target="_blank" rel="noopener">注册</a>免费账号。接着在账户界面选择<code>+ New repository</code>，在<code>Repository Name</code>中填入<code>用户名.github.io</code>，选择<code>Public</code>，点击<code>Create Respository</code>创建一个目录。这个目录就是你的网站的存储空间。</p>
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/1.png" alt="创建站点的存储空间"></p>
 <p>接下来打开Git Bash，在Git Bash中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/. ssh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/. ssh</span><br></pre></td></tr></table></figure>
 <p>以检查本机的ssh密钥。如果提示：’No such file or directory 说明你是第一次使用Git。</p>
 <p>生成新的SSH Key：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;	</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;此处直接回车&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;	</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;此处直接回车&gt;</span><br></pre></td></tr></table></figure>
 <p>这里邮箱地址要填入注册邮箱地址。</p>
 <p>然后设置密码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure>
 <p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。注意：输入密码的时候没有*字样的，你直接输入就可以了。</p>
 <p>最后看到这样的界面，就成功设置SSH Key了：</p>
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/2.png" alt="配置成功"></p>
@@ -309,29 +215,29 @@ var _hmt = _hmt || [];
 </ol>
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/3.png" alt="SSH Keys"></p>
 <p>测试设置结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>如果得到如下反馈：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure>
 <p>此时输入<code>yes</code>即可。然后会看到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi thesharing! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi thesharing! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 <p>说明SSH Key已经设置成功，这台设备的Git Bash已经可以访问你的GitHub了。</p>
 <p>接下来需要设置登录信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">$ git config --global user.email  &quot;你的注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">$ git config --global user.email  &quot;你的注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>到这一步，Git Bash就配置完毕了。</p>
 <h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p><a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的博客框架。在安装完以上的软件以后，在命令提示行中使用<code>npm</code>命令即可完成安装。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>可能会有网络错误，可以重新执行命令安装。</p>
 <p>接下来执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <p>以安装所需的依赖包。</p>
 <h2 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h2><p>指定一个文件夹作为你的博客存放的文件夹，然后从此文件夹打开命令行，开始部署：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>等待一段时间，Hexo会在这个文件夹下建立工作目录。现在本地博客已经建立完毕，执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>然后在浏览器中访问<code>localhost:4000</code>即可看到初始化的博客内容。</p>
 <h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>在Hexo的官方网站<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes | Hexo </a>上有一些主题可供使用，在Hexo的GitHub主页<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">Themes - hexojs/hexo</a>上提供了更多的主题链接可供下载。你可以选择用Git将主题<code>Clone</code>到本地，以获得主题的实时更新，也可以通过<code>Download Zip</code>将主题下载到本地的hexo文件夹/theme/使用。针对不同主题会有不同的设置项，一般主题的GitHub主页会提供Wiki来帮助设置主页。本次以PPOffice开发的Icarus为例进行主题方面的设置。</p>
 <h2 id="个性化你的博客"><a href="#个性化你的博客" class="headerlink" title="个性化你的博客"></a>个性化你的博客</h2><p>首先要配置你的站点信息，用Sublime Text等文本编辑器（不推荐使用记事本，存在一些格式上的问题）打开<code>hexo文件夹\_config.yml</code>开始配置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"># Site 站点信息设置</span><br><span class="line">title: Zhilong&apos;s Tech Blog # 站点标题</span><br><span class="line">subtitle: Have a try # 副标题</span><br><span class="line">description: Zhilong&apos;s personal blog on github # 给搜索引擎看的，对站点的描述，可以自定义</span><br><span class="line">author: Thesharing # 网站作者：在站点下方可以看到</span><br><span class="line">mail: thesharing@163.com# 你的联系邮箱</span><br><span class="line">language: zh-CN # 语言：简体中文</span><br><span class="line">	</span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://thesharing.github.io/ #站点地址</span><br><span class="line">root: / #站点的根目录</span><br><span class="line">permalink: :year/:month/:day/:title/ #文章默认存放位置的格式，这里表示目录结构为：year/month/day/title.md。</span><br><span class="line">tag_dir: tags # 标签页的文件夹位置</span><br><span class="line">archive_dir: archives # 归档页的文件夹位置</span><br><span class="line">category_dir: categories # 目录页的文件夹位置</span><br><span class="line">	</span><br><span class="line"># Writing 文章布局、写作格式的定义</span><br><span class="line">new_post_name: :title.md # 新文章的文章名，这里是用文章标题作为文件名</span><br><span class="line">default_layout: post # 默认的布局，详情查看https://hexo.io/zh-cn/docs/writing.html以获得更多信息</span><br><span class="line">auto_spacing: true # 是否在中文字符和英文字符之间自动添加空格</span><br><span class="line">titlecase: false # 是否将标题大写</span><br><span class="line">max_open_file: 100</span><br><span class="line">filename_case: 0</span><br><span class="line">highlight: #语法高亮</span><br><span class="line">  enable: true</span><br><span class="line">  backtick_code_block: true</span><br><span class="line">  line_number: true</span><br><span class="line">  tab_replace:</span><br><span class="line">	</span><br><span class="line"># 目录和标签</span><br><span class="line">default_category: uncategorized # 默认目录</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</span><br><span class="line">## 2: Enable pagination</span><br><span class="line">## 1: Disable pagination</span><br><span class="line">## 0: Fully Disable</span><br><span class="line">archive: 1</span><br><span class="line">category: 1</span><br><span class="line">tag: 1</span><br><span class="line"></span><br><span class="line"># Server 本地服务器信息</span><br><span class="line">## Hexo uses Connect as a server</span><br><span class="line">## You can customize the logger format as defined in</span><br><span class="line">## http://www.senchalabs.org/connect/logger.html</span><br><span class="line">port: 4000</span><br><span class="line">logger: false</span><br><span class="line">logger_format:</span><br><span class="line">	</span><br><span class="line"># Date / Time format 日期、时间格式</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: MMM D YYYY</span><br><span class="line">time_format: H:mm:ss</span><br><span class="line">	</span><br><span class="line"># Pagination 每页显示文章数，可以自定义</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line">	</span><br><span class="line"># Disqus Disqus插件设置</span><br><span class="line">disqus_shortname: thesharing # 这里填入讨论区名即可</span><br><span class="line">	</span><br><span class="line"># Extensions 配置站点所用主题和插件</span><br><span class="line">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</span><br><span class="line">## Themes: https://github.com/tommy351/hexo/wiki/Themes</span><br><span class="line">theme: icarus # 主题</span><br><span class="line">exclude_generator:</span><br><span class="line">plugins:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line">	</span><br><span class="line"># Deployment 站点部署到github的设置</span><br><span class="line">## 官方文档：https://hexo.io/zh-cn/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/thesharing/thesharing.github.io.git # Repository地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"># Site 站点信息设置</span><br><span class="line">title: Zhilong&apos;s Tech Blog # 站点标题</span><br><span class="line">subtitle: Have a try # 副标题</span><br><span class="line">description: Zhilong&apos;s personal blog on github # 给搜索引擎看的，对站点的描述，可以自定义</span><br><span class="line">author: Thesharing # 网站作者：在站点下方可以看到</span><br><span class="line">mail: thesharing@163.com# 你的联系邮箱</span><br><span class="line">language: zh-CN # 语言：简体中文</span><br><span class="line">	</span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://thesharing.github.io/ #站点地址</span><br><span class="line">root: / #站点的根目录</span><br><span class="line">permalink: :year/:month/:day/:title/ #文章默认存放位置的格式，这里表示目录结构为：year/month/day/title.md。</span><br><span class="line">tag_dir: tags # 标签页的文件夹位置</span><br><span class="line">archive_dir: archives # 归档页的文件夹位置</span><br><span class="line">category_dir: categories # 目录页的文件夹位置</span><br><span class="line">	</span><br><span class="line"># Writing 文章布局、写作格式的定义</span><br><span class="line">new_post_name: :title.md # 新文章的文章名，这里是用文章标题作为文件名</span><br><span class="line">default_layout: post # 默认的布局，详情查看https://hexo.io/zh-cn/docs/writing.html以获得更多信息</span><br><span class="line">auto_spacing: true # 是否在中文字符和英文字符之间自动添加空格</span><br><span class="line">titlecase: false # 是否将标题大写</span><br><span class="line">max_open_file: 100</span><br><span class="line">filename_case: 0</span><br><span class="line">highlight: #语法高亮</span><br><span class="line">  enable: true</span><br><span class="line">  backtick_code_block: true</span><br><span class="line">  line_number: true</span><br><span class="line">  tab_replace:</span><br><span class="line">	</span><br><span class="line"># 目录和标签</span><br><span class="line">default_category: uncategorized # 默认目录</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</span><br><span class="line">## 2: Enable pagination</span><br><span class="line">## 1: Disable pagination</span><br><span class="line">## 0: Fully Disable</span><br><span class="line">archive: 1</span><br><span class="line">category: 1</span><br><span class="line">tag: 1</span><br><span class="line"></span><br><span class="line"># Server 本地服务器信息</span><br><span class="line">## Hexo uses Connect as a server</span><br><span class="line">## You can customize the logger format as defined in</span><br><span class="line">## http://www.senchalabs.org/connect/logger.html</span><br><span class="line">port: 4000</span><br><span class="line">logger: false</span><br><span class="line">logger_format:</span><br><span class="line">	</span><br><span class="line"># Date / Time format 日期、时间格式</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: MMM D YYYY</span><br><span class="line">time_format: H:mm:ss</span><br><span class="line">	</span><br><span class="line"># Pagination 每页显示文章数，可以自定义</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line">	</span><br><span class="line"># Disqus Disqus插件设置</span><br><span class="line">disqus_shortname: thesharing # 这里填入讨论区名即可</span><br><span class="line">	</span><br><span class="line"># Extensions 配置站点所用主题和插件</span><br><span class="line">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</span><br><span class="line">## Themes: https://github.com/tommy351/hexo/wiki/Themes</span><br><span class="line">theme: icarus # 主题</span><br><span class="line">exclude_generator:</span><br><span class="line">plugins:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line">	</span><br><span class="line"># Deployment 站点部署到github的设置</span><br><span class="line">## 官方文档：https://hexo.io/zh-cn/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/thesharing/thesharing.github.io.git # Repository地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>可以将其直接复制入你的<code>_config.yml</code>文件中使用。下面解释各项如何修改。</p>
 <h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><p>按照说明修改即可。</p>
 <h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>将url改为你的博客首地址，可以到<a href="https://www.godaddy.com/" target="_blank" rel="noopener">GoDaddy</a>上购买域名进行绑定，那么这里就应该改成你的域名而非GitHub.io地址。</p>
@@ -339,7 +245,7 @@ var _hmt = _hmt || [];
 <h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><p>将Theme修改为你下载的主题的主题名，要注意，<code>theme</code>文件夹下的主题文件夹也要对应名称。</p>
 <h3 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h3><p>将<code>repository</code>改为<a href="https://github.com/你的用户名/你的用户名.github.io.git，`branch`不变。" target="_blank" rel="noopener">https://github.com/你的用户名/你的用户名.github.io.git，`branch`不变。</a></p>
 <p>此时第一个配置文件设置结束，我们打开第二个，主题的配置文件来配置主题样式。这里以我使用的Icarus为例：<code>hexo文件夹\themes\icarus\_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"># Menus</span><br><span class="line">menu:</span><br><span class="line">  首页: .</span><br><span class="line">  归档: archives</span><br><span class="line">  关于: about</span><br><span class="line">	</span><br><span class="line"># Customize</span><br><span class="line">customize:</span><br><span class="line">    logo:</span><br><span class="line">        enabled: true</span><br><span class="line">        width: 40</span><br><span class="line">        height: 40</span><br><span class="line">        url: images/logo.png</span><br><span class="line">    profile:</span><br><span class="line">        enabled: true # Whether to show profile bar</span><br><span class="line">        avatar: css/images/avatar.png</span><br><span class="line">        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden</span><br><span class="line">        author: Zhilong</span><br><span class="line">        author_title: A CS Student</span><br><span class="line">        location: 北京, 中国</span><br><span class="line">        follow: http://weibo.com/sharinginworld/</span><br><span class="line">    highlight: monokai</span><br><span class="line">    sidebar: left # sidebar position, options: left, right</span><br><span class="line">    thumbnail: false # enable posts thumbnail, options: true, false</span><br><span class="line">    favicon: css/images/favicon.png # path to favicon</span><br><span class="line">    social_links:</span><br><span class="line">        github: http://github.com/thesharing/</span><br><span class="line">        twitter: http://twitter.com/cyprestar/</span><br><span class="line">        facebook: https://www.facebook.com/cyprestar/</span><br><span class="line">        linkedin: https://www.linkedin.com/in/%E5%BF%97%E9%BE%99-%E6%B4%AA-964252a6/</span><br><span class="line">        steam: http://steamcommunity.com/profiles/76561198136146683/</span><br><span class="line">        weibo: http://weibo.com/sharinginworld/</span><br><span class="line">	</span><br><span class="line"># Widgets</span><br><span class="line">widgets:</span><br><span class="line">    - recent_posts</span><br><span class="line">    - category</span><br><span class="line">    - archive</span><br><span class="line">    - tag</span><br><span class="line">    - tagcloud</span><br><span class="line">    - links</span><br><span class="line">	</span><br><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">    swiftype: # enter swiftype install key here</span><br><span class="line">    baidu: true # you need to disable other search engines to use Baidu search, options: true, false</span><br><span class="line"></span><br><span class="line"># Comment</span><br><span class="line">comment:</span><br><span class="line">    disqus: thesharing # enter disqus shortname here</span><br><span class="line">    duoshuo: # enter duoshuo shortname here</span><br><span class="line">    youyan: # enter youyan uid here</span><br><span class="line"></span><br><span class="line"># Share</span><br><span class="line">share: default # options: jiathis, bdshare, addtoany, default</span><br><span class="line"></span><br><span class="line"># Plugins</span><br><span class="line">plugins:</span><br><span class="line">    fancybox: true # options: true, false</span><br><span class="line">    google_analytics: UA-74183669-1 # enter the tracking ID for your Google Analytics</span><br><span class="line">    google_site_verification: # enter Google site verification code</span><br><span class="line">    baidu_analytics: 631ec0463314a38fa28346d593dadbed # enter Baidu Analytics hash key</span><br><span class="line"></span><br><span class="line"># Miscellaneous</span><br><span class="line">miscellaneous:</span><br><span class="line">    open_graph: # see http://ogp.me</span><br><span class="line">        fb_app_id:</span><br><span class="line">        fb_admins:</span><br><span class="line">        twitter_id:</span><br><span class="line">        google_plus:</span><br><span class="line">    links:</span><br><span class="line">        Github: http://github.com/thesharing/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"># Menus</span><br><span class="line">menu:</span><br><span class="line">  首页: .</span><br><span class="line">  归档: archives</span><br><span class="line">  关于: about</span><br><span class="line">	</span><br><span class="line"># Customize</span><br><span class="line">customize:</span><br><span class="line">    logo:</span><br><span class="line">        enabled: true</span><br><span class="line">        width: 40</span><br><span class="line">        height: 40</span><br><span class="line">        url: images/logo.png</span><br><span class="line">    profile:</span><br><span class="line">        enabled: true # Whether to show profile bar</span><br><span class="line">        avatar: css/images/avatar.png</span><br><span class="line">        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden</span><br><span class="line">        author: Zhilong</span><br><span class="line">        author_title: A CS Student</span><br><span class="line">        location: 北京, 中国</span><br><span class="line">        follow: http://weibo.com/sharinginworld/</span><br><span class="line">    highlight: monokai</span><br><span class="line">    sidebar: left # sidebar position, options: left, right</span><br><span class="line">    thumbnail: false # enable posts thumbnail, options: true, false</span><br><span class="line">    favicon: css/images/favicon.png # path to favicon</span><br><span class="line">    social_links:</span><br><span class="line">        github: http://github.com/thesharing/</span><br><span class="line">        twitter: http://twitter.com/cyprestar/</span><br><span class="line">        facebook: https://www.facebook.com/cyprestar/</span><br><span class="line">        linkedin: https://www.linkedin.com/in/%E5%BF%97%E9%BE%99-%E6%B4%AA-964252a6/</span><br><span class="line">        steam: http://steamcommunity.com/profiles/76561198136146683/</span><br><span class="line">        weibo: http://weibo.com/sharinginworld/</span><br><span class="line">	</span><br><span class="line"># Widgets</span><br><span class="line">widgets:</span><br><span class="line">    - recent_posts</span><br><span class="line">    - category</span><br><span class="line">    - archive</span><br><span class="line">    - tag</span><br><span class="line">    - tagcloud</span><br><span class="line">    - links</span><br><span class="line">	</span><br><span class="line"># Search</span><br><span class="line">search:</span><br><span class="line">    swiftype: # enter swiftype install key here</span><br><span class="line">    baidu: true # you need to disable other search engines to use Baidu search, options: true, false</span><br><span class="line"></span><br><span class="line"># Comment</span><br><span class="line">comment:</span><br><span class="line">    disqus: thesharing # enter disqus shortname here</span><br><span class="line">    duoshuo: # enter duoshuo shortname here</span><br><span class="line">    youyan: # enter youyan uid here</span><br><span class="line"></span><br><span class="line"># Share</span><br><span class="line">share: default # options: jiathis, bdshare, addtoany, default</span><br><span class="line"></span><br><span class="line"># Plugins</span><br><span class="line">plugins:</span><br><span class="line">    fancybox: true # options: true, false</span><br><span class="line">    google_analytics: UA-74183669-1 # enter the tracking ID for your Google Analytics</span><br><span class="line">    google_site_verification: # enter Google site verification code</span><br><span class="line">    baidu_analytics: 631ec0463314a38fa28346d593dadbed # enter Baidu Analytics hash key</span><br><span class="line"></span><br><span class="line"># Miscellaneous</span><br><span class="line">miscellaneous:</span><br><span class="line">    open_graph: # see http://ogp.me</span><br><span class="line">        fb_app_id:</span><br><span class="line">        fb_admins:</span><br><span class="line">        twitter_id:</span><br><span class="line">        google_plus:</span><br><span class="line">    links:</span><br><span class="line">        Github: http://github.com/thesharing/</span><br></pre></td></tr></table></figure>
 <h3 id="可配置项"><a href="#可配置项" class="headerlink" title="可配置项"></a>可配置项</h3><ul>
 <li>在配置中按照<code>页面名: 页面目录</code>的格式可以自行添加页面。</li>
 <li><code>logo</code>中可以设置Logo以及Logo大小。建议直接替换而非自定目录。</li>
@@ -356,17 +262,17 @@ var _hmt = _hmt || [];
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/4.png" alt="Disqus 设置"></p>
 <p><img src="http://7xr64j.com1.z0.glb.clouddn.com/5.png" alt="Disqus 设置"></p>
 <h3 id="生成并预览"><a href="#生成并预览" class="headerlink" title="生成并预览"></a>生成并预览</h3><p>设置完成后，在hexo文件夹下打开命令行输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>如果运行成功，那么输入<code>localhost:4000</code>即可打开你的个人主页。</p>
 <h2 id="部署你的Blog"><a href="#部署你的Blog" class="headerlink" title="部署你的Blog"></a>部署你的Blog</h2><p>之前我们一直在本地运行，接下来我们要把这个个人主页部署到GitHub上去。在每一次对设置的修改以及写文章之后都要用<code>hexo generate</code>命令重新生成一次。然后右击hexo文件夹，选择<code>Git Bash Here</code>，打开Git Bash，在Git Bash中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>等待安装完成以后，再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>有可能会提示输入邮箱和密码，按照之前设置的输入即可。如果失败可能是网络问题，重新尝试一下。</p>
 <p>提示成功以后可以在你的GitHub的该Repository下看到Commit成功+1，说明服务器已经接受了你的提交，一般等待3-5分钟以后，你的Blog便会被刷新。此时用<code>你的用户名.github.io</code>即可访问到你的Blog，怎么样，是不是很Coooool？</p>
 <h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>那么说了这么多，个人主页已经建好，接下来就是充实内容了。内容怎么充实呢？写文章咯。</p>
 <p>在hexo文件夹下打开命令行，输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 <p>这里<code>[layout]</code>是指你所用的模板名称，所有模板都在<code>hexo\scaffolds\</code>文件夹下存放，关于模板的更多信息，请访问<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">官方Doc</a>，里面有很详尽的解释。</p>
 <p><code>title</code>则是文章的标题，可以为中文。 在执行完命令后，到<code>hexo\source\_posts\</code>文件夹下可以找到生成的Markdown文件。用MarkdownPad 2或者Visual Studio Code打开Markdown文件即可开始书写你的文章，正如我现在所做。至于<a href="https://gist.github.com/Thesharing/5e5f5842ede0cb6d95d38ea39d9e0234" target="_blank" rel="noopener">Markdown文法</a>，又是一个大坑。</p>
 <p>对于图片，我们需要将文章中要用到的图片上传至图床然后引用外链。图床是指存放图片的云存储空间，我个人正在使用的是<a href="www.qiniu.com">七牛</a>，可以找一个适合自己的图床一直用下去。</p>
@@ -385,274 +291,85 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 
-        
         </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
 </div>
 
-    <a data-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/" data-id="cjqz53q8q0001ukfnv1rgbu1v" class="article-share-link"><i class="fas fa-share"></i>分享到</a>
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2016/04/30/BoP/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">用编程展现绘画之美</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
 <script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/04/30/BoP/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    用编程展现绘画之美
-                
-            </div>
-        </a>
-    
-    
-</nav>
-
-
-    
-</article>
-
-
-    
-    
-        <section id="comments">
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-</section>
-    
-
-</section>
-            
-                
-<aside id="sidebar">
-   
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">最新文章</h3>
-        <div class="widget">
-            <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
-                            <p class="item-title"><a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="title">在Ubuntu Server上配置CUDA环境</a></p>
-                            <p class="item-date"><time datetime="2018-08-15T03:00:09.000Z" itemprop="datePublished">2018-08-15</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
-                            <p class="item-title"><a href="/2018/02/26/Write-Markdown-with-Formulas/" class="title">用Markdown写公式</a></p>
-                            <p class="item-date"><time datetime="2018-02-26T09:55:09.000Z" itemprop="datePublished">2018-02-26</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Basic/">Basic</a></p>
-                            <p class="item-title"><a href="/2016/11/01/How-to-Write-Markdown/" class="title">如何快速掌握Markdown语法？</a></p>
-                            <p class="item-date"><time datetime="2016-11-01T03:25:25.000Z" itemprop="datePublished">2016-11-01</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/DanmakuPie/">DanmakuPie</a></p>
-                            <p class="item-title"><a href="/2016/08/29/BackgroundWorker/" class="title">浅谈BackgroundWorker的使用</a></p>
-                            <p class="item-date"><time datetime="2016-08-29T11:06:41.000Z" itemprop="datePublished">2016-08-29</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Creative/">Creative</a></p>
-                            <p class="item-title"><a href="/2016/04/30/BoP/" class="title">用编程展现绘画之美</a></p>
-                            <p class="item-date"><time datetime="2016-04-30T15:59:41.000Z" itemprop="datePublished">2016-04-30</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">分类</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Basic/">Basic</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Creative/">Creative</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DanmakuPie/">DanmakuPie</a><span class="category-list-count">1</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签</h3>
-        <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BoP2016/">BoP2016</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Configuration/">Configuration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WPF/">WPF</a><span class="tag-list-count">1</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签云</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://github.com/thesharing/">GitHub - Thesharing</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://leetcode.com/thesharing/">LeetCode - Thesharing</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://www.zhihu.com/people/Thesharing/">知乎 - 柏星</a>
-                    </li>
-                
-                    <li>
-                        <a href="http://www.douban.com/people/thesharing/">豆瓣 - cyprestar</a>
-                    </li>
-                
-                    <li>
-                        <a href="http://blog.zhengzi.me/">政子的博客</a>
-                    </li>
-                
-                    <li>
-                        <a href="http://www.danmakupie.com/">弹幕派</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-    
-    <div id="toTop" class="fas fa-angle-up"></div>
-</aside>
-
-            
-        </div>
-        <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2019 Zhilong<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
-        </div>
-    </div>
-</footer>
-        
-    
-    <script>
     var disqus_config = function () {
-        
-            this.page.url = 'http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/';
-        
-        this.page.identifier = 'Build-a-Github-Blog-with-Hexo';
+        this.page.url = 'http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/';
+        this.page.identifier = '2016/02/23/Build-a-Github-Blog-with-Hexo/';
     };
-    (function() { 
+    (function() {
         var d = document, s = d.createElement('script');  
         s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
@@ -660,23 +377,904 @@ var _hmt = _hmt || [];
     })();
 </script>
 
-
-
-
+<div id="disqus_thread">
     
-    
-    
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    
-
-
-
-<!-- Custom Scripts -->
-<script src="/js/main.js"></script>
-
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
     </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image container is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Zhilong
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        A CS Student
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>北京, 中国</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/thesharing/">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/thesharing/">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
+                
+                <i class="fab fa-stack-overflow"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Steam" href="http://steamcommunity.com/id/cyprestar/">
+                
+                <i class="fab fa-steam"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Instagram" href="http://www.instagram.com/cyprestar/">
+                
+                <i class="fab fa-instagram"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Weibo" href=" http://weibo.com/sharinginworld/">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/cyprestar/">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com/cyprestar/">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="http://github.com/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">GitHub - Thesharing</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://leetcode.com/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">LeetCode - Thesharing</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">leetcode.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://www.zhihu.com/people/Thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">知乎 - 柏星</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.zhihu.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.douban.com/people/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">豆瓣 - cyprestar</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.douban.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://blog.zhengzi.me/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">政子的博客</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">blog.zhengzi.me</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.danmakupie.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">弹幕派</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.danmakupie.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
+                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
+                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
+                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-08-29T11:06:41.000Z">2016-08-29</time></div>
+                    <a href="/2016/08/29/BackgroundWorker/" class="has-link-black-ter is-size-6">浅谈BackgroundWorker的使用</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-04-30T15:59:41.000Z">2016-04-30</time></div>
+                    <a href="/2016/04/30/BoP/" class="has-link-black-ter is-size-6">用编程展现绘画之美</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Creative/">Creative</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Basic/">
+            <span class="level-start">
+                <span class="level-item">Basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Creative/">
+            <span class="level-start">
+                <span class="level-item">Creative</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/DanmakuPie/">
+            <span class="level-start">
+                <span class="level-item">DanmakuPie</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BoP2016/">
+                        <span class="tag">BoP2016</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Configuration/">
+                        <span class="tag">Configuration</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Markdown/">
+                        <span class="tag">Markdown</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/WPF/">
+                        <span class="tag">WPF</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
+                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
+                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
+                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-08-29T11:06:41.000Z">2016-08-29</time></div>
+                    <a href="/2016/08/29/BackgroundWorker/" class="has-link-black-ter is-size-6">浅谈BackgroundWorker的使用</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-04-30T15:59:41.000Z">2016-04-30</time></div>
+                    <a href="/2016/04/30/BoP/" class="has-link-black-ter is-size-6">用编程展现绘画之美</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Creative/">Creative</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Basic/">
+            <span class="level-start">
+                <span class="level-item">Basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Creative/">
+            <span class="level-start">
+                <span class="level-item">Creative</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/DanmakuPie/">
+            <span class="level-start">
+                <span class="level-item">DanmakuPie</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BoP2016/">
+                        <span class="tag">BoP2016</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Configuration/">
+                        <span class="tag">Configuration</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Markdown/">
+                        <span class="tag">Markdown</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/WPF/">
+                        <span class="tag">WPF</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.png" alt="用Hexo搭建一个Github个人Blog" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Zhilong&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
 </body>
 </html>
