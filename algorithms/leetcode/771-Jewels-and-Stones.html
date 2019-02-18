@@ -2,25 +2,26 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: Basic - Zhilong&#39;s Blog</title>
+<title>771 Jewels and Stones - Zhilong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Zhilong&apos;s personal blog.">
+    <meta name="description" content="Easy You’re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of th">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Zhilong&#39;s Blog">
-<meta property="og:url" content="http://www.cyprestar.com/categories/Basic/index.html">
+<meta property="og:title" content="771 Jewels and Stones">
+<meta property="og:url" content="http://www.cyprestar.com/algorithms/leetcode/771-Jewels-and-Stones.html">
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
-<meta property="og:description" content="Zhilong&apos;s personal blog.">
+<meta property="og:description" content="Easy You’re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of th">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-18T14:06:13.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhilong&#39;s Blog">
-<meta name="twitter:description" content="Zhilong&apos;s personal blog.">
+<meta name="twitter:title" content="771 Jewels and Stones">
+<meta name="twitter:description" content="Easy You’re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of th">
 
 
 
-<link rel="alternative" href="rss.xml" title="Zhilong&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="rss.xml" title="771 Jewels and Stones" type="application/atom+xml">
 
 
 
@@ -106,7 +107,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                <img src="/images/logo.png" alt="771 Jewels and Stones" height="28">
             
             </a>
         </div>
@@ -152,225 +153,99 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                771 Jewels and Stones
+            
+        </h1>
+        <div class="content">
+            <p><strong>Easy</strong></p>
+<p>You’re given strings <code>J</code> representing the types of stones that are jewels, and <code>S</code> representing the stones you have.  Each character in <code>S</code> is a type of stone you have.  You want to know how many of the stones you have are also jewels.</p>
+<p>The letters in <code>J</code> are guaranteed distinct, and all characters in <code>J</code> and <code>S</code> are letters. Letters are case sensitive, so <code>&quot;a&quot;</code> is considered a different type of stone from <code>&quot;A&quot;</code>.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: J = &quot;z&quot;, S = &quot;ZZ&quot;</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li><code>S</code> and <code>J</code> will consist of letters and have length at most 50.</li>
+<li>The characters in <code>J</code> are distinct.</li>
+</ul>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>第一感觉是两重循环，遍历S的每一个字符，寻找J里面有没有相同的字符，复杂度是$O(n^2)$。后来想了一下，不需要这么高的复杂度，只需要用一个bool数组把字符是否出现存下来就行。复杂度降至$O(n)$。</p>
+<h3 id="解"><a href="#解" class="headerlink" title="解"></a>解</h3><figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">numJewelsInStones</span><span class="hljs-params">(<span class="hljs-built_in">string</span> J, <span class="hljs-built_in">string</span> S)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (J.length() == <span class="hljs-number">0</span> || S.length() == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">int</span> ptr[<span class="hljs-number">52</span>];</span><br><span class="line">    <span class="hljs-keyword">int</span> temp = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-built_in">memset</span>(ptr, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>) * <span class="hljs-number">52</span>);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> &amp;c : J) &#123;</span><br><span class="line">        temp = <span class="hljs-keyword">int</span>(c);</span><br><span class="line">        <span class="hljs-keyword">if</span> (temp &gt; <span class="hljs-number">96</span>) &#123;</span><br><span class="line">            ptr[temp - <span class="hljs-number">71</span>] = <span class="hljs-number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            ptr[temp - <span class="hljs-number">65</span>] = <span class="hljs-number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> &amp;c : S) &#123;</span><br><span class="line">        temp = <span class="hljs-keyword">int</span>(c);</span><br><span class="line">        <span class="hljs-keyword">if</span> (temp &gt; <span class="hljs-number">96</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (ptr[temp - <span class="hljs-number">71</span>] == <span class="hljs-number">1</span>) &#123;</span><br><span class="line">                res += <span class="hljs-number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(ptr[temp - <span class="hljs-number">65</span>] == <span class="hljs-number">1</span>) &#123;</span><br><span class="line">            res += <span class="hljs-number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-built_in">cout</span> &lt;&lt; numJewelsInStones(<span class="hljs-string">"aA"</span>, <span class="hljs-string">"aAAbbbb"</span>) &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
             
-            <li class="is-active"><a href="#" aria-current="page">Basic</a></li>
-        </ul>
-        </nav>
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
     </div>
 </div>
 
-    <div class="card">
+
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://www.cyprestar.com/algorithms/leetcode/771-Jewels-and-Stones.html';
+        this.page.identifier = 'algorithms/leetcode/771-Jewels-and-Stones.html';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
     
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    11 分钟 读完 (大约 1604 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/">在Ubuntu Server上配置CUDA环境</a>
-            
-        </h1>
-        <div class="content">
-            <p>在配置Ubuntu Server的CUDA和TensorFlow的过程中，遇到了很多问题（驱动无法正常运行、CUDA无法正常配置等等），在网上找了很多资料，最终正确安装驱动、CUDA、cuDNN和TensorFlow（GPU版本），因此将安装过程记录下来，方便以后再配环境。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 小时 读完 (大约 7143 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/02/26/Write-Markdown-with-Formulas/">用Markdown写公式</a>
-            
-        </h1>
-        <div class="content">
-            <p>在写课堂报告的时候，用Latex会比较笨重，用Word插入公式又太麻烦，用Markdown则恰如其分，因此这篇文章主要涉及如何在Markdown中使用Mathjax，参考LaTeX语法来书写公式。公式可以在Typora里导出成PDF文档。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/02/26/Write-Markdown-with-Formulas/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    13 分钟 读完 (大约 1906 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2016/11/01/How-to-Write-Markdown/">如何快速掌握Markdown语法？</a>
-            
-        </h1>
-        <div class="content">
-            <p>Markdown 是一种轻量级标记语言。<br>它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档。<br>这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>掌握Markdown语法的基本语法，只需要十点就够了。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2016/11/01/How-to-Write-Markdown/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2016-02-23T08:46:29.000Z">2016-02-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    34 分钟 读完 (大约 5144 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2016/02/23/Build-a-Github-Blog-with-Hexo/">用Hexo搭建一个GitHub个人Blog</a>
-            
-        </h1>
-        <div class="content">
-            <p>不知道有没有人像我一样，想要建立个人主页，可是对JaveScript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在GitHub搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。Here we go.<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2016/02/23/Build-a-Github-Blog-with-Hexo/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 </div>
                 
 
@@ -1138,7 +1013,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                    <img src="/images/logo.png" alt="771 Jewels and Stones" height="28">
                 
                 </a>
                 <p class="is-size-7">

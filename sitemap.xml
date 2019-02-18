@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/771-Jewels-and-Stones.html</loc>
+    
+    <lastmod>2019-02-18T14:06:13.665Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/index.html</loc>
+    
+    <lastmod>2019-02-18T14:04:39.684Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/about/index.html</loc>
+    
+    <lastmod>2019-02-18T13:40:53.490Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cyprestar.com/2019/02/06/An-always-on-top-window-based-on-electron/</loc>
     
     <lastmod>2019-02-13T13:44:47.031Z</lastmod>
@@ -40,13 +61,6 @@
     <loc>http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/</loc>
     
     <lastmod>2018-08-15T03:40:04.117Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cyprestar.com/about/index.html</loc>
-    
-    <lastmod>2016-12-25T06:25:40.000Z</lastmod>
     
   </url>
   
