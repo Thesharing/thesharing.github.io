@@ -2,25 +2,26 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2016/8 - Zhilong&#39;s Blog</title>
+<title>709 To Lower Case - Zhilong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Zhilong&apos;s personal blog.">
+    <meta name="description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Zhilong&#39;s Blog">
-<meta property="og:url" content="http://www.cyprestar.com/archives/2016/08/index.html">
+<meta property="og:title" content="709 To Lower Case">
+<meta property="og:url" content="http://www.cyprestar.com/algorithms/leetcode/709-To-Lower-Case.html">
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
-<meta property="og:description" content="Zhilong&apos;s personal blog.">
+<meta property="og:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-20T14:29:45.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhilong&#39;s Blog">
-<meta name="twitter:description" content="Zhilong&apos;s personal blog.">
+<meta name="twitter:title" content="709 To Lower Case">
+<meta name="twitter:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
 
 
 
-<link rel="alternative" href="rss.xml" title="Zhilong&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="rss.xml" title="709 To Lower Case" type="application/atom+xml">
 
 
 
@@ -106,7 +107,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                <img src="/images/logo.png" alt="709 To Lower Case" height="28">
             
             </a>
         </div>
@@ -151,39 +152,101 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                709 To Lower Case
+            
+        </h1>
+        <div class="content">
+            <p><strong>Easy</strong></p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;Hello&quot;</span><br><span class="line">Output: &quot;hello&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;here&quot;</span><br><span class="line">Output: &quot;here&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;LOVELY&quot;</span><br><span class="line">Output: &quot;lovely&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>两种方式，一种是遍历字符按照ASCII大写变小写即可。另一种是利用C++的内置函数<code>tolower()</code>。不过由于<code>int std::tolower ( int c );</code>的输入是字符，因此需要用<code>std::transform()</code>来进行处理。</p>
+<figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function">OutputIterator <span class="hljs-title">transform</span> <span class="hljs-params">(InputIterator first1, InputIterator last1,</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">                            OutputIterator result, UnaryOperation op)</span></span></span><br></pre></td></tr></table></figure>
+<p><a href="http://www.cplusplus.com/reference/algorithm/transform/" target="_blank" rel="noopener">std::transform</a></p>
+<p><a href="https://blog.csdn.net/jerryjbiao/article/details/7523110" target="_blank" rel="noopener">简单的程序诠释C++ STL算法系列之十八：transform</a></p>
+<p><a href="http://www.cplusplus.com/reference/cctype/tolower/" target="_blank" rel="noopener">tolower</a></p>
+<p><a href="https://stackoverflow.com/questions/313970/how-to-convert-stdstring-to-lower-case" target="_blank" rel="noopener">How to convert std::string to lower case?</a></p>
+<p><a href="https://stackoverflow.com/questions/5539249/why-cant-transforms-begin-s-end-s-begin-tolower-be-complied-successfu" target="_blank" rel="noopener">Why can’t “transform(s.begin(),s.end(),s.begin(),tolower)” be complied successfully?</a></p>
+<h3 id="解"><a href="#解" class="headerlink" title="解"></a>解</h3><figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span></span><br><span class="line"><span class="hljs-keyword">public</span>:</span><br><span class="line">    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">toLowerCase</span><span class="hljs-params">(<span class="hljs-built_in">string</span> str)</span> </span>&#123;</span><br><span class="line">        transform(str.begin(), str.end(), str.begin(), ::<span class="hljs-built_in">tolower</span>);</span><br><span class="line">        <span class="hljs-keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        八月 2016
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2016-08-29T11:06:41.000Z">2016-08-29</time>
-                        <a href="/2016/08/29/BackgroundWorker/" class="has-link-black-ter is-size-6">浅谈BackgroundWorker的使用</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
 </div>
 
 
 
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://www.cyprestar.com/algorithms/leetcode/709-To-Lower-Case.html';
+        this.page.identifier = 'algorithms/leetcode/709-To-Lower-Case.html';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
@@ -951,7 +1014,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                    <img src="/images/logo.png" alt="709 To Lower Case" height="28">
                 
                 </a>
                 <p class="is-size-7">

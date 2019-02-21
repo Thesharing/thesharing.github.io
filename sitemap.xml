@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.cyprestar.com/algorithms/leetcode/771-Jewels-and-Stones.html</loc>
+    <loc>http://www.cyprestar.com/algorithms/index.html</loc>
     
-    <lastmod>2019-02-18T14:06:13.665Z</lastmod>
+    <lastmod>2019-02-20T14:44:18.447Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.cyprestar.com/algorithms/index.html</loc>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/709-To-Lower-Case.html</loc>
     
-    <lastmod>2019-02-18T14:04:39.684Z</lastmod>
+    <lastmod>2019-02-20T14:29:45.349Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/100-Same-Tree.html</loc>
+    
+    <lastmod>2019-02-20T14:29:31.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/929-Unique-Email-Addresses.html</loc>
+    
+    <lastmod>2019-02-20T14:03:46.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/771-Jewels-and-Stones.html</loc>
+    
+    <lastmod>2019-02-18T14:06:13.665Z</lastmod>
     
   </url>
   

@@ -2,25 +2,26 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2016/8 - Zhilong&#39;s Blog</title>
+<title>929 Unique Email Addresses - Zhilong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Zhilong&apos;s personal blog.">
+    <meta name="description" content="Easy Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercas">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Zhilong&#39;s Blog">
-<meta property="og:url" content="http://www.cyprestar.com/archives/2016/08/index.html">
+<meta property="og:title" content="929 Unique Email Addresses">
+<meta property="og:url" content="http://www.cyprestar.com/algorithms/leetcode/929-Unique-Email-Addresses.html">
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
-<meta property="og:description" content="Zhilong&apos;s personal blog.">
+<meta property="og:description" content="Easy Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercas">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-20T14:03:46.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zhilong&#39;s Blog">
-<meta name="twitter:description" content="Zhilong&apos;s personal blog.">
+<meta name="twitter:title" content="929 Unique Email Addresses">
+<meta name="twitter:description" content="Easy Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercas">
 
 
 
-<link rel="alternative" href="rss.xml" title="Zhilong&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="rss.xml" title="929 Unique Email Addresses" type="application/atom+xml">
 
 
 
@@ -106,7 +107,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                <img src="/images/logo.png" alt="929 Unique Email Addresses" height="28">
             
             </a>
         </div>
@@ -151,39 +152,108 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                929 Unique Email Addresses
+            
+        </h1>
+        <div class="content">
+            <p><strong>Easy</strong></p>
+<p>Every email consists of a local name and a domain name, separated by the @ sign.</p>
+<p>For example, in <code>alice@leetcode.com</code>, <code>alice</code> is the local name, and <code>leetcode.com</code> is the domain name.</p>
+<p>Besides lowercase letters, these emails may contain <code>&#39;.&#39;</code>s or <code>&#39;+&#39;</code>s.</p>
+<p>If you add periods (<code>&#39;.&#39;</code>) between some characters in the <strong>local name</strong> part of an email address, mail sent there will be forwarded to the same address without dots in the local name.  For example, <code>&quot;alice.z@leetcode.com&quot;</code> and <code>&quot;alicez@leetcode.com&quot;</code> forward to the same email address.  (Note that this rule does not apply for domain names.)</p>
+<p>If you add a plus (<code>&#39;+&#39;</code>) in the <strong>local name</strong>, everything after the first plus sign will be <strong>ignored</strong>. This allows certain emails to be filtered, for example <code>m.y+name@email.com</code> will be forwarded to <code>my@email.com</code>.  (Again, this rule does not apply for domain names.)</p>
+<p>It is possible to use both of these rules at the same time.</p>
+<p>Given a list of <code>emails</code>, we send one email to each address in the list.  How many different addresses actually receive mails? </p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;test.email+alex@leetcode.com&quot;,&quot;test.e.mail+bob.cathy@leetcode.com&quot;,&quot;testemail+david@lee.tcode.com&quot;]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: &quot;testemail@leetcode.com&quot; and &quot;testemail@lee.tcode.com&quot; actually receive mails</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li><code>1 &lt;= emails[i].length &lt;= 100</code></li>
+<li><code>1 &lt;= emails.length &lt;= 100</code></li>
+<li>Each <code>emails[i]</code> contains exactly one <code>&#39;@&#39;</code> character.</li>
+</ul>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>一开始看题目这么长有点懵，后面整理一下思路就是遍历一遍按照状态机得到结果即可。主要是注意C++中<code>vector</code>的遍历以及<code>string</code>的遍历。</p>
+<p><code>vector</code>的遍历：</p>
+<figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt;::iterator it = v.begin(); it != v.end(); it++) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><code>string</code>的遍历：</p>
+<figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> &amp;c : *ch) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解"><a href="#解" class="headerlink" title="解"></a>解</h3><figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span></span><br><span class="line"><span class="hljs-keyword">public</span>:</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">numUniqueEmails</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt;&amp; emails)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt; res;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt;::iterator it = emails.begin(); it != emails.end(); it++) &#123;</span><br><span class="line">            <span class="hljs-built_in">string</span> s = <span class="hljs-string">""</span>;</span><br><span class="line">            <span class="hljs-keyword">bool</span> localname = <span class="hljs-literal">true</span>;</span><br><span class="line">            <span class="hljs-keyword">bool</span> afterplus = <span class="hljs-literal">false</span>;</span><br><span class="line">            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> &amp;c : *it) &#123;</span><br><span class="line">                <span class="hljs-keyword">switch</span> (c) &#123;</span><br><span class="line">                <span class="hljs-keyword">case</span> <span class="hljs-string">'@'</span>:</span><br><span class="line">                    localname = <span class="hljs-literal">false</span>;</span><br><span class="line">                    s += c;</span><br><span class="line">                    <span class="hljs-keyword">break</span>;</span><br><span class="line">                <span class="hljs-keyword">case</span> <span class="hljs-string">'.'</span>:</span><br><span class="line">                    <span class="hljs-keyword">if</span> (!localname) &#123;</span><br><span class="line">                        s += c;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="hljs-keyword">break</span>;</span><br><span class="line">                <span class="hljs-keyword">case</span> <span class="hljs-string">'+'</span>:</span><br><span class="line">                    <span class="hljs-keyword">if</span> (localname) &#123;</span><br><span class="line">                        afterplus = <span class="hljs-literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                        s += c;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="hljs-keyword">break</span>;</span><br><span class="line">                <span class="hljs-keyword">default</span>:</span><br><span class="line">                    <span class="hljs-keyword">if</span> (!localname || !afterplus) &#123;</span><br><span class="line">                        s += c;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="hljs-keyword">bool</span> equal = <span class="hljs-literal">false</span>;</span><br><span class="line">            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt;::iterator it2 = res.begin(); it2 != res.end(); it2++) &#123;</span><br><span class="line">                <span class="hljs-keyword">if</span>(s == *it2) &#123;</span><br><span class="line">                    equal = <span class="hljs-literal">true</span>;</span><br><span class="line">                    <span class="hljs-keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="hljs-keyword">if</span> (!equal) &#123;</span><br><span class="line">                res.push_back(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> res.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        八月 2016
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2016-08-29T11:06:41.000Z">2016-08-29</time>
-                        <a href="/2016/08/29/BackgroundWorker/" class="has-link-black-ter is-size-6">浅谈BackgroundWorker的使用</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
 </div>
 
 
 
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://www.cyprestar.com/algorithms/leetcode/929-Unique-Email-Addresses.html';
+        this.page.identifier = 'algorithms/leetcode/929-Unique-Email-Addresses.html';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
@@ -951,7 +1021,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Zhilong&#39;s Blog" height="28">
+                    <img src="/images/logo.png" alt="929 Unique Email Addresses" height="28">
                 
                 </a>
                 <p class="is-size-7">
