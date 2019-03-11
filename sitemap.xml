@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/51-n-queens.html</loc>
+    
+    <lastmod>2019-03-11T18:22:08.733Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/37-sudoku-solver.html</loc>
+    
+    <lastmod>2019-03-11T18:20:02.843Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cyprestar.com/2019/03/11/Configure-vscode-for-cpp/</loc>
     
     <lastmod>2019-03-11T18:14:22.128Z</lastmod>
@@ -16,13 +30,6 @@
   </url>
   
   <url>
-    <loc>http://www.cyprestar.com/algorithms/leetcode/51-n-queens.html</loc>
-    
-    <lastmod>2019-03-10T17:38:48.019Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.cyprestar.com/algorithms/POJ/course/index.html</loc>
     
     <lastmod>2019-03-06T15:09:34.287Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://www.cyprestar.com/about/index.html</loc>
     
     <lastmod>2019-03-06T14:58:59.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cyprestar.com/algorithms/leetcode/37-sudoku-solver.html</loc>
-    
-    <lastmod>2019-03-06T14:47:55.603Z</lastmod>
     
   </url>
   
