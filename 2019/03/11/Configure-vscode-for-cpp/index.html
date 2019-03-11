@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
 <meta property="og:description" content="最近一直在用C++写LeetCode，本地调试的时候一直在纠结用什么编辑器，CLion有点耗资源，Visual Studio又有点杀鸡焉用宰牛刀，Dev-Cpp已经太古老了，于是决定用VS Code来写，但是官方文档写的有点……不是特别友好，因此在这里记录一下自己是怎么配置的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T13:00:53.568Z">
+<meta property="og:updated_time" content="2019-03-11T13:01:56.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Visual Studio Code配置C&#x2F;C++编译运行环境">
 <meta name="twitter:description" content="最近一直在用C++写LeetCode，本地调试的时候一直在纠结用什么编辑器，CLion有点耗资源，Visual Studio又有点杀鸡焉用宰牛刀，Dev-Cpp已经太古老了，于是决定用VS Code来写，但是官方文档写的有点……不是特别友好，因此在这里记录一下自己是怎么配置的。">
@@ -169,7 +169,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    23 分钟 读完 (大约 3388 个字)
+                    23 分钟 读完 (大约 3391 个字)
                 </span>
                 
                 
@@ -195,7 +195,7 @@ var _hmt = _hmt || [];
 </li>
 <li><a href="#3-测试">3 测试</a></li>
 </ul>
-<h3 id="1-安装MinGW或者Clang"><a href="#1-安装MinGW或者Clang" class="headerlink" title="1 安装MinGW或者Clang"></a>1 安装MinGW或者Clang</h3><p>目前比较主流的C++编译器就<a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">MinGW</a>（也就是Windows版本的GCC）以及<a href="http://releases.llvm.org/download.html" target="_blank" rel="noopener">CLang</a>。在这里以MinGW为例。</p>
+<h3 id="1-安装MinGW或者Clang"><a href="#1-安装MinGW或者Clang" class="headerlink" title="1 安装MinGW或者Clang"></a>1 安装MinGW或者Clang</h3><p>目前Windows上比较主流的C++编译器包括<a href="https://sourceforge.net/projects/mingw-w64/files/" target="_blank" rel="noopener">MinGW</a>（也就是Windows版本的GCC）以及<a href="http://releases.llvm.org/download.html" target="_blank" rel="noopener">CLang</a>。在这里以MinGW为例。</p>
 <p>MinGW可以下载Onlien Installer然后选择对应的版本号进行安装，在这里我选择了8.1.0, posix和seh。对于不同版本的对比可以参考这篇<a href="https://stackoverflow.com/questions/29947302/meaning-of-options-in-mingw-w64-installer" target="_blank" rel="noopener">StackOverflow</a>。</p>
 <p>安装完成后将<code>MinGW安装目录/bin</code>文件夹（例如<code>C:\Dev\mingw64\bin</code>）加入环境变量，具体可以参考<a href="https://www.eclipse.org/4diac/documentation/html/installation/minGW.html" target="_blank" rel="noopener">这篇文档</a>。加入环境变量后重新开启一个命令行然后输入<code>g++ --version</code>就可以看到已经安装的MinGW的版本号了。</p>
 <h3 id="2-安装并配置C-C-插件"><a href="#2-安装并配置C-C-插件" class="headerlink" title="2 安装并配置C/C++插件"></a>2 安装并配置C/C++插件</h3><p>访问<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener">C/C++ - Visual Studio Marketplace</a>点击<code>Install</code>启动VS Code安装插件即可。</p>
