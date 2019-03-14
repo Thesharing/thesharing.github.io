@@ -7,17 +7,17 @@
 
 
 
-    <meta name="description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
+    <meta name="description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot;  实现函数">
 <meta property="og:type" content="website">
 <meta property="og:title" content="709 To Lower Case">
 <meta property="og:url" content="http://www.cyprestar.com/algorithms/leetcode/709-To-Lower-Case.html">
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
-<meta property="og:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
+<meta property="og:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot;  实现函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-20T14:29:45.349Z">
+<meta property="og:updated_time" content="2019-03-14T18:42:39.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="709 To Lower Case">
-<meta name="twitter:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot; 想法两种方式">
+<meta name="twitter:description" content="Easy Example 1: 12Input: &amp;quot;Hello&amp;quot;Output: &amp;quot;hello&amp;quot; Example 2: 12Input: &amp;quot;here&amp;quot;Output: &amp;quot;here&amp;quot; Example 3: 12Input: &amp;quot;LOVELY&amp;quot;Output: &amp;quot;lovely&amp;quot;  实现函数">
 
 
 
@@ -169,6 +169,14 @@ var _hmt = _hmt || [];
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;here&quot;</span><br><span class="line">Output: &quot;here&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;LOVELY&quot;</span><br><span class="line">Output: &quot;lovely&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。 </p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;Hello&quot;</span><br><span class="line">输出: &quot;hello&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;here&quot;</span><br><span class="line">输出: &quot;here&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>示例</strong> <strong>3：</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;LOVELY&quot;</span><br><span class="line">输出: &quot;lovely&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>两种方式，一种是遍历字符按照ASCII大写变小写即可。另一种是利用C++的内置函数<code>tolower()</code>。不过由于<code>int std::tolower ( int c );</code>的输入是字符，因此需要用<code>std::transform()</code>来进行处理。</p>
 <figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function">OutputIterator <span class="hljs-title">transform</span> <span class="hljs-params">(InputIterator first1, InputIterator last1,</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">                            OutputIterator result, UnaryOperation op)</span></span></span><br></pre></td></tr></table></figure>
 <p><a href="http://www.cplusplus.com/reference/algorithm/transform/" target="_blank" rel="noopener">std::transform</a></p>

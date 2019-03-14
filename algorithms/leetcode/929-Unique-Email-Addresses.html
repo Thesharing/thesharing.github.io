@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
 <meta property="og:description" content="Easy Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercas">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-20T14:03:46.443Z">
+<meta property="og:updated_time" content="2019-03-14T18:43:43.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="929 Unique Email Addresses">
 <meta name="twitter:description" content="Easy Every email consists of a local name and a domain name, separated by the @ sign. For example, in alice@leetcode.com, alice is the local name, and leetcode.com is the domain name. Besides lowercas">
@@ -177,6 +177,22 @@ var _hmt = _hmt || [];
 <li><code>1 &lt;= emails[i].length &lt;= 100</code></li>
 <li><code>1 &lt;= emails.length &lt;= 100</code></li>
 <li>Each <code>emails[i]</code> contains exactly one <code>&#39;@&#39;</code> character.</li>
+</ul>
+<hr>
+<p>每封电子邮件都由一个本地名称和一个域名组成，以 @ 符号分隔。</p>
+<p>例如，在 <code>alice@leetcode.com</code>中， <code>alice</code> 是本地名称，而 <code>leetcode.com</code> 是域名。</p>
+<p>除了小写字母，这些电子邮件还可能包含 <code>&#39;.&#39;</code> 或 <code>&#39;+&#39;</code>。</p>
+<p>如果在电子邮件地址的<strong>本地名称</strong>部分中的某些字符之间添加句点（<code>&#39;.&#39;</code>），则发往那里的邮件将会转发到本地名称中没有点的同一地址。例如，<code>&quot;alice.z@leetcode.com”</code> 和 <code>“alicez@leetcode.com”</code> 会转发到同一电子邮件地址。 （请注意，此规则不适用于域名。）</p>
+<p>如果在<strong>本地名称</strong>中添加加号（<code>&#39;+&#39;</code>），则会忽略第一个加号后面的所有内容。这允许过滤某些电子邮件，例如 <code>m.y+name@email.com</code> 将转发到 <code>my@email.com</code>。 （同样，此规则不适用于域名。）</p>
+<p>可以同时使用这两个规则。</p>
+<p>给定电子邮件列表 <code>emails</code>，我们会向列表中的每个地址发送一封电子邮件。实际收到邮件的不同地址有多少？</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：[&quot;test.email+alex@leetcode.com&quot;,&quot;test.e.mail+bob.cathy@leetcode.com&quot;,&quot;testemail+david@lee.tcode.com&quot;]</span><br><span class="line">输出：2</span><br><span class="line">解释：实际收到邮件的是 &quot;testemail@leetcode.com&quot; 和 &quot;testemail@lee.tcode.com&quot;。</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= emails[i].length &lt;= 100</code></li>
+<li><code>1 &lt;= emails.length &lt;= 100</code></li>
+<li>每封 <code>emails[i]</code> 都包含有且仅有一个 <code>&#39;@&#39;</code> 字符。</li>
 </ul>
 <h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>一开始看题目这么长有点懵，后面整理一下思路就是遍历一遍按照状态机得到结果即可。主要是注意C++中<code>vector</code>的遍历以及<code>string</code>的遍历。</p>
 <p><code>vector</code>的遍历：</p>
