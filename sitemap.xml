@@ -2,6 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cyprestar.com/algorithms/index.html</loc>
+    
+    <lastmod>2019-04-04T17:43:27.315Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/19-remove-nth-node-from-end-of-list.html</loc>
+    
+    <lastmod>2019-04-04T17:41:01.162Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/17-letter-combinations-of-a-phone-number.html</loc>
+    
+    <lastmod>2019-04-04T17:34:51.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/16-3-sum-closest.html</loc>
+    
+    <lastmod>2019-04-04T17:26:51.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/15-3-sum.html</loc>
+    
+    <lastmod>2019-04-04T17:20:17.202Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/14-longest-common-prefix.html</loc>
+    
+    <lastmod>2019-04-04T17:13:20.868Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/13-roman-to-integer.html</loc>
+    
+    <lastmod>2019-04-04T17:10:45.807Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/12-integer-to-roman.html</loc>
+    
+    <lastmod>2019-04-04T17:06:14.621Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/11-container-with-most-water.html</loc>
+    
+    <lastmod>2019-04-04T16:13:35.990Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/10-regular-expression-matching.html</loc>
+    
+    <lastmod>2019-03-19T16:37:17.155Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/9-palindrome-number.html</loc>
+    
+    <lastmod>2019-03-19T09:46:36.073Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyprestar.com/algorithms/leetcode/3-longest-substring-without-repeating-characters.html</loc>
+    
+    <lastmod>2019-03-19T09:40:10.353Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cyprestar.com/algorithms/leetcode/6-zig-zag-conversion.html</loc>
     
     <lastmod>2019-03-14T18:57:24.538Z</lastmod>
@@ -12,13 +96,6 @@
     <loc>http://www.cyprestar.com/algorithms/leetcode/7-reverse-integer.html</loc>
     
     <lastmod>2019-03-14T18:56:25.212Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cyprestar.com/algorithms/index.html</loc>
-    
-    <lastmod>2019-03-14T18:52:20.325Z</lastmod>
     
   </url>
   

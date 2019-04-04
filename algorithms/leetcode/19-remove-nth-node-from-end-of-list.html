@@ -2,26 +2,26 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>算法题 - Zhilong&#39;s Blog</title>
+<title>19 Remove Nth Node From End of List - Zhilong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Record of my  solutions and thoughts to algorithm problems. LeetCode    Problems Solutions Topic Difficulty     3 Longest Substring Without Repeating Characters C++ Hash Table Two Pointer Medium   5 L">
+    <meta name="description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: 123Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.After removing the second node from the end, the">
 <meta property="og:type" content="website">
-<meta property="og:title" content="算法题">
-<meta property="og:url" content="http://www.cyprestar.com/algorithms/index.html">
+<meta property="og:title" content="19 Remove Nth Node From End of List">
+<meta property="og:url" content="http://www.cyprestar.com/algorithms/leetcode/19-remove-nth-node-from-end-of-list.html">
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
-<meta property="og:description" content="Record of my  solutions and thoughts to algorithm problems. LeetCode    Problems Solutions Topic Difficulty     3 Longest Substring Without Repeating Characters C++ Hash Table Two Pointer Medium   5 L">
+<meta property="og:description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: 123Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.After removing the second node from the end, the">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-04T17:43:27.315Z">
+<meta property="og:updated_time" content="2019-04-04T17:41:01.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法题">
-<meta name="twitter:description" content="Record of my  solutions and thoughts to algorithm problems. LeetCode    Problems Solutions Topic Difficulty     3 Longest Substring Without Repeating Characters C++ Hash Table Two Pointer Medium   5 L">
+<meta name="twitter:title" content="19 Remove Nth Node From End of List">
+<meta name="twitter:description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: 123Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.After removing the second node from the end, the">
 
 
 
-<link rel="alternative" href="rss.xml" title="算法题" type="application/atom+xml">
+<link rel="alternative" href="rss.xml" title="19 Remove Nth Node From End of List" type="application/atom+xml">
 
 
 
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="算法题" height="28">
+                <img src="/images/logo.png" alt="19 Remove Nth Node From End of List" height="28">
             
             </a>
         </div>
@@ -119,7 +119,7 @@ var _hmt = _hmt || [];
                 
                 <a class="navbar-item" href="/archives">归档</a>
                 
-                <a class="navbar-item is-active" href="/algorithms">算法题</a>
+                <a class="navbar-item" href="/algorithms">算法题</a>
                 
                 <a class="navbar-item" href="/about">关于</a>
                 
@@ -158,184 +158,67 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                算法题
+                19 Remove Nth Node From End of List
             
         </h1>
         <div class="content">
-            <p>Record of my  solutions and thoughts to algorithm problems.</p>
-<h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><table>
-<thead>
-<tr>
-<th></th>
-<th>Problems</th>
-<th>Solutions</th>
-<th>Topic</th>
-<th>Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3</td>
-<td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></td>
-<td><a href="/algorithms/leetcode/3-longest-substring-without-repeating-characters.html">C++</a></td>
-<td><code>Hash Table</code> <code>Two Pointer</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>5</td>
-<td><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank" rel="noopener">Longest Palindromic Substring</a></td>
-<td><a href="/algorithms/leetcode/5-longest-palindromic-substring.html">C++</a></td>
-<td><code>Two Pointer</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="https://leetcode.com/problems/zigzag-conversion" target="_blank" rel="noopener">ZigZag Conversion</a></td>
-<td><a href="/algorithms/leetcode/6-zig-zag-conversion.html">C++</a></td>
-<td><code>String</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>7</td>
-<td><a href="https://leetcode.com/problems/reverse-integer" target="_blank" rel="noopener">Reverse Integer</a></td>
-<td><a href="/algorithms/leetcode/7-reverse-integer.html">C++</a></td>
-<td><code>Math</code></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>8</td>
-<td><a href="https://leetcode.com/problems/string-to-integer-atoi" target="_blank" rel="noopener">String to Integer (atoi)</a></td>
-<td><a href="/algorithms/leetcode/8-string-to-integer-atoi.html">C++</a></td>
-<td><code>String</code> <code>Simulation</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>9</td>
-<td><a href="https://leetcode.com/problems/palindrome-number" target="_blank" rel="noopener">Palindrome Number</a></td>
-<td><a href="/algorithms/leetcode/9-palindrome-number.html">C++</a></td>
-<td><code>Math</code></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>10</td>
-<td><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank" rel="noopener">Regular Expression Matching</a></td>
-<td><a href="/algorithms/leetcode/10-regular-expression-matching.html">C++</a></td>
-<td><code>String</code>  <code>Dynamic Programming</code></td>
-<td>Hard</td>
-</tr>
-<tr>
-<td>11</td>
-<td><a href="https://leetcode.com/problems/container-with-most-water" target="_blank" rel="noopener">Container With Most Water</a></td>
-<td><a href="/algorithms/leetcode/11-container-with-most-water.html">C++</a></td>
-<td><code>Array</code>  <code>Two Pointer</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>12</td>
-<td><a href="https://leetcode.com/problems/integer-to-roman" target="_blank" rel="noopener">Integer to Roman</a></td>
-<td><a href="/algorithms/leetcode/12-integer-to-roman.html">C++</a></td>
-<td><code>Math</code>  <code>HashMap</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>13</td>
-<td><a href="https://leetcode.com/problems/roman-to-integer" target="_blank" rel="noopener">Roman to Integer</a></td>
-<td><a href="/algorithms/leetcode/13-roman-to-integer.html">C++</a></td>
-<td><code>Math</code> <code>HashMap</code></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>14</td>
-<td><a href="https://leetcode.com/problems/longest-common-prefix" target="_blank" rel="noopener">Longest Common Prefix</a></td>
-<td><a href="/algorithms/leetcode/14-longest-common-prefix.html">C++</a></td>
-<td><code>String</code></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>15</td>
-<td><a href="https://leetcode.com/problems/3sum" target="_blank" rel="noopener">3Sum</a></td>
-<td><a href="/algorithms/leetcode/15-3-sum.html">C++</a></td>
-<td><code>Array</code> <code>Two Pointers</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>16</td>
-<td><a href="https://leetcode.com/problems/3sum-closest" target="_blank" rel="noopener">3Sum Closest</a></td>
-<td><a href="/algorithms/leetcode/16-3-sum-closest.html">C++</a></td>
-<td><code>Array</code> <code>Two Pointers</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>17</td>
-<td><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number" target="_blank" rel="noopener">Letter Combinations of a Phone Number</a></td>
-<td><a href="/algorithms/leetcode/17-letter-combinations-of-a-phone-number.html">C++</a></td>
-<td><code>Array</code> <code>Backtracking</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>19</td>
-<td><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list" target="_blank" rel="noopener">Remove Nth Node From End of List</a></td>
-<td><a href="/algorithms/leetcode/19-remove-nth-node-from-end-of-list.html">C++</a></td>
-<td><code>Linked List</code> <code>Two Pointers</code></td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>37</td>
-<td><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank" rel="noopener">Sudoku Solver</a></td>
-<td><a href="/algorithms/leetcode/37-sudoku-solver.html">C++</a></td>
-<td></td>
-<td>Hard</td>
-</tr>
-<tr>
-<td>51</td>
-<td><a href="https://leetcode.com/problems/n-queens/" target="_blank" rel="noopener">N-Queens</a></td>
-<td><a href="/algorithms/leetcode/51-n-queens.html">C++</a></td>
-<td></td>
-<td>Hard</td>
-</tr>
-<tr>
-<td>100</td>
-<td><a href="https://leetcode.com/problems/same-tree/" target="_blank" rel="noopener">Same Tree</a></td>
-<td><a href="/algorithms/leetcode/100-Same-Tree.html">C++</a></td>
-<td></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>709</td>
-<td><a href="https://leetcode.com/problems/to-lower-case/" target="_blank" rel="noopener">To Lower Case</a></td>
-<td><a href="/algorithms/leetcode/709-To-Lower-Case.html">C++</a></td>
-<td></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>771</td>
-<td><a href="https://leetcode.com/problems/jewels-and-stones/" target="_blank" rel="noopener">Jewels and Stones</a></td>
-<td><a href="/algorithms/leetcode/771-Jewels-and-Stones.html">C++</a></td>
-<td></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>929</td>
-<td><a href="https://leetcode.com/problems/unique-email-addresses/" target="_blank" rel="noopener">Unique Email Address</a></td>
-<td><a href="/algorithms/leetcode/929-Unique-Email-Addresses.html">C++</a></td>
-<td></td>
-<td>Easy</td>
-</tr>
-<tr>
-<td>961</td>
-<td><a href="https://leetcode.com/problems/n-repeated-element-in-size-2n-array/" target="_blank" rel="noopener">N-Repeated Element in Size 2N Array</a></td>
-<td><a href="/algorithms/leetcode/961-n-repeated-element-in-size-2-n-array.html">C++</a></td>
-<td></td>
-<td>Easy</td>
-</tr>
-</tbody>
-</table>
-<h2 id="POJ"><a href="#POJ" class="headerlink" title="POJ"></a>POJ</h2><p><a href="/algorithms/POJ/course/">Codes of Analysis of Algorithms Course</a></p>
+            <p>Given a linked list, remove the <em>n</em>-th node from the end of list and return its head.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</span><br><span class="line"></span><br><span class="line">After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<p>Given <em>n</em> will always be valid.</p>
+<p><strong>Follow up:</strong></p>
+<p>Could you do this in one pass?</p>
+<hr>
+<p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.</span><br><span class="line"></span><br><span class="line">当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
+<p><strong>说明：</strong></p>
+<p>给定的 <em>n</em> 保证是有效的。</p>
+<p><strong>进阶：</strong></p>
+<p>你能尝试使用一趟扫描实现吗？</p>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>快慢指针，快指针指向第K个节点，慢指针指向开始节点，当快指针到达末尾时慢指针正好指向倒数第K的节点。由于要删除该节点，还得记录慢指针的上一个节点。Corner Case：传入参数为空、删除的是头节点、K大于链表长度。</p>
+<h3 id="解"><a href="#解" class="headerlink" title="解"></a>解</h3><figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="hljs-comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="hljs-comment"> *     int val;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode *next;</span></span><br><span class="line"><span class="hljs-comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="hljs-comment"> * &#125;;</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span></span><br><span class="line">  <span class="hljs-keyword">public</span>:</span><br><span class="line">    <span class="hljs-function">ListNode *<span class="hljs-title">removeNthFromEnd</span><span class="hljs-params">(ListNode *head, <span class="hljs-keyword">int</span> n)</span></span></span><br><span class="line"><span class="hljs-function">    </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">NULL</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode *cur = head, *ans = head, *last = <span class="hljs-literal">NULL</span>;</span><br><span class="line">        <span class="hljs-keyword">int</span> i = n - <span class="hljs-number">1</span>;</span><br><span class="line">        <span class="hljs-keyword">while</span> (cur-&gt;next != <span class="hljs-literal">NULL</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (i &lt;= <span class="hljs-number">0</span>) &#123;</span><br><span class="line">                last = ans;</span><br><span class="line">                ans = ans-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span> (last == <span class="hljs-literal">NULL</span>) &#123;</span><br><span class="line">            ListNode *temp = head;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">            <span class="hljs-keyword">delete</span> (temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            last-&gt;next = ans-&gt;next;</span><br><span class="line">            <span class="hljs-keyword">delete</span> (ans);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
         </div>
         
         
         
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
     </div>
 </div>
 
@@ -343,7 +226,29 @@ var _hmt = _hmt || [];
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://www.cyprestar.com/algorithms/leetcode/19-remove-nth-node-from-end-of-list.html';
+        this.page.identifier = 'algorithms/leetcode/19-remove-nth-node-from-end-of-list.html';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
@@ -1161,7 +1066,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="算法题" height="28">
+                    <img src="/images/logo.png" alt="19 Remove Nth Node From End of List" height="28">
                 
                 </a>
                 <p class="is-size-7">
