@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-<title>Visual Studio Code配置C/C++编译运行环境 - Zhilong&#39;s Blog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
 
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Visual Studio Code配置C/C++编译运行环境 - Zhilong&#39;s Blog</title>
 
 
     <meta name="description" content="最近一直在用C++写LeetCode，本地调试的时候一直在纠结用什么编辑器，CLion有点耗资源，Visual Studio又有点杀鸡焉用宰牛刀，Dev-Cpp已经太古老了，于是决定用VS Code来写，但是官方文档写的有点……不是特别友好，因此在这里记录一下自己是怎么配置的。">
@@ -15,10 +18,14 @@
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
 <meta property="og:description" content="最近一直在用C++写LeetCode，本地调试的时候一直在纠结用什么编辑器，CLion有点耗资源，Visual Studio又有点杀鸡焉用宰牛刀，Dev-Cpp已经太古老了，于是决定用VS Code来写，但是官方文档写的有点……不是特别友好，因此在这里记录一下自己是怎么配置的。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.cyprestar.com/images/og_image.png">
 <meta property="og:updated_time" content="2019-03-11T18:14:22.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Visual Studio Code配置C&#x2F;C++编译运行环境">
 <meta name="twitter:description" content="最近一直在用C++写LeetCode，本地调试的时候一直在纠结用什么编辑器，CLion有点耗资源，Visual Studio又有点杀鸡焉用宰牛刀，Dev-Cpp已经太古老了，于是决定用VS Code来写，但是官方文档写的有点……不是特别友好，因此在这里记录一下自己是怎么配置的。">
+<meta name="twitter:image" content="http://www.cyprestar.com/images/og_image.png">
+
+
 
 
 
@@ -29,42 +36,33 @@
 <link rel="icon" href="/images/favicon.png">
 
 
-<link rel="stylesheet" href="https://unpkg.com/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
-<link rel="stylesheet" href="https://unpkg.com/highlight.js@9.12.0/styles/vs2015.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/vs2015.css">
 
 
     
     
-    
-    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
-    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
 
     
     
-    
-    <link rel="stylesheet" href="https://unpkg.com/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
 
     
     
-
-<link rel="stylesheet" href="https://unpkg.com/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
     
     
     
     
-
 <link rel="stylesheet" href="/css/back-to-top.css">
 
-
     
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -73,10 +71,8 @@
     gtag('config', 'UA-74183669-1');
 </script>
 
-
     
-    
-<script>
+    <script>
 var _hmt = _hmt || [];
 (function() {
     var hm = document.createElement("script");
@@ -85,16 +81,9 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
     
-    
-<link rel="stylesheet" href="/css/progressbar.css">
-<script src="https://unpkg.com/pace-js@1.0.2/pace.min.js"></script>
-
-    
-    
-    
-
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
     
     
     
@@ -102,7 +91,7 @@ var _hmt = _hmt || [];
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -116,21 +105,25 @@ var _hmt = _hmt || [];
             
             <div class="navbar-start">
                 
-                <a class="navbar-item" href="/">首页</a>
+                <a class="navbar-item"
+                href="/">首页</a>
                 
-                <a class="navbar-item" href="/archives">归档</a>
+                <a class="navbar-item"
+                href="/archives">归档</a>
                 
-                <a class="navbar-item" href="/algorithms">算法题</a>
+                <a class="navbar-item"
+                href="/algorithms">算法题</a>
                 
-                <a class="navbar-item" href="/about">关于</a>
+                <a class="navbar-item"
+                href="/about">关于</a>
                 
-                <a class="navbar-item" href="/rss.xml">RSS</a>
+                <a class="navbar-item"
+                href="/rss.xml">RSS</a>
                 
             </div>
             
             <div class="navbar-end">
                 
-                    
                     
                     <a class="navbar-item" target="_blank" title="GitHub" href="http://github.com/thesharing/">
                         
@@ -153,7 +146,8 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
     
     <div class="card-content article ">
         
@@ -202,7 +196,7 @@ var _hmt = _hmt || [];
 <p>可以参考<a href="https://code.visualstudio.com/docs/languages/cpp" target="_blank" rel="noopener">官方文档</a>来配置C/C++插件，这里着重对官方文档中没有讲明白的部分进行强调。比较懒的同学可以直接跳过每一节后面详细配置部分，直接复制配置修改对应编译器和Debugger的位置即可使用。下面均以Windows系统为主，macOS和Linux可以根据详细配置部分自行修改。</p>
 <h4 id="2-1-配置IntelliSence"><a href="#2-1-配置IntelliSence" class="headerlink" title="2.1 配置IntelliSence"></a>2.1 配置IntelliSence</h4><p>新建一个项目文件夹，在VS Code中打开，然后在VS Code中按<code>Ctrl + Shift + P</code>输入命令<code>C/C++: Edit Configurations...</code>，VS Code会自动在项目文件夹根目录新建配置文件夹<code>.vscode</code>并同时在<code>.vscode</code>中新建配置文件<code>c_cpp_properties.json</code>。</p>
 <p>先给出配置文件内容：</p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Win32"</span>,</span><br><span class="line">            <span class="hljs-attr">"includePath"</span>: [</span><br><span class="line">                <span class="hljs-string">"$&#123;workspaceFolder&#125;/**"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="hljs-attr">"defines"</span>: [</span><br><span class="line">                <span class="hljs-string">"_DEBUG"</span>,</span><br><span class="line">                <span class="hljs-string">"UNICODE"</span>,</span><br><span class="line">                <span class="hljs-string">"_UNICODE"</span></span><br><span class="line">            ],</span><br><span class="line">            "compilerPath": "C:/Dev/MinGW/mingw64/bin/gcc.exe", //修改为本机gcc.exe路径</span><br><span class="line">            "cStandard": "c11",</span><br><span class="line">            "cppStandard": "c++17",</span><br><span class="line">            "intelliSenseMode": "gcc-x64"</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    "version": 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Win32"</span>,</span><br><span class="line">            <span class="hljs-attr">"includePath"</span>: [</span><br><span class="line">                <span class="hljs-string">"$&#123;workspaceFolder&#125;/**"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="hljs-attr">"defines"</span>: [</span><br><span class="line">                <span class="hljs-string">"_DEBUG"</span>,</span><br><span class="line">                <span class="hljs-string">"UNICODE"</span>,</span><br><span class="line">                <span class="hljs-string">"_UNICODE"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="hljs-attr">"compilerPath"</span>: <span class="hljs-string">"C:/Dev/MinGW/mingw64/bin/gcc.exe"</span>, <span class="hljs-comment">//修改为本机gcc.exe路径</span></span><br><span class="line">            <span class="hljs-attr">"cStandard"</span>: <span class="hljs-string">"c11"</span>,</span><br><span class="line">            <span class="hljs-attr">"cppStandard"</span>: <span class="hljs-string">"c++17"</span>,</span><br><span class="line">            <span class="hljs-attr">"intelliSenseMode"</span>: <span class="hljs-string">"gcc-x64"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="hljs-attr">"version"</span>: <span class="hljs-number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后介绍其中重要的部分：</p>
 <p><code>c_cpp_properties.json</code>中共包含三部分：</p>
 <p><code>env</code>：可以在这里定义用户变量，在下面的<code>configuration</code>中可以使用这里定义的变量来代替多次重复出现的地址等配置。</p>
@@ -229,7 +223,7 @@ var _hmt = _hmt || [];
 <p><a href="https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/LanguageServer/c_cpp_properties.json.md" target="_blank" rel="noopener"><code>c_cpp_properties.json</code> Reference Guide</a></p>
 <h3 id="2-2-配置编译选项"><a href="#2-2-配置编译选项" class="headerlink" title="2.2 配置编译选项"></a>2.2 配置编译选项</h3><p>VS Code通过<a href="https://code.visualstudio.com/docs/editor/tasks" target="_blank" rel="noopener">Tasks</a>来执行编译和运行操作。在<code>.vscode</code>文件夹中新建文件<code>tasks.json</code>进行配置。</p>
 <p>先给出配置文件内容：</p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"2.0.0"</span>,</span><br><span class="line">    <span class="hljs-attr">"tasks"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Build"</span>,</span><br><span class="line">            "command": "C:/Dev/MinGW/mingw64/bin/g++.exe", // 修改这里为本机g++路径</span><br><span class="line">            "type": "shell",</span><br><span class="line">            "args": [</span><br><span class="line">                "-g",</span><br><span class="line">                "-Wall",</span><br><span class="line">                "-std=c++11",</span><br><span class="line">                "-lm",</span><br><span class="line">                "$&#123;file&#125;",</span><br><span class="line">                "-o",</span><br><span class="line">                "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe" //Linux和macOS这里要修改为.o</span><br><span class="line">            ],</span><br><span class="line">            "presentation": &#123;</span><br><span class="line">                "reveal": "always",</span><br><span class="line">                "echo": true,</span><br><span class="line">                "focus": true</span><br><span class="line">            &#125;,</span><br><span class="line">            "problemMatcher": &#123;</span><br><span class="line">                "owner": "cpp",</span><br><span class="line">                "fileLocation": ["relative", "$&#123;workspaceRoot&#125;"],</span><br><span class="line">                "pattern": &#123;</span><br><span class="line">                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",</span><br><span class="line">                    "file": 1,</span><br><span class="line">                    "line": 2,</span><br><span class="line">                    "column": 3,</span><br><span class="line">                    "severity": 4,</span><br><span class="line">                    "message": 5</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            "group": &#123;</span><br><span class="line">                "kind": "build",</span><br><span class="line">                "isDefault": true</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Run"</span>,</span><br><span class="line">            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"shell"</span>,</span><br><span class="line">            <span class="hljs-attr">"dependsOn"</span>: <span class="hljs-string">"Build"</span>,</span><br><span class="line">            <span class="hljs-attr">"command"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.o"</span>,</span><br><span class="line">            <span class="hljs-attr">"windows"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"command"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"args"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"presentation"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"reveal"</span>: <span class="hljs-string">"always"</span>,</span><br><span class="line">                <span class="hljs-attr">"focus"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"problemMatcher"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"group"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"test"</span>,</span><br><span class="line">                <span class="hljs-attr">"isDefault"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"2.0.0"</span>,</span><br><span class="line">    <span class="hljs-attr">"tasks"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Build"</span>,</span><br><span class="line">            <span class="hljs-attr">"command"</span>: <span class="hljs-string">"C:/Dev/MinGW/mingw64/bin/g++.exe"</span>, <span class="hljs-comment">// 修改这里为本机g++路径</span></span><br><span class="line">            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"shell"</span>,</span><br><span class="line">            <span class="hljs-attr">"args"</span>: [</span><br><span class="line">                <span class="hljs-string">"-g"</span>,</span><br><span class="line">                <span class="hljs-string">"-Wall"</span>,</span><br><span class="line">                <span class="hljs-string">"-std=c++11"</span>,</span><br><span class="line">                <span class="hljs-string">"-lm"</span>,</span><br><span class="line">                <span class="hljs-string">"$&#123;file&#125;"</span>,</span><br><span class="line">                <span class="hljs-string">"-o"</span>,</span><br><span class="line">                <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span> <span class="hljs-comment">//Linux和macOS这里要修改为.o</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="hljs-attr">"presentation"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"reveal"</span>: <span class="hljs-string">"always"</span>,</span><br><span class="line">                <span class="hljs-attr">"echo"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">                <span class="hljs-attr">"focus"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"problemMatcher"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"cpp"</span>,</span><br><span class="line">                <span class="hljs-attr">"fileLocation"</span>: [<span class="hljs-string">"relative"</span>, <span class="hljs-string">"$&#123;workspaceRoot&#125;"</span>],</span><br><span class="line">                <span class="hljs-attr">"pattern"</span>: &#123;</span><br><span class="line">                    <span class="hljs-attr">"regexp"</span>: <span class="hljs-string">"^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$"</span>,</span><br><span class="line">                    <span class="hljs-attr">"file"</span>: <span class="hljs-number">1</span>,</span><br><span class="line">                    <span class="hljs-attr">"line"</span>: <span class="hljs-number">2</span>,</span><br><span class="line">                    <span class="hljs-attr">"column"</span>: <span class="hljs-number">3</span>,</span><br><span class="line">                    <span class="hljs-attr">"severity"</span>: <span class="hljs-number">4</span>,</span><br><span class="line">                    <span class="hljs-attr">"message"</span>: <span class="hljs-number">5</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"group"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"build"</span>,</span><br><span class="line">                <span class="hljs-attr">"isDefault"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Run"</span>,</span><br><span class="line">            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"shell"</span>,</span><br><span class="line">            <span class="hljs-attr">"dependsOn"</span>: <span class="hljs-string">"Build"</span>,</span><br><span class="line">            <span class="hljs-attr">"command"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.o"</span>,</span><br><span class="line">            <span class="hljs-attr">"windows"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"command"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"args"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"presentation"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"reveal"</span>: <span class="hljs-string">"always"</span>,</span><br><span class="line">                <span class="hljs-attr">"focus"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"problemMatcher"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"group"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"test"</span>,</span><br><span class="line">                <span class="hljs-attr">"isDefault"</span>: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后解释其中配置的内容：</p>
 <p><code>label</code>：任务标签。</p>
 <p><code>type</code>：任务类型，一般指定为<code>shell</code>或<code>process</code>。当设置为<code>shell</code>时会将命令看作终端操作，包括bash、cmd或PowerShell。当指定为<code>process</code>时会将命令看作是一个进程。这里选择<code>shell</code>。</p>
@@ -254,7 +248,7 @@ var _hmt = _hmt || [];
 <p><a href="https://code.visualstudio.com/docs/editor/tasks-appendix" target="_blank" rel="noopener">Schema for tasks.json</a></p>
 <h4 id="2-3-配置Debug选项"><a href="#2-3-配置Debug选项" class="headerlink" title="2.3 配置Debug选项"></a>2.3 配置Debug选项</h4><p>如果要启用Debug，需要在.vscode文件夹下创建<code>launch.json</code>。</p>
 <p>先给出配置内容：</p>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // Use IntelliSense to learn about possible attributes.</span><br><span class="line">    // Hover to view descriptions of existing attributes.</span><br><span class="line">    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    // https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md</span><br><span class="line">    "version": "0.2.0",</span><br><span class="line">    "configurations": [</span><br><span class="line">        &#123;</span><br><span class="line">            "name": "(gdb) Launch", // 配置名称，将会在启动配置的下拉菜单中显示</span><br><span class="line">            "type": "cppdbg",// 配置类型，这里只能为cppdbg</span><br><span class="line">            "request": "launch", // 请求配置类型，可以为launch（启动）或attach（附加）</span><br><span class="line">            "program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.o", // 将要进行调试的程序的路径</span><br><span class="line">            "args": [],</span><br><span class="line">            "stopAtEntry": false,</span><br><span class="line">            "cwd": "$&#123;workspaceFolder&#125;",</span><br><span class="line">            "externalConsole": true,</span><br><span class="line">            "environment": [],</span><br><span class="line">            "MIMode": "gdb",</span><br><span class="line">            "windows": &#123;</span><br><span class="line">                "program": "$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe",</span><br><span class="line">                "miDebuggerPath": "C:/Dev/MinGW/mingw64/bin/gdb.exe" // 修改为本机gdb.exe的路径</span><br><span class="line">            &#125;,</span><br><span class="line">            "setupCommands": [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Enable pretty-printing for gdb"</span>,</span><br><span class="line">                    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"-enable-pretty-printing"</span>,</span><br><span class="line">                    <span class="hljs-attr">"ignoreFailures"</span>: <span class="hljs-literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            "preLaunchTask": "Build"</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">    <span class="hljs-comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">    <span class="hljs-comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="hljs-comment">// https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md</span></span><br><span class="line">    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.2.0"</span>,</span><br><span class="line">    <span class="hljs-attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"(gdb) Launch"</span>, <span class="hljs-comment">// 配置名称，将会在启动配置的下拉菜单中显示</span></span><br><span class="line">            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"cppdbg"</span>,<span class="hljs-comment">// 配置类型，这里只能为cppdbg</span></span><br><span class="line">            <span class="hljs-attr">"request"</span>: <span class="hljs-string">"launch"</span>, <span class="hljs-comment">// 请求配置类型，可以为launch（启动）或attach（附加）</span></span><br><span class="line">            <span class="hljs-attr">"program"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.o"</span>, <span class="hljs-comment">// 将要进行调试的程序的路径</span></span><br><span class="line">            <span class="hljs-attr">"args"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"stopAtEntry"</span>: <span class="hljs-literal">false</span>,</span><br><span class="line">            <span class="hljs-attr">"cwd"</span>: <span class="hljs-string">"$&#123;workspaceFolder&#125;"</span>,</span><br><span class="line">            <span class="hljs-attr">"externalConsole"</span>: <span class="hljs-literal">true</span>,</span><br><span class="line">            <span class="hljs-attr">"environment"</span>: [],</span><br><span class="line">            <span class="hljs-attr">"MIMode"</span>: <span class="hljs-string">"gdb"</span>,</span><br><span class="line">            <span class="hljs-attr">"windows"</span>: &#123;</span><br><span class="line">                <span class="hljs-attr">"program"</span>: <span class="hljs-string">"$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.exe"</span>,</span><br><span class="line">                <span class="hljs-attr">"miDebuggerPath"</span>: <span class="hljs-string">"C:/Dev/MinGW/mingw64/bin/gdb.exe"</span> <span class="hljs-comment">// 修改为本机gdb.exe的路径</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="hljs-attr">"setupCommands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Enable pretty-printing for gdb"</span>,</span><br><span class="line">                    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"-enable-pretty-printing"</span>,</span><br><span class="line">                    <span class="hljs-attr">"ignoreFailures"</span>: <span class="hljs-literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="hljs-attr">"preLaunchTask"</span>: <span class="hljs-string">"Build"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后解释每一项具体的含义：</p>
 <p><code>program</code>：（必填项）指定Debugger程序路径，在这里修改成本机gdb.exe的路径。</p>
 <p><code>symbolSearchPath</code>：指定符号文件的路径。</p>
@@ -307,8 +301,8 @@ var _hmt = _hmt || [];
         
         
         <div class="social-share"></div>
-<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
@@ -348,6 +342,13 @@ var _hmt = _hmt || [];
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/02/Pythonic-Readding-Note/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">《Python 工匠：善用变量来改善代码质量》摘录</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -391,19 +392,18 @@ var _hmt = _hmt || [];
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
     <div class="card-content">
         <nav class="level">
-            <div class="level-item has-text-centered">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
                 <div>
                     
-                        <figure class="image container is-128x128 has-mb-6">
-                            <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
-                        </figure>
-                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
+                    </figure>
                     
                     <p class="is-size-4 is-block">
                         Zhilong
@@ -411,13 +411,13 @@ var _hmt = _hmt || [];
                     
                     
                     <p class="is-size-6 is-block">
-                        A CS Student
+                        Student
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>北京, 中国</span>
+                        <span>Beijing, China</span>
                     </p>
                     
                 </div>
@@ -429,9 +429,11 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         文章
                     </p>
-                    <p class="title has-text-weight-normal">
-                        8
-                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -439,9 +441,11 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         分类
                     </p>
-                    <p class="title has-text-weight-normal">
-                        3
-                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            3
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -449,57 +453,68 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         标签
                     </p>
-                    <p class="title has-text-weight-normal">
-                        8
-                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
                 </div>
             </div>
         </nav>
+        
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://github.com/thesharing/">
+            <a class="level-item button is-link is-rounded" href="https://github.com/thesharing/" target="_blank">
                 关注我</a>
         </div>
         
         
+        
         <div class="level is-mobile">
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/thesharing/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="http://github.com/thesharing/">
                 
                 <i class="fab fa-github"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
                 
                 <i class="fab fa-stack-overflow"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Steam" href="http://steamcommunity.com/id/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Steam" href="http://steamcommunity.com/id/cyprestar/">
                 
                 <i class="fab fa-steam"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Instagram" href="http://www.instagram.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Instagram" href="http://www.instagram.com/cyprestar/">
                 
                 <i class="fab fa-instagram"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Weibo" href=" http://weibo.com/sharinginworld/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Weibo" href=" http://weibo.com/sharinginworld/">
                 
                 <i class="fab fa-weibo"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/cyprestar/">
                 
                 <i class="fab fa-facebook"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Twitter" href="http://twitter.com/cyprestar/">
                 
                 <i class="fab fa-twitter"></i>
                 
@@ -510,9 +525,7 @@ var _hmt = _hmt || [];
     </div>
 </div>
     
-        
-
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -591,26 +604,22 @@ var _hmt = _hmt || [];
     </div>
 </div>
 
-
     
-        
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
+        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
     </div>
 </div>
-
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
+        <div class="column-right-shadow  is-sticky">
+            
             
         
-            
-<div class="card widget">
+            <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             最新文章
@@ -620,8 +629,21 @@ var _hmt = _hmt || [];
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-02T11:12:02.000Z">2019-12-02</time></div>
+                    <a href="/2019/12/02/Pythonic-Readding-Note/" class="title has-link-black-ter is-size-6 has-text-weight-normal">《Python 工匠：善用变量来改善代码质量》摘录</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-10T17:39:21.000Z">2019-03-11</time></div>
-                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="has-link-black-ter is-size-6">Visual Studio Code配置C/C++编译运行环境</a>
+                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Visual Studio Code配置C/C++编译运行环境</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -634,7 +656,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-06T07:35:42.000Z">2019-02-06</time></div>
-                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="has-link-black-ter is-size-6">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
+                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
                     </p>
@@ -647,7 +669,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
-                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
+                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Ubuntu Server上配置CUDA环境</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -660,20 +682,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
-                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
-                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
+                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="title has-link-black-ter is-size-6 has-text-weight-normal">用Markdown写公式</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -683,7 +692,6 @@ var _hmt = _hmt || [];
         
     </div>
 </div>
-
         
             <div class="card widget">
     <div class="card-content">
@@ -692,6 +700,17 @@ var _hmt = _hmt || [];
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -800,7 +819,7 @@ var _hmt = _hmt || [];
                 <span class="level-item">Basic</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Creative/">
@@ -875,6 +894,13 @@ var _hmt = _hmt || [];
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/VSCode/">
                         <span class="tag">VSCode</span>
                         <span class="tag is-grey">1</span>
@@ -898,301 +924,6 @@ var _hmt = _hmt || [];
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-10T17:39:21.000Z">2019-03-11</time></div>
-                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="has-link-black-ter is-size-6">Visual Studio Code配置C/C++编译运行环境</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-06T07:35:42.000Z">2019-02-06</time></div>
-                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="has-link-black-ter is-size-6">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
-                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
-                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
-                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">三月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">八月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/11/">
-                <span class="level-start">
-                    <span class="level-item">十一月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/08/">
-                <span class="level-start">
-                    <span class="level-item">八月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/04/">
-                <span class="level-start">
-                    <span class="level-item">四月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/Basic/">
-            <span class="level-start">
-                <span class="level-item">Basic</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Creative/">
-            <span class="level-start">
-                <span class="level-item">Creative</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/DanmakuPie/">
-            <span class="level-start">
-                <span class="level-item">DanmakuPie</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/BoP2016/">
-                        <span class="tag">BoP2016</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/C/">
-                        <span class="tag">C++</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Configuration/">
-                        <span class="tag">Configuration</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Electron/">
-                        <span class="tag">Electron</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Markdown/">
-                        <span class="tag">Markdown</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/VSCode/">
-                        <span class="tag">VSCode</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/WPF/">
-                        <span class="tag">WPF</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>
@@ -1207,14 +938,14 @@ var _hmt = _hmt || [];
                 </a>
                 <p class="is-size-7">
                 &copy; 2019 Zhilong&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 </p>
             </div>
             <div class="level-end">
             
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                
                 
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
@@ -1238,35 +969,45 @@ var _hmt = _hmt || [];
         </div>
     </div>
 </footer>
-    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/moment@2.22.2/min/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
 
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
 
     
     
-    
-    <script src="/js/animation.js"></script>
-    
+<script src="/js/animation.js"></script>
 
     
     
-    
-    <script src="https://unpkg.com/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
-    <script src="https://unpkg.com/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
-    <script src="/js/gallery.js" defer></script>
-    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
 
     
     
-
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script src="https://unpkg.com/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         outdatedBrowser({
@@ -1277,10 +1018,8 @@ var _hmt = _hmt || [];
     });
 </script>
 
-
     
-    
-<script src="https://unpkg.com/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
@@ -1302,30 +1041,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
     
     
-
 <a id="back-to-top" title="回到顶端" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
 
-
-    
-    
-
     
     
     
     
     
     
-    
-    <script src="https://unpkg.com/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
-    <script src="/js/clipboard.js" defer></script>
-    
-
     
     
     
@@ -1337,7 +1065,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">

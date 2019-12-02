@@ -1,224 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   <url>
+    <loc>http://www.cyprestar.com/2019/12/02/Pythonic-Readding-Note/</loc>
+    <lastmod>2019-12-02</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2019/03/11/Configure-vscode-for-cpp/</loc>
-    <lastmod>2019-03-11T18:14:22.128Z</lastmod>
-    <data>
-        <display>
-        <title>Visual Studio Code配置C/C++编译运行环境</title>
-        <pubTime>2019-03-10T17:39:21.000Z</pubTime>
-        
-        <tag>VSCode</tag>
-         
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
+    <lastmod>2019-03-11</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2019/02/06/An-always-on-top-window-based-on-electron/</loc>
-    <lastmod>2019-02-13T13:44:47.031Z</lastmod>
-    <data>
-        <display>
-        <title>在Electron上实现始终置顶且可调整大小的二维码窗口</title>
-        <pubTime>2019-02-06T07:35:42.000Z</pubTime>
-        
-        <tag>Electron</tag>
-         
-         
-           
-             
-              <breadCrumb title="DanmakuPie" url="http://www.cyprestar.com/categories/DanmakuPie/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-13</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2016/02/23/Build-a-Github-Blog-with-Hexo/</loc>
-    <lastmod>2019-02-06T20:56:55.194Z</lastmod>
-    <data>
-        <display>
-        <title>用Hexo搭建一个GitHub个人Blog</title>
-        <pubTime>2016-02-23T08:46:29.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-06</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2018/08/15/Install-CUDA-on-Ubuntu-Server/</loc>
-    <lastmod>2018-08-15T14:23:59.680Z</lastmod>
-    <data>
-        <display>
-        <title>在Ubuntu Server上配置CUDA环境</title>
-        <pubTime>2018-08-15T03:00:09.000Z</pubTime>
-        
-        <tag>Configuration</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-15</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2016/04/30/BoP/</loc>
-    <lastmod>2018-08-15T03:41:42.889Z</lastmod>
-    <data>
-        <display>
-        <title>用编程展现绘画之美</title>
-        <pubTime>2016-04-30T15:59:41.000Z</pubTime>
-        
-        <tag>BoP2016</tag>
-         
-         
-           
-             
-              <breadCrumb title="Creative" url="http://www.cyprestar.com/categories/Creative/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-15</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2016/11/01/How-to-Write-Markdown/</loc>
-    <lastmod>2018-08-15T03:40:08.037Z</lastmod>
-    <data>
-        <display>
-        <title>如何快速掌握Markdown语法？</title>
-        <pubTime>2016-11-01T03:25:25.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-15</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2018/02/26/Write-Markdown-with-Formulas/</loc>
-    <lastmod>2018-08-15T03:40:04.117Z</lastmod>
-    <data>
-        <display>
-        <title>用Markdown写公式</title>
-        <pubTime>2018-02-26T09:55:09.000Z</pubTime>
-        
-        <tag>Markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="Basic" url="http://www.cyprestar.com/categories/Basic/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  <url>
+    <lastmod>2018-08-15</lastmod>
+  </url>  <url>
     <loc>http://www.cyprestar.com/2016/08/29/BackgroundWorker/</loc>
-    <lastmod>2016-08-29T16:23:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>浅谈BackgroundWorker的使用</title>
-        <pubTime>2016-08-29T11:06:41.000Z</pubTime>
-        
-        <tag>WPF</tag>
-         
-         
-           
-             
-              <breadCrumb title="DanmakuPie" url="http://www.cyprestar.com/categories/DanmakuPie/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2016-08-29</lastmod>
+  </url>
 </urlset>

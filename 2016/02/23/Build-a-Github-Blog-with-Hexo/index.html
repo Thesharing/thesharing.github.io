@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-<title>用Hexo搭建一个GitHub个人Blog - Zhilong&#39;s Blog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
 
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>用Hexo搭建一个GitHub个人Blog - Zhilong&#39;s Blog</title>
 
 
     <meta name="description" content="不知道有没有人像我一样，想要建立个人主页，可是对JaveScript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在GitHub搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。Here we go.">
@@ -15,16 +18,14 @@
 <meta property="og:site_name" content="Zhilong&#39;s Blog">
 <meta property="og:description" content="不知道有没有人像我一样，想要建立个人主页，可是对JaveScript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在GitHub搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。Here we go.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/2.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/3.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/4.png">
-<meta property="og:image" content="http://7xr64j.com1.z0.glb.clouddn.com/5.png">
+<meta property="og:image" content="http://www.cyprestar.com/images/og_image.png">
 <meta property="og:updated_time" content="2019-02-06T20:56:55.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Hexo搭建一个GitHub个人Blog">
 <meta name="twitter:description" content="不知道有没有人像我一样，想要建立个人主页，可是对JaveScript和PHP都不了解。不过现在好了，基于开源的Hexo，只需1小时，即可在GitHub搭建一个简单又美观的个人主页，并在上面发表你的第一篇文章。Here we go.">
-<meta name="twitter:image" content="http://7xr64j.com1.z0.glb.clouddn.com/1.png">
+<meta name="twitter:image" content="http://www.cyprestar.com/images/og_image.png">
+
+
 
 
 
@@ -35,42 +36,33 @@
 <link rel="icon" href="/images/favicon.png">
 
 
-<link rel="stylesheet" href="https://unpkg.com/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
-<link rel="stylesheet" href="https://unpkg.com/highlight.js@9.12.0/styles/vs2015.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/vs2015.css">
 
 
     
     
-    
-    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
-    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
 
     
     
-    
-    <link rel="stylesheet" href="https://unpkg.com/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
 
     
     
-
-<link rel="stylesheet" href="https://unpkg.com/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
     
     
     
     
-
 <link rel="stylesheet" href="/css/back-to-top.css">
 
-
     
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -79,10 +71,8 @@
     gtag('config', 'UA-74183669-1');
 </script>
 
-
     
-    
-<script>
+    <script>
 var _hmt = _hmt || [];
 (function() {
     var hm = document.createElement("script");
@@ -91,16 +81,9 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
     
-    
-<link rel="stylesheet" href="/css/progressbar.css">
-<script src="https://unpkg.com/pace-js@1.0.2/pace.min.js"></script>
-
-    
-    
-    
-
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
     
     
     
@@ -108,7 +91,7 @@ var _hmt = _hmt || [];
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -122,21 +105,25 @@ var _hmt = _hmt || [];
             
             <div class="navbar-start">
                 
-                <a class="navbar-item" href="/">首页</a>
+                <a class="navbar-item"
+                href="/">首页</a>
                 
-                <a class="navbar-item" href="/archives">归档</a>
+                <a class="navbar-item"
+                href="/archives">归档</a>
                 
-                <a class="navbar-item" href="/algorithms">算法题</a>
+                <a class="navbar-item"
+                href="/algorithms">算法题</a>
                 
-                <a class="navbar-item" href="/about">关于</a>
+                <a class="navbar-item"
+                href="/about">关于</a>
                 
-                <a class="navbar-item" href="/rss.xml">RSS</a>
+                <a class="navbar-item"
+                href="/rss.xml">RSS</a>
                 
             </div>
             
             <div class="navbar-end">
                 
-                    
                     
                     <a class="navbar-item" target="_blank" title="GitHub" href="http://github.com/thesharing/">
                         
@@ -159,7 +146,8 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
     
     <div class="card-content article ">
         
@@ -256,7 +244,7 @@ var _hmt = _hmt || [];
 <p>然后在浏览器中访问<code>localhost:4000</code>即可看到初始化的博客内容。</p>
 <h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>在Hexo的官方网站<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes|Hexo </a>上有一些主题可供使用，在Hexo的GitHub主页<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">Themes - hexojs/hexo</a>上提供了更多的主题链接可供下载。你可以选择用Git将主题<code>Clone</code>到本地，以获得主题的实时更新，也可以通过<code>Download Zip</code>将主题下载到本地的hexo文件夹/theme/使用。针对不同主题会有不同的设置项，一般主题的GitHub主页会提供Wiki来帮助设置主页。本次以PPOffice开发的<a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>为例进行主题方面的设置。</p>
 <h2 id="个性化你的博客"><a href="#个性化你的博客" class="headerlink" title="个性化你的博客"></a>个性化你的博客</h2><p>首先要配置你的站点信息，用Visual Studio Code等文本编辑器（不推荐使用记事本，存在一些格式上的问题）打开<code>hexo/_config.yml</code>开始配置。</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Site 站点信息设置</span></span><br><span class="line"><span class="hljs-attr">title:</span> <span class="hljs-string">Zhilong's</span> <span class="hljs-string">Blog</span> <span class="hljs-comment"># 站点标题</span></span><br><span class="line"><span class="hljs-attr">subtitle:</span> <span class="hljs-string">Have</span> <span class="hljs-string">a</span> <span class="hljs-string">try</span> <span class="hljs-comment"># 副标题</span></span><br><span class="line"><span class="hljs-attr">description:</span> <span class="hljs-string">Zhilong's</span> <span class="hljs-string">personal</span> <span class="hljs-string">blog</span> <span class="hljs-string">on</span> <span class="hljs-string">github</span> <span class="hljs-comment"># 给搜索引擎看的，对站点的描述，可以自定义</span></span><br><span class="line"><span class="hljs-attr">author:</span> <span class="hljs-string">Thesharing</span> <span class="hljs-comment"># 网站作者：在站点下方可以看到</span></span><br><span class="line"><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span> <span class="hljs-comment"># 语言：简体中文</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># URL</span></span><br><span class="line"><span class="hljs-comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="hljs-attr">url:</span> <span class="hljs-attr">http://thesharing.github.io/</span> <span class="hljs-comment">#站点地址</span></span><br><span class="line"><span class="hljs-attr">root:</span> <span class="hljs-string">/</span> <span class="hljs-comment">#站点的根目录</span></span><br><span class="line"><span class="hljs-attr">permalink:</span> <span class="hljs-string">:year/:month/:day/:title/</span> <span class="hljs-comment">#文章默认存放位置的格式，这里表示目录结构为：year/month/day/title.md</span></span><br><span class="line"><span class="hljs-comment"># Directory</span></span><br><span class="line"><span class="hljs-attr">source_dir:</span> <span class="hljs-string">source</span></span><br><span class="line"><span class="hljs-attr">public_dir:</span> <span class="hljs-string">public</span></span><br><span class="line"><span class="hljs-attr">tag_dir:</span> <span class="hljs-string">tags</span></span><br><span class="line"><span class="hljs-attr">archive_dir:</span> <span class="hljs-string">archives</span></span><br><span class="line"><span class="hljs-attr">category_dir:</span> <span class="hljs-string">categories</span></span><br><span class="line"><span class="hljs-attr">code_dir:</span> <span class="hljs-string">downloads/code</span></span><br><span class="line"><span class="hljs-attr">i18n_dir:</span> <span class="hljs-string">:lang</span></span><br><span class="line"><span class="hljs-attr">skip_render:</span> <span class="hljs-string">[readme.md,</span> <span class="hljs-string">"*.html"</span><span class="hljs-string">,</span> <span class="hljs-string">"*.htm"</span><span class="hljs-string">]</span></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Writing 文章布局、写作格式的定义</span></span><br><span class="line"><span class="hljs-attr">new_post_name:</span> <span class="hljs-string">:title.md</span> <span class="hljs-comment"># 新文章的文章名，这里是用文章标题作为文件名</span></span><br><span class="line"><span class="hljs-attr">default_layout:</span> <span class="hljs-string">post</span> <span class="hljs-comment"># 默认的布局，详情查看https://hexo.io/zh-cn/docs/writing.html以获得更多信息</span></span><br><span class="line"><span class="hljs-attr">auto_spacing:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 是否在中文字符和英文字符之间自动添加空格</span></span><br><span class="line"><span class="hljs-attr">titlecase:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 是否将标题大写</span></span><br><span class="line"><span class="hljs-attr">external_link:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># Open external links in new tab</span></span><br><span class="line"><span class="hljs-attr">filename_case:</span> <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-attr">render_drafts:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">relative_link:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">future:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">highlight:</span> <span class="hljs-comment">#语法高亮</span></span><br><span class="line"><span class="hljs-attr">  enable:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">  backtick_code_block:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">  line_number:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">  tab_replace:</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># 目录和标签</span></span><br><span class="line"><span class="hljs-attr">default_category:</span> <span class="hljs-string">uncategorized</span> <span class="hljs-comment"># 默认目录</span></span><br><span class="line"><span class="hljs-attr">category_map:</span></span><br><span class="line"><span class="hljs-attr">tag_map:</span></span><br><span class="line"><span class="hljs-attr">sitemap:</span></span><br><span class="line"><span class="hljs-attr">  path:</span> <span class="hljs-string">sitemap.xml</span></span><br><span class="line"><span class="hljs-attr">baidusitemap:</span></span><br><span class="line"><span class="hljs-attr">  path:</span> <span class="hljs-string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</span></span><br><span class="line"><span class="hljs-comment">## 2: Enable pagination</span></span><br><span class="line"><span class="hljs-comment">## 1: Disable pagination</span></span><br><span class="line"><span class="hljs-comment">## 0: Fully Disable</span></span><br><span class="line"><span class="hljs-attr">archive:</span> <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attr">category:</span> <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attr">tag:</span> <span class="hljs-number">1</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Server 本地服务器信息</span></span><br><span class="line"><span class="hljs-comment">## Hexo uses Connect as a server</span></span><br><span class="line"><span class="hljs-comment">## You can customize the logger format as defined in</span></span><br><span class="line"><span class="hljs-comment">## http://www.senchalabs.org/connect/logger.html</span></span><br><span class="line"><span class="hljs-attr">port:</span> <span class="hljs-number">4000</span></span><br><span class="line"><span class="hljs-attr">logger:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">logger_format:</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Date / Time format 日期、时间格式</span></span><br><span class="line"><span class="hljs-comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="hljs-comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="hljs-comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="hljs-attr">date_format:</span> <span class="hljs-string">YYYY-MM-DD</span></span><br><span class="line"><span class="hljs-attr">time_format:</span> <span class="hljs-attr">HH:mm:ss</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Pagination 每页显示文章数，可以自定义</span></span><br><span class="line"><span class="hljs-comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="hljs-attr">per_page:</span> <span class="hljs-number">10</span></span><br><span class="line"><span class="hljs-attr">pagination_dir:</span> <span class="hljs-string">page</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Extensions 配置站点所用主题和插件</span></span><br><span class="line"><span class="hljs-comment">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</span></span><br><span class="line"><span class="hljs-comment">## Themes: https://github.com/tommy351/hexo/wiki/Themes</span></span><br><span class="line"><span class="hljs-attr">theme:</span> <span class="hljs-string">icarus</span> <span class="hljs-comment"># 主题</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Deployment 站点部署到github的设置</span></span><br><span class="line"><span class="hljs-comment">## 官方文档：https://hexo.io/zh-cn/docs/deployment.html</span></span><br><span class="line"><span class="hljs-attr">deploy:</span></span><br><span class="line"><span class="hljs-attr">  type:</span> <span class="hljs-string">git</span></span><br><span class="line"><span class="hljs-attr">  repository:</span> <span class="hljs-attr">https://github.com/thesharing/thesharing.github.io.git</span> <span class="hljs-comment"># Repository地址</span></span><br><span class="line"><span class="hljs-attr">  branch:</span> <span class="hljs-string">master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Site 站点信息设置</span></span><br><span class="line"><span class="hljs-attr">title:</span> <span class="hljs-string">Zhilong's</span> <span class="hljs-string">Blog</span> <span class="hljs-comment"># 站点标题</span></span><br><span class="line"><span class="hljs-attr">subtitle:</span> <span class="hljs-string">Have</span> <span class="hljs-string">a</span> <span class="hljs-string">try</span> <span class="hljs-comment"># 副标题</span></span><br><span class="line"><span class="hljs-attr">description:</span> <span class="hljs-string">Zhilong's</span> <span class="hljs-string">personal</span> <span class="hljs-string">blog</span> <span class="hljs-string">on</span> <span class="hljs-string">github</span> <span class="hljs-comment"># 给搜索引擎看的，对站点的描述，可以自定义</span></span><br><span class="line"><span class="hljs-attr">author:</span> <span class="hljs-string">Thesharing</span> <span class="hljs-comment"># 网站作者：在站点下方可以看到</span></span><br><span class="line"><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span> <span class="hljs-comment"># 语言：简体中文</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># URL</span></span><br><span class="line"><span class="hljs-comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="hljs-attr">url:</span> <span class="hljs-string">http://thesharing.github.io/</span> <span class="hljs-comment">#站点地址</span></span><br><span class="line"><span class="hljs-attr">root:</span> <span class="hljs-string">/</span> <span class="hljs-comment">#站点的根目录</span></span><br><span class="line"><span class="hljs-attr">permalink:</span> <span class="hljs-string">:year/:month/:day/:title/</span> <span class="hljs-comment">#文章默认存放位置的格式，这里表示目录结构为：year/month/day/title.md</span></span><br><span class="line"><span class="hljs-comment"># Directory</span></span><br><span class="line"><span class="hljs-attr">source_dir:</span> <span class="hljs-string">source</span></span><br><span class="line"><span class="hljs-attr">public_dir:</span> <span class="hljs-string">public</span></span><br><span class="line"><span class="hljs-attr">tag_dir:</span> <span class="hljs-string">tags</span></span><br><span class="line"><span class="hljs-attr">archive_dir:</span> <span class="hljs-string">archives</span></span><br><span class="line"><span class="hljs-attr">category_dir:</span> <span class="hljs-string">categories</span></span><br><span class="line"><span class="hljs-attr">code_dir:</span> <span class="hljs-string">downloads/code</span></span><br><span class="line"><span class="hljs-attr">i18n_dir:</span> <span class="hljs-string">:lang</span></span><br><span class="line"><span class="hljs-attr">skip_render:</span> <span class="hljs-string">[readme.md,</span> <span class="hljs-string">"*.html"</span><span class="hljs-string">,</span> <span class="hljs-string">"*.htm"</span><span class="hljs-string">]</span></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Writing 文章布局、写作格式的定义</span></span><br><span class="line"><span class="hljs-attr">new_post_name:</span> <span class="hljs-string">:title.md</span> <span class="hljs-comment"># 新文章的文章名，这里是用文章标题作为文件名</span></span><br><span class="line"><span class="hljs-attr">default_layout:</span> <span class="hljs-string">post</span> <span class="hljs-comment"># 默认的布局，详情查看https://hexo.io/zh-cn/docs/writing.html以获得更多信息</span></span><br><span class="line"><span class="hljs-attr">auto_spacing:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 是否在中文字符和英文字符之间自动添加空格</span></span><br><span class="line"><span class="hljs-attr">titlecase:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 是否将标题大写</span></span><br><span class="line"><span class="hljs-attr">external_link:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># Open external links in new tab</span></span><br><span class="line"><span class="hljs-attr">filename_case:</span> <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-attr">render_drafts:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">relative_link:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">future:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">highlight:</span> <span class="hljs-comment">#语法高亮</span></span><br><span class="line">  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span></span><br><span class="line">  <span class="hljs-attr">backtick_code_block:</span> <span class="hljs-literal">true</span></span><br><span class="line">  <span class="hljs-attr">line_number:</span> <span class="hljs-literal">true</span></span><br><span class="line">  <span class="hljs-attr">tab_replace:</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># 目录和标签</span></span><br><span class="line"><span class="hljs-attr">default_category:</span> <span class="hljs-string">uncategorized</span> <span class="hljs-comment"># 默认目录</span></span><br><span class="line"><span class="hljs-attr">category_map:</span></span><br><span class="line"><span class="hljs-attr">tag_map:</span></span><br><span class="line"><span class="hljs-attr">sitemap:</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">sitemap.xml</span></span><br><span class="line"><span class="hljs-attr">baidusitemap:</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文</span></span><br><span class="line"><span class="hljs-comment">## 2: Enable pagination</span></span><br><span class="line"><span class="hljs-comment">## 1: Disable pagination</span></span><br><span class="line"><span class="hljs-comment">## 0: Fully Disable</span></span><br><span class="line"><span class="hljs-attr">archive:</span> <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attr">category:</span> <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-attr">tag:</span> <span class="hljs-number">1</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Server 本地服务器信息</span></span><br><span class="line"><span class="hljs-comment">## Hexo uses Connect as a server</span></span><br><span class="line"><span class="hljs-comment">## You can customize the logger format as defined in</span></span><br><span class="line"><span class="hljs-comment">## http://www.senchalabs.org/connect/logger.html</span></span><br><span class="line"><span class="hljs-attr">port:</span> <span class="hljs-number">4000</span></span><br><span class="line"><span class="hljs-attr">logger:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-attr">logger_format:</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Date / Time format 日期、时间格式</span></span><br><span class="line"><span class="hljs-comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="hljs-comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="hljs-comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="hljs-attr">date_format:</span> <span class="hljs-string">YYYY-MM-DD</span></span><br><span class="line"><span class="hljs-attr">time_format:</span> <span class="hljs-string">HH:mm:ss</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Pagination 每页显示文章数，可以自定义</span></span><br><span class="line"><span class="hljs-comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="hljs-attr">per_page:</span> <span class="hljs-number">10</span></span><br><span class="line"><span class="hljs-attr">pagination_dir:</span> <span class="hljs-string">page</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Extensions 配置站点所用主题和插件</span></span><br><span class="line"><span class="hljs-comment">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</span></span><br><span class="line"><span class="hljs-comment">## Themes: https://github.com/tommy351/hexo/wiki/Themes</span></span><br><span class="line"><span class="hljs-attr">theme:</span> <span class="hljs-string">icarus</span> <span class="hljs-comment"># 主题</span></span><br><span class="line">	</span><br><span class="line"><span class="hljs-comment"># Deployment 站点部署到github的设置</span></span><br><span class="line"><span class="hljs-comment">## 官方文档：https://hexo.io/zh-cn/docs/deployment.html</span></span><br><span class="line"><span class="hljs-attr">deploy:</span></span><br><span class="line">  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span></span><br><span class="line">  <span class="hljs-attr">repository:</span> <span class="hljs-string">https://github.com/thesharing/thesharing.github.io.git</span> <span class="hljs-comment"># Repository地址</span></span><br><span class="line">  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span></span><br></pre></td></tr></table></figure>
 <p>可以将其直接复制入你的<code>_config.yml</code>文件中使用。下面解释各项如何修改。</p>
 <h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><p>按照说明修改即可。</p>
 <h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>将url改为你的博客首地址，可以到<a href="https://www.godaddy.com/" target="_blank" rel="noopener">GoDaddy</a>上购买域名进行绑定，那么这里就应该改成你的域名而非GitHub.io地址。</p>
@@ -264,7 +252,7 @@ var _hmt = _hmt || [];
 <h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><p>将Theme修改为你下载的主题的主题名，要注意，<code>theme</code>文件夹下的主题文件夹也要对应名称。</p>
 <h3 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h3><p>将<code>repository</code>改为<code>https://github.com/你的用户名/你的用户名.github.io.git</code>，<code>branch</code>不变。</p>
 <p>此时第一个配置文件设置结束，我们打开主题的配置文件来配置主题样式。这里以icarus为例，打开<code>hexo/themes/icarus/_config.yml：</code></p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Version of the Icarus theme that is currently used</span></span><br><span class="line"><span class="hljs-attr">version:</span> <span class="hljs-number">2.3</span><span class="hljs-number">.0</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to the website's icon</span></span><br><span class="line"><span class="hljs-attr">favicon:</span> <span class="hljs-string">/images/favicon.png</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to RSS atom.xml</span></span><br><span class="line"><span class="hljs-attr">rss:</span> <span class="hljs-string">rss.xml</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to the website's logo to be shown on the left of the navigation bar or footer</span></span><br><span class="line"><span class="hljs-attr">logo:</span> <span class="hljs-string">/images/logo.png</span></span><br><span class="line"><span class="hljs-comment"># Open Graph metadata</span></span><br><span class="line"><span class="hljs-comment"># https://hexo.io/docs/helpers.html#open-graph</span></span><br><span class="line"><span class="hljs-attr">open_graph:</span></span><br><span class="line">    <span class="hljs-comment"># Facebook App ID</span></span><br><span class="line"><span class="hljs-attr">    fb_app_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Facebook Admin ID</span></span><br><span class="line"><span class="hljs-attr">    fb_admins:</span> </span><br><span class="line">    <span class="hljs-comment"># Twitter ID</span></span><br><span class="line"><span class="hljs-attr">    twitter_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Twitter site</span></span><br><span class="line"><span class="hljs-attr">    twitter_site:</span> </span><br><span class="line">    <span class="hljs-comment"># Google+ profile link</span></span><br><span class="line"><span class="hljs-attr">    google_plus:</span> </span><br><span class="line"><span class="hljs-comment"># Navigation bar link settings</span></span><br><span class="line"><span class="hljs-attr">navbar:</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar menu links</span></span><br><span class="line"><span class="hljs-attr">    menu:</span></span><br><span class="line">        <span class="hljs-string">首页:</span> <span class="hljs-string">/</span></span><br><span class="line">        <span class="hljs-string">归档:</span> <span class="hljs-string">/archives</span></span><br><span class="line">        <span class="hljs-string">关于:</span> <span class="hljs-string">/about</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar links to be shown on the right</span></span><br><span class="line"><span class="hljs-attr">    links:</span></span><br><span class="line"><span class="hljs-attr">        GitHub:</span></span><br><span class="line"><span class="hljs-attr">            icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-github</span></span><br><span class="line"><span class="hljs-attr">            url:</span> <span class="hljs-string">'http://github.com/thesharing/'</span></span><br><span class="line"><span class="hljs-comment"># Footer section link settings</span></span><br><span class="line"><span class="hljs-attr">footer:</span></span><br><span class="line">    <span class="hljs-comment"># Links to be shown on the right of the footer section</span></span><br><span class="line"><span class="hljs-attr">    links:</span></span><br><span class="line">        <span class="hljs-string">Creative</span> <span class="hljs-attr">Commons:</span></span><br><span class="line"><span class="hljs-attr">            icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-creative-commons</span></span><br><span class="line"><span class="hljs-attr">            url:</span> <span class="hljs-string">'https://creativecommons.org/'</span></span><br><span class="line">        <span class="hljs-string">Attribution</span> <span class="hljs-number">4.0</span> <span class="hljs-attr">International:</span></span><br><span class="line"><span class="hljs-attr">            icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-creative-commons-by</span></span><br><span class="line"><span class="hljs-attr">            url:</span> <span class="hljs-string">'https://creativecommons.org/licenses/by/4.0/'</span></span><br><span class="line"><span class="hljs-comment"># Article display settings</span></span><br><span class="line"><span class="hljs-attr">article:</span></span><br><span class="line">    <span class="hljs-comment"># Code highlight theme</span></span><br><span class="line">    <span class="hljs-comment"># https://github.com/highlightjs/highlight.js/tree/master/src/styles</span></span><br><span class="line"><span class="hljs-attr">    highlight:</span> <span class="hljs-string">pojoaque</span></span><br><span class="line">    <span class="hljs-comment"># Whether to show article thumbnail images</span></span><br><span class="line"><span class="hljs-attr">    thumbnail:</span> <span class="hljs-literal">false</span></span><br><span class="line">    <span class="hljs-comment"># Whether to show estimate article reading time</span></span><br><span class="line"><span class="hljs-attr">    readtime:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-comment"># Search plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Search-Plugins</span></span><br><span class="line"><span class="hljs-attr">search:</span></span><br><span class="line">    <span class="hljs-comment"># Name of the search plugin</span></span><br><span class="line"><span class="hljs-attr">    type:</span> <span class="hljs-string">insight</span></span><br><span class="line"><span class="hljs-comment"># Comment plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins</span></span><br><span class="line"><span class="hljs-attr">comment:</span></span><br><span class="line">    <span class="hljs-comment"># Name of the comment plugin</span></span><br><span class="line"><span class="hljs-attr">    type:</span> <span class="hljs-string">disqus</span></span><br><span class="line"><span class="hljs-attr">    shortname:</span> <span class="hljs-string">thesharing</span></span><br><span class="line"><span class="hljs-comment"># Donation entries</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Donation/</span></span><br><span class="line"><span class="hljs-attr">donate:</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Donation entry name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">alipay</span></span><br><span class="line">        <span class="hljs-comment"># Qrcode image URL</span></span><br><span class="line"><span class="hljs-attr">        qrcode:</span> <span class="hljs-string">'/images/alipay.jpg'</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Donation entry name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">wechat</span></span><br><span class="line">        <span class="hljs-comment"># Qrcode image URL</span></span><br><span class="line"><span class="hljs-attr">        qrcode:</span> <span class="hljs-string">'/images/wechat.jpg'</span></span><br><span class="line">    <span class="hljs-comment"># -</span></span><br><span class="line">    <span class="hljs-comment">#     # Donation entry name</span></span><br><span class="line">    <span class="hljs-comment">#     type: paypal</span></span><br><span class="line">    <span class="hljs-comment">#     # Paypal business ID or email address</span></span><br><span class="line">    <span class="hljs-comment">#     business: ''</span></span><br><span class="line">    <span class="hljs-comment">#     # Currency code</span></span><br><span class="line">    <span class="hljs-comment">#     currency_code: USD</span></span><br><span class="line">    <span class="hljs-comment"># -</span></span><br><span class="line">    <span class="hljs-comment">#     # Donation entry name</span></span><br><span class="line">    <span class="hljs-comment">#     type: patreon</span></span><br><span class="line">    <span class="hljs-comment">#     # URL to the Patreon page</span></span><br><span class="line">    <span class="hljs-comment">#     url: ''</span></span><br><span class="line"><span class="hljs-comment"># Share plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins</span></span><br><span class="line"><span class="hljs-attr">share:</span></span><br><span class="line">    <span class="hljs-comment"># Share plugin name</span></span><br><span class="line"><span class="hljs-attr">    type:</span> <span class="hljs-string">sharejs</span></span><br><span class="line"><span class="hljs-comment"># Sidebar settings.</span></span><br><span class="line"><span class="hljs-comment"># Please be noted that a sidebar is only visible when it has at least one widget</span></span><br><span class="line"><span class="hljs-attr">sidebar:</span></span><br><span class="line">    <span class="hljs-comment"># left sidebar settings</span></span><br><span class="line"><span class="hljs-attr">    left:</span></span><br><span class="line">        <span class="hljs-comment"># Whether the left sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line"><span class="hljs-attr">        sticky:</span> <span class="hljs-literal">false</span></span><br><span class="line">    <span class="hljs-comment"># right sidebar settings</span></span><br><span class="line"><span class="hljs-attr">    right:</span></span><br><span class="line">        <span class="hljs-comment"># Whether the right sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line"><span class="hljs-attr">        sticky:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-comment"># Sidebar widget settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/</span></span><br><span class="line"><span class="hljs-attr">widgets:</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">profile</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">left</span></span><br><span class="line">        <span class="hljs-comment"># Author name to be shown in the profile widget</span></span><br><span class="line"><span class="hljs-attr">        author:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Name</span></span><br><span class="line">        <span class="hljs-comment"># Title of the author to be shown in the profile widget</span></span><br><span class="line"><span class="hljs-attr">        author_title:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Title</span></span><br><span class="line">        <span class="hljs-comment"># Author's current location to be shown in the profile widget</span></span><br><span class="line"><span class="hljs-attr">        location:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Location</span></span><br><span class="line">        <span class="hljs-comment"># Path or URL to the avatar to be shown in the profile widget</span></span><br><span class="line"><span class="hljs-attr">        avatar:</span> <span class="hljs-string">/images/avatar.png</span></span><br><span class="line">        <span class="hljs-comment"># Email address for the Gravatar to be shown in the profile widget</span></span><br><span class="line"><span class="hljs-attr">        gravatar:</span> </span><br><span class="line">        <span class="hljs-comment"># Whether to show avatar image rounded or square</span></span><br><span class="line"><span class="hljs-attr">        avatar_rounded:</span> <span class="hljs-literal">true</span></span><br><span class="line">        <span class="hljs-comment"># Path or URL for the follow button</span></span><br><span class="line"><span class="hljs-attr">        follow_link:</span> <span class="hljs-string">'http://github.com/thesharing/'</span></span><br><span class="line">        <span class="hljs-comment"># Links to be shown on the bottom of the profile widget</span></span><br><span class="line"><span class="hljs-attr">        social_links:</span></span><br><span class="line"><span class="hljs-attr">            Github:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-github</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            StackOverflow:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-stack-overflow</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            Steam:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-steam</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            Instagram:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-instagram</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            Weibo:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-weibo</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            Facebook:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-facebook</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-attr">            Twitter:</span></span><br><span class="line"><span class="hljs-attr">                icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-twitter</span></span><br><span class="line"><span class="hljs-attr">                url:</span> <span class="hljs-string">''</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">toc</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">right</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">links</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">left</span></span><br><span class="line">        <span class="hljs-comment"># Links to be shown in the links widget</span></span><br><span class="line"><span class="hljs-attr">        links:</span></span><br><span class="line">            <span class="hljs-string">GitHub</span> <span class="hljs-bullet">-</span> <span class="hljs-attr">Thesharing:</span> <span class="hljs-attr">http://github.com/thesharing/</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">recent_posts</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">right</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">archive</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">right</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">category</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">right</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">tag</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">right</span></span><br><span class="line"><span class="hljs-bullet">    -</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line"><span class="hljs-attr">        type:</span> <span class="hljs-string">tagcloud</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line"><span class="hljs-attr">        position:</span> <span class="hljs-string">left</span></span><br><span class="line"><span class="hljs-comment"># Other plugin settings</span></span><br><span class="line"><span class="hljs-attr">plugins:</span></span><br><span class="line">    <span class="hljs-comment"># Enable page animations</span></span><br><span class="line"><span class="hljs-attr">    animejs:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the lightGallery and Justified Gallery plugins</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/</span></span><br><span class="line"><span class="hljs-attr">    gallery:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the Outdated Browser plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://outdatedbrowser.com/</span></span><br><span class="line"><span class="hljs-attr">    outdated-browser:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the MathJax plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/mathjax-plugin/</span></span><br><span class="line"><span class="hljs-attr">    mathjax:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Show the back to top button on mobile devices</span></span><br><span class="line"><span class="hljs-attr">    back-to-top:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Google Analytics plugin settings</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Google-Analytics</span></span><br><span class="line"><span class="hljs-attr">    google-analytics:</span></span><br><span class="line">        <span class="hljs-comment"># Google Analytics tracking id</span></span><br><span class="line"><span class="hljs-attr">        tracking_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Baidu Analytics plugin settings</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Baidu-Analytics</span></span><br><span class="line"><span class="hljs-attr">    baidu-analytics:</span></span><br><span class="line">        <span class="hljs-comment"># Baidu Analytics tracking id</span></span><br><span class="line"><span class="hljs-attr">        tracking_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Hotjar user feedback plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Hotjar</span></span><br><span class="line">    <span class="hljs-comment"># hotjar:</span></span><br><span class="line">    <span class="hljs-comment">#     # Hotjar site id</span></span><br><span class="line">    <span class="hljs-comment">#     site_id: </span></span><br><span class="line">    <span class="hljs-comment"># Show a loading progress bar at top of the page</span></span><br><span class="line"><span class="hljs-attr">    progressbar:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Show the copy button in the highlighted code area</span></span><br><span class="line"><span class="hljs-attr">    clipboard:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># BuSuanZi site/page view counter</span></span><br><span class="line">    <span class="hljs-comment"># https://busuanzi.ibruce.info</span></span><br><span class="line"><span class="hljs-attr">    busuanzi:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-comment"># CDN provider settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/</span></span><br><span class="line"><span class="hljs-attr">providers:</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the JavaScript and/or stylesheet CDN provider</span></span><br><span class="line"><span class="hljs-attr">    cdn:</span> <span class="hljs-string">unpkg</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the webfont CDN provider</span></span><br><span class="line"><span class="hljs-attr">    fontcdn:</span> <span class="hljs-string">google</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the webfont Icon CDN provider</span></span><br><span class="line"><span class="hljs-attr">    iconcdn:</span> <span class="hljs-string">fontawesome</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Version of the Icarus theme that is currently used</span></span><br><span class="line"><span class="hljs-attr">version:</span> <span class="hljs-number">2.3</span><span class="hljs-number">.0</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to the website's icon</span></span><br><span class="line"><span class="hljs-attr">favicon:</span> <span class="hljs-string">/images/favicon.png</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to RSS atom.xml</span></span><br><span class="line"><span class="hljs-attr">rss:</span> <span class="hljs-string">rss.xml</span></span><br><span class="line"><span class="hljs-comment"># Path or URL to the website's logo to be shown on the left of the navigation bar or footer</span></span><br><span class="line"><span class="hljs-attr">logo:</span> <span class="hljs-string">/images/logo.png</span></span><br><span class="line"><span class="hljs-comment"># Open Graph metadata</span></span><br><span class="line"><span class="hljs-comment"># https://hexo.io/docs/helpers.html#open-graph</span></span><br><span class="line"><span class="hljs-attr">open_graph:</span></span><br><span class="line">    <span class="hljs-comment"># Facebook App ID</span></span><br><span class="line">    <span class="hljs-attr">fb_app_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Facebook Admin ID</span></span><br><span class="line">    <span class="hljs-attr">fb_admins:</span> </span><br><span class="line">    <span class="hljs-comment"># Twitter ID</span></span><br><span class="line">    <span class="hljs-attr">twitter_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Twitter site</span></span><br><span class="line">    <span class="hljs-attr">twitter_site:</span> </span><br><span class="line">    <span class="hljs-comment"># Google+ profile link</span></span><br><span class="line">    <span class="hljs-attr">google_plus:</span> </span><br><span class="line"><span class="hljs-comment"># Navigation bar link settings</span></span><br><span class="line"><span class="hljs-attr">navbar:</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar menu links</span></span><br><span class="line">    <span class="hljs-attr">menu:</span></span><br><span class="line">        <span class="hljs-string">首页:</span> <span class="hljs-string">/</span></span><br><span class="line">        <span class="hljs-string">归档:</span> <span class="hljs-string">/archives</span></span><br><span class="line">        <span class="hljs-string">关于:</span> <span class="hljs-string">/about</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar links to be shown on the right</span></span><br><span class="line">    <span class="hljs-attr">links:</span></span><br><span class="line">        <span class="hljs-attr">GitHub:</span></span><br><span class="line">            <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-github</span></span><br><span class="line">            <span class="hljs-attr">url:</span> <span class="hljs-string">'http://github.com/thesharing/'</span></span><br><span class="line"><span class="hljs-comment"># Footer section link settings</span></span><br><span class="line"><span class="hljs-attr">footer:</span></span><br><span class="line">    <span class="hljs-comment"># Links to be shown on the right of the footer section</span></span><br><span class="line">    <span class="hljs-attr">links:</span></span><br><span class="line">        <span class="hljs-attr">Creative Commons:</span></span><br><span class="line">            <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-creative-commons</span></span><br><span class="line">            <span class="hljs-attr">url:</span> <span class="hljs-string">'https://creativecommons.org/'</span></span><br><span class="line">        <span class="hljs-attr">Attribution 4.0 International:</span></span><br><span class="line">            <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-creative-commons-by</span></span><br><span class="line">            <span class="hljs-attr">url:</span> <span class="hljs-string">'https://creativecommons.org/licenses/by/4.0/'</span></span><br><span class="line"><span class="hljs-comment"># Article display settings</span></span><br><span class="line"><span class="hljs-attr">article:</span></span><br><span class="line">    <span class="hljs-comment"># Code highlight theme</span></span><br><span class="line">    <span class="hljs-comment"># https://github.com/highlightjs/highlight.js/tree/master/src/styles</span></span><br><span class="line">    <span class="hljs-attr">highlight:</span> <span class="hljs-string">pojoaque</span></span><br><span class="line">    <span class="hljs-comment"># Whether to show article thumbnail images</span></span><br><span class="line">    <span class="hljs-attr">thumbnail:</span> <span class="hljs-literal">false</span></span><br><span class="line">    <span class="hljs-comment"># Whether to show estimate article reading time</span></span><br><span class="line">    <span class="hljs-attr">readtime:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-comment"># Search plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Search-Plugins</span></span><br><span class="line"><span class="hljs-attr">search:</span></span><br><span class="line">    <span class="hljs-comment"># Name of the search plugin</span></span><br><span class="line">    <span class="hljs-attr">type:</span> <span class="hljs-string">insight</span></span><br><span class="line"><span class="hljs-comment"># Comment plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins</span></span><br><span class="line"><span class="hljs-attr">comment:</span></span><br><span class="line">    <span class="hljs-comment"># Name of the comment plugin</span></span><br><span class="line">    <span class="hljs-attr">type:</span> <span class="hljs-string">disqus</span></span><br><span class="line">    <span class="hljs-attr">shortname:</span> <span class="hljs-string">thesharing</span></span><br><span class="line"><span class="hljs-comment"># Donation entries</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Donation/</span></span><br><span class="line"><span class="hljs-attr">donate:</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Donation entry name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">alipay</span></span><br><span class="line">        <span class="hljs-comment"># Qrcode image URL</span></span><br><span class="line">        <span class="hljs-attr">qrcode:</span> <span class="hljs-string">'/images/alipay.jpg'</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Donation entry name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">wechat</span></span><br><span class="line">        <span class="hljs-comment"># Qrcode image URL</span></span><br><span class="line">        <span class="hljs-attr">qrcode:</span> <span class="hljs-string">'/images/wechat.jpg'</span></span><br><span class="line">    <span class="hljs-comment"># -</span></span><br><span class="line">    <span class="hljs-comment">#     # Donation entry name</span></span><br><span class="line">    <span class="hljs-comment">#     type: paypal</span></span><br><span class="line">    <span class="hljs-comment">#     # Paypal business ID or email address</span></span><br><span class="line">    <span class="hljs-comment">#     business: ''</span></span><br><span class="line">    <span class="hljs-comment">#     # Currency code</span></span><br><span class="line">    <span class="hljs-comment">#     currency_code: USD</span></span><br><span class="line">    <span class="hljs-comment"># -</span></span><br><span class="line">    <span class="hljs-comment">#     # Donation entry name</span></span><br><span class="line">    <span class="hljs-comment">#     type: patreon</span></span><br><span class="line">    <span class="hljs-comment">#     # URL to the Patreon page</span></span><br><span class="line">    <span class="hljs-comment">#     url: ''</span></span><br><span class="line"><span class="hljs-comment"># Share plugin settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins</span></span><br><span class="line"><span class="hljs-attr">share:</span></span><br><span class="line">    <span class="hljs-comment"># Share plugin name</span></span><br><span class="line">    <span class="hljs-attr">type:</span> <span class="hljs-string">sharejs</span></span><br><span class="line"><span class="hljs-comment"># Sidebar settings.</span></span><br><span class="line"><span class="hljs-comment"># Please be noted that a sidebar is only visible when it has at least one widget</span></span><br><span class="line"><span class="hljs-attr">sidebar:</span></span><br><span class="line">    <span class="hljs-comment"># left sidebar settings</span></span><br><span class="line">    <span class="hljs-attr">left:</span></span><br><span class="line">        <span class="hljs-comment"># Whether the left sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line">        <span class="hljs-attr">sticky:</span> <span class="hljs-literal">false</span></span><br><span class="line">    <span class="hljs-comment"># right sidebar settings</span></span><br><span class="line">    <span class="hljs-attr">right:</span></span><br><span class="line">        <span class="hljs-comment"># Whether the right sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line">        <span class="hljs-attr">sticky:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-comment"># Sidebar widget settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/</span></span><br><span class="line"><span class="hljs-attr">widgets:</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">profile</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">left</span></span><br><span class="line">        <span class="hljs-comment"># Author name to be shown in the profile widget</span></span><br><span class="line">        <span class="hljs-attr">author:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Name</span></span><br><span class="line">        <span class="hljs-comment"># Title of the author to be shown in the profile widget</span></span><br><span class="line">        <span class="hljs-attr">author_title:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Title</span></span><br><span class="line">        <span class="hljs-comment"># Author's current location to be shown in the profile widget</span></span><br><span class="line">        <span class="hljs-attr">location:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Location</span></span><br><span class="line">        <span class="hljs-comment"># Path or URL to the avatar to be shown in the profile widget</span></span><br><span class="line">        <span class="hljs-attr">avatar:</span> <span class="hljs-string">/images/avatar.png</span></span><br><span class="line">        <span class="hljs-comment"># Email address for the Gravatar to be shown in the profile widget</span></span><br><span class="line">        <span class="hljs-attr">gravatar:</span> </span><br><span class="line">        <span class="hljs-comment"># Whether to show avatar image rounded or square</span></span><br><span class="line">        <span class="hljs-attr">avatar_rounded:</span> <span class="hljs-literal">true</span></span><br><span class="line">        <span class="hljs-comment"># Path or URL for the follow button</span></span><br><span class="line">        <span class="hljs-attr">follow_link:</span> <span class="hljs-string">'http://github.com/thesharing/'</span></span><br><span class="line">        <span class="hljs-comment"># Links to be shown on the bottom of the profile widget</span></span><br><span class="line">        <span class="hljs-attr">social_links:</span></span><br><span class="line">            <span class="hljs-attr">Github:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-github</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">StackOverflow:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-stack-overflow</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">Steam:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-steam</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">Instagram:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-instagram</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">Weibo:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-weibo</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">Facebook:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-facebook</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">            <span class="hljs-attr">Twitter:</span></span><br><span class="line">                <span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-twitter</span></span><br><span class="line">                <span class="hljs-attr">url:</span> <span class="hljs-string">''</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">toc</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">right</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">links</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">left</span></span><br><span class="line">        <span class="hljs-comment"># Links to be shown in the links widget</span></span><br><span class="line">        <span class="hljs-attr">links:</span></span><br><span class="line">            <span class="hljs-attr">GitHub - Thesharing:</span> <span class="hljs-string">http://github.com/thesharing/</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">recent_posts</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">right</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">archive</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">right</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">category</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">right</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">tag</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">right</span></span><br><span class="line">    <span class="hljs-bullet">-</span></span><br><span class="line">        <span class="hljs-comment"># Widget name</span></span><br><span class="line">        <span class="hljs-attr">type:</span> <span class="hljs-string">tagcloud</span></span><br><span class="line">        <span class="hljs-comment"># Where should the widget be placed, left or right</span></span><br><span class="line">        <span class="hljs-attr">position:</span> <span class="hljs-string">left</span></span><br><span class="line"><span class="hljs-comment"># Other plugin settings</span></span><br><span class="line"><span class="hljs-attr">plugins:</span></span><br><span class="line">    <span class="hljs-comment"># Enable page animations</span></span><br><span class="line">    <span class="hljs-attr">animejs:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the lightGallery and Justified Gallery plugins</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/gallery-plugin/</span></span><br><span class="line">    <span class="hljs-attr">gallery:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the Outdated Browser plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://outdatedbrowser.com/</span></span><br><span class="line">    <span class="hljs-attr">outdated-browser:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Enable the MathJax plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/mathjax-plugin/</span></span><br><span class="line">    <span class="hljs-attr">mathjax:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Show the back to top button on mobile devices</span></span><br><span class="line">    <span class="hljs-attr">back-to-top:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Google Analytics plugin settings</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Google-Analytics</span></span><br><span class="line">    <span class="hljs-attr">google-analytics:</span></span><br><span class="line">        <span class="hljs-comment"># Google Analytics tracking id</span></span><br><span class="line">        <span class="hljs-attr">tracking_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Baidu Analytics plugin settings</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Baidu-Analytics</span></span><br><span class="line">    <span class="hljs-attr">baidu-analytics:</span></span><br><span class="line">        <span class="hljs-comment"># Baidu Analytics tracking id</span></span><br><span class="line">        <span class="hljs-attr">tracking_id:</span> </span><br><span class="line">    <span class="hljs-comment"># Hotjar user feedback plugin</span></span><br><span class="line">    <span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Hotjar</span></span><br><span class="line">    <span class="hljs-comment"># hotjar:</span></span><br><span class="line">    <span class="hljs-comment">#     # Hotjar site id</span></span><br><span class="line">    <span class="hljs-comment">#     site_id: </span></span><br><span class="line">    <span class="hljs-comment"># Show a loading progress bar at top of the page</span></span><br><span class="line">    <span class="hljs-attr">progressbar:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># Show the copy button in the highlighted code area</span></span><br><span class="line">    <span class="hljs-attr">clipboard:</span> <span class="hljs-literal">true</span></span><br><span class="line">    <span class="hljs-comment"># BuSuanZi site/page view counter</span></span><br><span class="line">    <span class="hljs-comment"># https://busuanzi.ibruce.info</span></span><br><span class="line">    <span class="hljs-attr">busuanzi:</span> <span class="hljs-literal">false</span></span><br><span class="line"><span class="hljs-comment"># CDN provider settings</span></span><br><span class="line"><span class="hljs-comment"># http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/</span></span><br><span class="line"><span class="hljs-attr">providers:</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the JavaScript and/or stylesheet CDN provider</span></span><br><span class="line">    <span class="hljs-attr">cdn:</span> <span class="hljs-string">unpkg</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the webfont CDN provider</span></span><br><span class="line">    <span class="hljs-attr">fontcdn:</span> <span class="hljs-string">google</span></span><br><span class="line">    <span class="hljs-comment"># Name or URL of the webfont Icon CDN provider</span></span><br><span class="line">    <span class="hljs-attr">iconcdn:</span> <span class="hljs-string">fontawesome</span></span><br></pre></td></tr></table></figure>
 <h3 id="可配置项"><a href="#可配置项" class="headerlink" title="可配置项"></a>可配置项</h3><ul>
 <li>在配置的<code>navbar</code>部分中按照<code>页面名: 页面目录</code>的格式可以自行添加页面。</li>
 <li><code>logo</code>中可以设置Logo以及Logo大小。建议直接替换而非自定目录。</li>
@@ -303,7 +291,7 @@ var _hmt = _hmt || [];
 <p>然后需要生成SiteMap。在Hexo根目录下执行：</p>
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
 <p>安装完成后在Hexo文件夹中的<code>_config.yml</code>中添加：</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">sitemap:</span></span><br><span class="line"><span class="hljs-attr">  path:</span> <span class="hljs-string">sitemap.xml</span></span><br><span class="line"><span class="hljs-attr">baidusitemap:</span></span><br><span class="line"><span class="hljs-attr">  path:</span> <span class="hljs-string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">sitemap:</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">sitemap.xml</span></span><br><span class="line"><span class="hljs-attr">baidusitemap:</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
 <p>然后运行<code>hexo -g</code>即可生成sitemap.xml和baidusitemap.xml文件。</p>
 <p>在生成了SiteMap文件后需要进行提交。</p>
 <p>百度提交方式为：</p>
@@ -317,20 +305,20 @@ var _hmt = _hmt || [];
 <p>对于不支持MathJax的主题来说，在Hexo根目录下运行：</p>
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-math</span><br></pre></td></tr></table></figure>
 <p>然后在Hexo的<code>_config.yml</code>文件中设置MathJax：</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">math:</span></span><br><span class="line"><span class="hljs-attr">  engine:</span> <span class="hljs-string">'mathjax'</span></span><br><span class="line"><span class="hljs-attr">  mathjax:</span></span><br><span class="line"><span class="hljs-attr">    src:</span> <span class="hljs-string">custom_mathjax_source</span></span><br><span class="line"><span class="hljs-attr">    config:</span></span><br><span class="line">      <span class="hljs-comment"># MATHJAX CONFIG</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">math:</span></span><br><span class="line">  <span class="hljs-attr">engine:</span> <span class="hljs-string">'mathjax'</span></span><br><span class="line">  <span class="hljs-attr">mathjax:</span></span><br><span class="line">    <span class="hljs-attr">src:</span> <span class="hljs-string">custom_mathjax_source</span></span><br><span class="line">    <span class="hljs-attr">config:</span></span><br><span class="line">      <span class="hljs-comment"># MATHJAX CONFIG</span></span><br></pre></td></tr></table></figure>
 <p>可参考<a href="http://stevenshi.me/2017/06/26/hexo-insert-formula/" target="_blank" rel="noopener">hexo中插入数学公式</a></p>
 <h3 id="添加RSS订阅"><a href="#添加RSS订阅" class="headerlink" title="添加RSS订阅"></a>添加RSS订阅</h3><p>首先在Hexo根目录下运行：</p>
 <figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
 <p>然后在Hexo的<code>_config.yml</code>文件中添加配置：</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">feed:</span></span><br><span class="line"><span class="hljs-attr">  type:</span> <span class="hljs-string">atom</span></span><br><span class="line"><span class="hljs-attr">  path:</span> <span class="hljs-string">rss.xml</span></span><br><span class="line"><span class="hljs-attr">  limit:</span> <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-attr">  hub:</span></span><br><span class="line"><span class="hljs-attr">  content:</span> <span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-attr">  order_by:</span> <span class="hljs-bullet">-date</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">feed:</span></span><br><span class="line">  <span class="hljs-attr">type:</span> <span class="hljs-string">atom</span></span><br><span class="line">  <span class="hljs-attr">path:</span> <span class="hljs-string">rss.xml</span></span><br><span class="line">  <span class="hljs-attr">limit:</span> <span class="hljs-number">0</span></span><br><span class="line">  <span class="hljs-attr">hub:</span></span><br><span class="line">  <span class="hljs-attr">content:</span> <span class="hljs-literal">true</span></span><br><span class="line">  <span class="hljs-attr">order_by:</span> <span class="hljs-string">-date</span></span><br></pre></td></tr></table></figure>
 <p>接着在icarus的<code>_config.yml</code>文件中添加RSS的入口，可以在<code>Navbar</code>部分添加RSS链接：</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">navbar:</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar menu links</span></span><br><span class="line"><span class="hljs-attr">    menu:</span></span><br><span class="line">        <span class="hljs-string">首页:</span> <span class="hljs-string">/</span></span><br><span class="line">        <span class="hljs-string">归档:</span> <span class="hljs-string">/archives</span></span><br><span class="line">        <span class="hljs-string">关于:</span> <span class="hljs-string">/about</span></span><br><span class="line"><span class="hljs-attr">        RSS:</span> <span class="hljs-string">/rss.xml</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">navbar:</span></span><br><span class="line">    <span class="hljs-comment"># Navigation bar menu links</span></span><br><span class="line">    <span class="hljs-attr">menu:</span></span><br><span class="line">        <span class="hljs-string">首页:</span> <span class="hljs-string">/</span></span><br><span class="line">        <span class="hljs-string">归档:</span> <span class="hljs-string">/archives</span></span><br><span class="line">        <span class="hljs-string">关于:</span> <span class="hljs-string">/about</span></span><br><span class="line">        <span class="hljs-attr">RSS:</span> <span class="hljs-string">/rss.xml</span></span><br></pre></td></tr></table></figure>
 <p>也可以在<code>Social Links</code>部分添加：</p>
 <figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">social_links:</span></span><br><span class="line">	<span class="hljs-attr">RSS:</span></span><br><span class="line">		<span class="hljs-attr">icon:</span> <span class="hljs-string">fab</span> <span class="hljs-string">fa-rss</span></span><br><span class="line">		<span class="hljs-attr">url:</span> <span class="hljs-string">'/rss.xml'</span></span><br></pre></td></tr></table></figure>
 <p>可参考<a href="https://segmentfault.com/a/1190000012647294" target="_blank" rel="noopener">为hexo博客添加RSS订阅功能</a></p>
 <h3 id="节点分流"><a href="#节点分流" class="headerlink" title="节点分流"></a>节点分流</h3><p>如果你已经将你的个人主页挂靠在自己申请的域名上，那么你可以通过域名解析进行节点分流，国外用户访问GitHub，国内用户访问coding.net，从而解决GitHub在国内访问速度慢的问题。</p>
 <p>首先在coding.net（现在又称腾讯云开发者平台）注册账号，并新建一个项目，然后在项目设置中开启Pages服务。然后在Hexo的<code>_config.xml</code>文件中设置<code>deploy</code>到多个仓库中：</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">deploy:</span></span><br><span class="line"><span class="hljs-attr">  type:</span> <span class="hljs-string">git</span></span><br><span class="line"><span class="hljs-attr">  repository:</span></span><br><span class="line"><span class="hljs-attr">    github:</span> <span class="hljs-string">git@github.com:abc/abc.github.io.git</span></span><br><span class="line"><span class="hljs-attr">    tencent:</span> <span class="hljs-string">git@git.dev.tencent.com:abc/abc.git</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">deploy:</span></span><br><span class="line">  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span></span><br><span class="line">  <span class="hljs-attr">repository:</span></span><br><span class="line">    <span class="hljs-attr">github:</span> <span class="hljs-string">git@github.com:abc/abc.github.io.git</span></span><br><span class="line">    <span class="hljs-attr">tencent:</span> <span class="hljs-string">git@git.dev.tencent.com:abc/abc.git</span></span><br></pre></td></tr></table></figure>
 <p>接下来运行<code>hexo d</code>将页面分别部署到两个仓库中。访问coding.net / GitHub提供的原始网址，保证可以正常访问。</p>
 <p>再在云服务商的域名解析页面进行设置，添加CNAME记录，境外线路指向abc.github.io，境内线路指向abc.coding.me。等待DNS刷新后就可以进行节点分流了。</p>
 <h2 id="推荐阅读-与-参考资料"><a href="#推荐阅读-与-参考资料" class="headerlink" title="推荐阅读 与 参考资料"></a>推荐阅读 与 参考资料</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档 | Hexo</a></p>
@@ -359,8 +347,8 @@ var _hmt = _hmt || [];
         
         
         <div class="social-share"></div>
-<link rel="stylesheet" href="https://unpkg.com/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://unpkg.com/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
@@ -443,19 +431,18 @@ var _hmt = _hmt || [];
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
     <div class="card-content">
         <nav class="level">
-            <div class="level-item has-text-centered">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
                 <div>
                     
-                        <figure class="image container is-128x128 has-mb-6">
-                            <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
-                        </figure>
-                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
+                    </figure>
                     
                     <p class="is-size-4 is-block">
                         Zhilong
@@ -463,13 +450,13 @@ var _hmt = _hmt || [];
                     
                     
                     <p class="is-size-6 is-block">
-                        A CS Student
+                        Student
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>北京, 中国</span>
+                        <span>Beijing, China</span>
                     </p>
                     
                 </div>
@@ -481,9 +468,11 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         文章
                     </p>
-                    <p class="title has-text-weight-normal">
-                        8
-                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -491,9 +480,11 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         分类
                     </p>
-                    <p class="title has-text-weight-normal">
-                        3
-                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            3
+                        </p>
+                    </a>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
@@ -501,57 +492,68 @@ var _hmt = _hmt || [];
                     <p class="heading">
                         标签
                     </p>
-                    <p class="title has-text-weight-normal">
-                        8
-                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
                 </div>
             </div>
         </nav>
+        
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://github.com/thesharing/">
+            <a class="level-item button is-link is-rounded" href="https://github.com/thesharing/" target="_blank">
                 关注我</a>
         </div>
         
         
+        
         <div class="level is-mobile">
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/thesharing/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="http://github.com/thesharing/">
                 
                 <i class="fab fa-github"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
                 
                 <i class="fab fa-stack-overflow"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Steam" href="http://steamcommunity.com/id/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Steam" href="http://steamcommunity.com/id/cyprestar/">
                 
                 <i class="fab fa-steam"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Instagram" href="http://www.instagram.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Instagram" href="http://www.instagram.com/cyprestar/">
                 
                 <i class="fab fa-instagram"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Weibo" href=" http://weibo.com/sharinginworld/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Weibo" href=" http://weibo.com/sharinginworld/">
                 
                 <i class="fab fa-weibo"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/cyprestar/">
                 
                 <i class="fab fa-facebook"></i>
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com/cyprestar/">
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Twitter" href="http://twitter.com/cyprestar/">
                 
                 <i class="fab fa-twitter"></i>
                 
@@ -562,9 +564,7 @@ var _hmt = _hmt || [];
     </div>
 </div>
     
-        
-
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -643,26 +643,22 @@ var _hmt = _hmt || [];
     </div>
 </div>
 
-
     
-        
-<div class="card widget">
+        <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
+        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
     </div>
 </div>
-
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
+        <div class="column-right-shadow  is-sticky">
+            
             
         
-            
-<div class="card widget">
+            <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             最新文章
@@ -672,8 +668,21 @@ var _hmt = _hmt || [];
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-02T11:12:02.000Z">2019-12-02</time></div>
+                    <a href="/2019/12/02/Pythonic-Readding-Note/" class="title has-link-black-ter is-size-6 has-text-weight-normal">《Python 工匠：善用变量来改善代码质量》摘录</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-10T17:39:21.000Z">2019-03-11</time></div>
-                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="has-link-black-ter is-size-6">Visual Studio Code配置C/C++编译运行环境</a>
+                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Visual Studio Code配置C/C++编译运行环境</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -686,7 +695,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-06T07:35:42.000Z">2019-02-06</time></div>
-                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="has-link-black-ter is-size-6">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
+                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
                     </p>
@@ -699,7 +708,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
-                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
+                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Ubuntu Server上配置CUDA环境</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -712,20 +721,7 @@ var _hmt = _hmt || [];
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
-                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
-                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
+                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="title has-link-black-ter is-size-6 has-text-weight-normal">用Markdown写公式</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
                     </p>
@@ -735,7 +731,6 @@ var _hmt = _hmt || [];
         
     </div>
 </div>
-
         
             <div class="card widget">
     <div class="card-content">
@@ -744,6 +739,17 @@ var _hmt = _hmt || [];
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/03/">
@@ -852,7 +858,7 @@ var _hmt = _hmt || [];
                 <span class="level-item">Basic</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Creative/">
@@ -927,6 +933,13 @@ var _hmt = _hmt || [];
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/VSCode/">
                         <span class="tag">VSCode</span>
                         <span class="tag is-grey">1</span>
@@ -950,301 +963,6 @@ var _hmt = _hmt || [];
 </div>
 
                 
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            最新文章
-        </h3>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-10T17:39:21.000Z">2019-03-11</time></div>
-                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="has-link-black-ter is-size-6">Visual Studio Code配置C/C++编译运行环境</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-06T07:35:42.000Z">2019-02-06</time></div>
-                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="has-link-black-ter is-size-6">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
-                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="has-link-black-ter is-size-6">在Ubuntu Server上配置CUDA环境</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
-                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="has-link-black-ter is-size-6">用Markdown写公式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-11-01T03:25:25.000Z">2016-11-01</time></div>
-                    <a href="/2016/11/01/How-to-Write-Markdown/" class="has-link-black-ter is-size-6">如何快速掌握Markdown语法？</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            归档
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/03/">
-                <span class="level-start">
-                    <span class="level-item">三月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/08/">
-                <span class="level-start">
-                    <span class="level-item">八月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/11/">
-                <span class="level-start">
-                    <span class="level-item">十一月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/08/">
-                <span class="level-start">
-                    <span class="level-item">八月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/04/">
-                <span class="level-start">
-                    <span class="level-item">四月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2016/02/">
-                <span class="level-start">
-                    <span class="level-item">二月 2016</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/Basic/">
-            <span class="level-start">
-                <span class="level-item">Basic</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Creative/">
-            <span class="level-start">
-                <span class="level-item">Creative</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/DanmakuPie/">
-            <span class="level-start">
-                <span class="level-item">DanmakuPie</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/BoP2016/">
-                        <span class="tag">BoP2016</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/C/">
-                        <span class="tag">C++</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Configuration/">
-                        <span class="tag">Configuration</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Electron/">
-                        <span class="tag">Electron</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Markdown/">
-                        <span class="tag">Markdown</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/VSCode/">
-                        <span class="tag">VSCode</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/WPF/">
-                        <span class="tag">WPF</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
             </div>
         </div>
     </section>
@@ -1259,14 +977,14 @@ var _hmt = _hmt || [];
                 </a>
                 <p class="is-size-7">
                 &copy; 2019 Zhilong&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 </p>
             </div>
             <div class="level-end">
             
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                
                 
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
@@ -1290,35 +1008,45 @@ var _hmt = _hmt || [];
         </div>
     </div>
 </footer>
-    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/moment@2.22.2/min/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
 
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
 
     
     
-    
-    <script src="/js/animation.js"></script>
-    
+<script src="/js/animation.js"></script>
 
     
     
-    
-    <script src="https://unpkg.com/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
-    <script src="https://unpkg.com/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
-    <script src="/js/gallery.js" defer></script>
-    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
 
     
     
-
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script src="https://unpkg.com/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         outdatedBrowser({
@@ -1329,10 +1057,8 @@ var _hmt = _hmt || [];
     });
 </script>
 
-
     
-    
-<script src="https://unpkg.com/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     MathJax.Hub.Config({
@@ -1354,30 +1080,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
     
     
-
 <a id="back-to-top" title="回到顶端" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
 
-
-    
-    
-
     
     
     
     
     
     
-    
-    <script src="https://unpkg.com/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
-    <script src="/js/clipboard.js" defer></script>
-    
-
     
     
     
@@ -1389,7 +1104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">

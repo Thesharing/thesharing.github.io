@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>《Python 工匠：善用变量来改善代码质量》摘录 - Zhilong&#39;s Blog</title>
+
+
+    <meta name="description" content="在GitHub上看到一个内容很赞的Python读物《Python 工匠：善用变量来改善代码质量》，通读一遍学到不少新知识，因此决定把这些有用的Tricks记下来，方便日后查阅。">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python 工匠：善用变量来改善代码质量》摘录">
+<meta property="og:url" content="http://www.cyprestar.com/2019/12/02/Pythonic-Readding-Note/index.html">
+<meta property="og:site_name" content="Zhilong&#39;s Blog">
+<meta property="og:description" content="在GitHub上看到一个内容很赞的Python读物《Python 工匠：善用变量来改善代码质量》，通读一遍学到不少新知识，因此决定把这些有用的Tricks记下来，方便日后查阅。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.cyprestar.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-12-02T13:45:32.218Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Python 工匠：善用变量来改善代码质量》摘录">
+<meta name="twitter:description" content="在GitHub上看到一个内容很赞的Python读物《Python 工匠：善用变量来改善代码质量》，通读一遍学到不少新知识，因此决定把这些有用的Tricks记下来，方便日后查阅。">
+<meta name="twitter:image" content="http://www.cyprestar.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="rss.xml" title="《Python 工匠：善用变量来改善代码质量》摘录" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/vs2015.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74183669-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74183669-1');
+</script>
+
+    
+    <script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?7a644dceb2233a88eaca2d202ad70727";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="《Python 工匠：善用变量来改善代码质量》摘录" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">首页</a>
+                
+                <a class="navbar-item"
+                href="/archives">归档</a>
+                
+                <a class="navbar-item"
+                href="/algorithms">算法题</a>
+                
+                <a class="navbar-item"
+                href="/about">关于</a>
+                
+                <a class="navbar-item"
+                href="/rss.xml">RSS</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" title="GitHub" href="http://github.com/thesharing/">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-02T11:12:02.000Z">2019-12-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    38 分钟 读完 (大约 5709 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                《Python 工匠：善用变量来改善代码质量》摘录
+            
+        </h1>
+        <div class="content">
+            <p>在GitHub上看到一个内容很赞的Python读物《Python 工匠：善用变量来改善代码质量》，通读一遍学到不少新知识，因此决定把这些有用的Tricks记下来，方便日后查阅。</p>
+<a id="more"></a>
+<blockquote>
+<p>所有内容摘自<a href="https://github.com/piglei/one-python-craftsman" target="_blank" rel="noopener">https://github.com/piglei/one-python-craftsman</a>，作者piglei</p>
+</blockquote>
+<h3 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h3><ul>
+<li><a href="#1-当Class不包含方法时，可以用NamedTuple代替">1 当Class不包含方法时，可以用NamedTuple代替</a></li>
+<li><a href="#2-自定义对象的True-False">2 自定义对象的True/False</a></li>
+<li><a href="#3-在条件判断中使用-all-any">3 在条件判断中使用 all() / any()</a></li>
+<li>4 使用 try/while/for 中 else 分支</li>
+<li><a href="#5 以r开头的内建字符串函数">5 以r开头的内建字符串函数</a></li>
+<li><a href="#6-无穷大float-quot-inf-quot-和负无穷大float-quot-inf-quot">6 无穷大<code>float(&quot;inf&quot;)</code>和负无穷大<code>float(&quot;-inf&quot;)</code></a></li>
+<li><a href="#7-当需要频繁在list前端插入元素时，考虑用collections-deque">7 当需要频繁在list前端插入元素时，考虑用<code>collections.deque</code></a></li>
+<li><a href="#8-用collcetions-defaultdict统计次数">8 用<code>collcetions.defaultdict</code>统计次数</a></li>
+<li><a href="#9-字典操作">9 字典操作</a></li>
+<li><a href="#10-next-函数">10 <code>next()</code>函数</a></li>
+<li><a href="#11-使用partial构造新函数">11 使用<code>partial</code>构造新函数</a></li>
+<li><a href="#12-使用-product扁平化多层嵌套循环">12 使用 <code>product</code>扁平化多层嵌套循环</a></li>
+<li><a href="#13-使用-islice实现循环内隔行处理">13 使用 <code>islice</code>实现循环内隔行处理</a></li>
+<li><a href="#14-使用-takewhile-替代-break-语句">14 使用 <code>takewhile</code> 替代 <code>break</code> 语句</a></li>
+<li><a href="#15-尝试用类来实现装饰器">15 尝试用类来实现装饰器</a></li>
+<li><a href="#16-使用-wrapt-模块编写更扁平的装饰器">16 使用 wrapt 模块编写更扁平的装饰器</a></li>
+<li><a href="#17-使用-pathlib-模块改写代码">17 使用 pathlib 模块改写代码</a></li>
+</ul>
+<h3 id="1-当Class不包含方法时，可以用NamedTuple代替"><a href="#1-当Class不包含方法时，可以用NamedTuple代替" class="headerlink" title="1 当Class不包含方法时，可以用NamedTuple代替"></a>1 当Class不包含方法时，可以用NamedTuple代替</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line">Address = namedtuple(<span class="hljs-string">"Address"</span>, [<span class="hljs-string">'country'</span>, <span class="hljs-string">'province'</span>, <span class="hljs-string">'city'</span>])</span><br><span class="line"></span><br><span class="line">addr = Address(</span><br><span class="line">        country=<span class="hljs-string">'China'</span>,</span><br><span class="line">        province=<span class="hljs-string">'Beijing'</span>,</span><br><span class="line">        city=<span class="hljs-string">'Beijing'</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">print(addr.country)</span><br></pre></td></tr></table></figure>
+<h3 id="2-自定义对象的True-False"><a href="#2-自定义对象的True-False" class="headerlink" title="2 自定义对象的True/False"></a>2 自定义对象的True/False</h3><p>在Python内，对象的布尔值由__bool__和__len__返回，如果未定义__bool__则返回__len__ != 0的值。</p>
+<p>因此可以通过定义__bool__和__len__来直接定义对象的True/False。</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserCollection</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, users)</span>:</span></span><br><span class="line">        self._users = users</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span></span><br><span class="line">        <span class="hljs-keyword">return</span> len(self._users)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">users = UserCollection([piglei, raymond])</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 定义了 __len__ 方法后，UserCollection 对象本身就可以被用于布尔判断了</span></span><br><span class="line"><span class="hljs-keyword">if</span> users:</span><br><span class="line">    print(<span class="hljs-string">"There's some users in collection!"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3-在条件判断中使用-all-any"><a href="#3-在条件判断中使用-all-any" class="headerlink" title="3 在条件判断中使用 all() / any()"></a>3 在条件判断中使用 all() / any()</h3><p><code>all()</code> 和 <code>any()</code> 两个函数非常适合在条件判断中使用。这两个函数接受一个可迭代对象，返回一个布尔值，其中：</p>
+<ul>
+<li><code>all(seq)</code>：仅当 <code>seq</code> 中所有对象都为布尔真时返回 <code>True</code>，否则返回 <code>False</code></li>
+<li><code>any(seq)</code>：只要 <code>seq</code> 中任何一个对象为布尔真就返回 <code>True</code>，否则返回 <code>False</code></li>
+</ul>
+<p>假如我们有下面这段代码：</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">all_numbers_gt_10</span><span class="hljs-params">(numbers)</span>:</span></span><br><span class="line">    <span class="hljs-string">"""仅当序列中所有数字大于 10 时，返回 True</span></span><br><span class="line"><span class="hljs-string">    """</span></span><br><span class="line">    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> numbers:</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> numbers:</span><br><span class="line">        <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">10</span>:</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span></span><br></pre></td></tr></table></figure>
+<p>如果使用 <code>all()</code> 内建函数，再配合一个简单的生成器表达式，上面的代码可以写成这样：</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">all_numbers_gt_10_2</span><span class="hljs-params">(numbers)</span>:</span></span><br><span class="line">    <span class="hljs-keyword">return</span> bool(numbers) <span class="hljs-keyword">and</span> all(n &gt; <span class="hljs-number">10</span> <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> numbers)</span><br></pre></td></tr></table></figure>
+<h3 id="4-使用-try-while-for-中-else-分支"><a href="#4-使用-try-while-for-中-else-分支" class="headerlink" title="4 使用 try/while/for 中 else 分支"></a>4 使用 try/while/for 中 else 分支</h3><p>让我们看看这个函数：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def do_stuff():</span><br><span class="line">    first_thing_successed = False</span><br><span class="line">    try:</span><br><span class="line">        do_the_first_thing()</span><br><span class="line">        first_thing_successed = True</span><br><span class="line">    except Exception as e:</span><br><span class="line">        print(&quot;Error while calling do_some_thing&quot;)</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    # 仅当 first_thing 成功完成时，做第二件事</span><br><span class="line">    if first_thing_successed:</span><br><span class="line">        return do_the_second_thing()</span><br></pre></td></tr></table></figure>
+<p>在函数 <code>do_stuff</code> 中，我们希望只有当 <code>do_the_first_thing()</code> 成功调用后<em>（也就是不抛出任何异常）</em>，才继续做第二个函数调用。为了做到这一点，我们需要定义一个额外的变量 <code>first_thing_successed</code> 来作为标记。</p>
+<p>其实，我们可以用更简单的方法达到同样的效果：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def do_stuff():</span><br><span class="line">    try:</span><br><span class="line">        do_the_first_thing()</span><br><span class="line">    except Exception as e:</span><br><span class="line">        print(&quot;Error while calling do_some_thing&quot;)</span><br><span class="line">        return</span><br><span class="line">    else:</span><br><span class="line">        return do_the_second_thing()</span><br></pre></td></tr></table></figure>
+<p>在 <code>try</code> 语句块最后追加上 <code>else</code> 分支后，分支下的<code>do_the_second_thing()</code> 便只会在 <strong>try 下面的所有语句正常执行（也就是没有异常，没有 return、break 等）完成后执行</strong>。</p>
+<p>类似的，Python 里的 <code>for/while</code> 循环也支持添加 <code>else</code> 分支，它们表示：当循环使用的迭代对象被正常耗尽、或 while 循环使用的条件变量变为 False 后才执行 else 分支下的代码。</p>
+<h3 id="5-以r开头的内建字符串函数"><a href="#5-以r开头的内建字符串函数" class="headerlink" title="5 以r开头的内建字符串函数"></a>5 以r开头的内建字符串函数</h3><p>Python 的字符串有着非常多实用的内建方法，最常用的有 <code>.strip()</code>、<code>.split()</code> 等。这些内建方法里的大多数，处理起来的顺序都是从左往右。但是其中也包含了部分以 <code>r</code> 打头的<strong>从右至左处理</strong>的镜像方法。在处理特定逻辑时，使用它们可以让你事半功倍。</p>
+<p>假设我们需要解析一些访问日志，日志格式为：”{user_agent}” {content_length}：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; log_line = &apos;&quot;AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&quot; 47632&apos;</span><br></pre></td></tr></table></figure>
+<p>如果使用 <code>.split()</code> 将日志拆分为 <code>(user_agent, content_length)</code>，我们需要这么写：</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>l = log_line.split()</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">" "</span>.join(l[:<span class="hljs-number">-1</span>]), l[<span class="hljs-number">-1</span>]</span><br><span class="line">(<span class="hljs-string">'"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"'</span>, <span class="hljs-string">'47632'</span>)</span><br></pre></td></tr></table></figure>
+<p>但是如果使用 <code>.rsplit()</code> 的话，处理逻辑就更直接了：</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>log_line.rsplit(<span class="hljs-literal">None</span>, <span class="hljs-number">1</span>)</span><br><span class="line">[<span class="hljs-string">'"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"'</span>, <span class="hljs-string">'47632'</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="6-无穷大float-quot-inf-quot-和负无穷大float-quot-inf-quot"><a href="#6-无穷大float-quot-inf-quot-和负无穷大float-quot-inf-quot" class="headerlink" title="6 无穷大float(&quot;inf&quot;)和负无穷大float(&quot;-inf&quot;)"></a>6 无穷大<code>float(&quot;inf&quot;)</code>和负无穷大<code>float(&quot;-inf&quot;)</code></h3><h3 id="7-当需要频繁在list前端插入元素时，考虑用collections-deque"><a href="#7-当需要频繁在list前端插入元素时，考虑用collections-deque" class="headerlink" title="7 当需要频繁在list前端插入元素时，考虑用collections.deque"></a>7 当需要频繁在list前端插入元素时，考虑用<code>collections.deque</code></h3><h3 id="8-用collcetions-defaultdict统计次数"><a href="#8-用collcetions-defaultdict统计次数" class="headerlink" title="8 用collcetions.defaultdict统计次数"></a>8 用<code>collcetions.defaultdict</code>统计次数</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">counter_by_collections</span><span class="hljs-params">(l)</span>:</span></span><br><span class="line">    result = defaultdict(int)</span><br><span class="line">    <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> l:</span><br><span class="line">        result[key] += <span class="hljs-number">1</span></span><br><span class="line">    <span class="hljs-keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<h3 id="9-字典操作"><a href="#9-字典操作" class="headerlink" title="9 字典操作"></a>9 字典操作</h3><ul>
+<li>如果移除字典成员，不关心是否存在：<ul>
+<li>调用 pop 函数时设置默认值，比如 <code>dict.pop(key, None)</code></li>
+</ul>
+</li>
+<li>在字典获取成员时指定默认值：<code>dict.get(key, default_value)</code></li>
+<li>对列表进行不存在的切片访问不会抛出 <code>IndexError</code> 异常：<code>[&quot;foo&quot;][100:200]</code></li>
+</ul>
+<h3 id="10-next-函数"><a href="#10-next-函数" class="headerlink" title="10 next()函数"></a>10 <code>next()</code>函数</h3><p><code>next()</code> 是一个非常实用的内建函数，它接收一个迭代器作为参数，然后返回该迭代器的下一个元素。使用它配合生成器表达式，可以高效的实现<strong>“从列表中查找第一个满足条件的成员”</strong>之类的需求。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">numbers = [3, 7, 8, 2, 21]</span><br><span class="line"># 获取并立即返回列表里的第一个偶数</span><br><span class="line">print(next(i for i in numbers if i % 2 == 0))</span><br><span class="line"># OUTPUT: 8</span><br></pre></td></tr></table></figure>
+<h3 id="11-使用partial构造新函数"><a href="#11-使用partial构造新函数" class="headerlink" title="11 使用partial构造新函数"></a>11 使用<code>partial</code>构造新函数</h3><p>假设这么一个场景，在你的代码里有一个参数很多的函数 <code>A</code>，适用性很强。而另一个函数 <code>B</code> 则是完全通过调用 <code>A</code> 来完成工作，是一种类似快捷方式的存在。</p>
+<p>比方在这个例子里， <code>double</code> 函数就是完全通过 <code>multiply</code> 来完成计算的：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def multiply(x, y):</span><br><span class="line">    return x * y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def double(value):</span><br><span class="line">    # 返回另一个函数调用结果</span><br><span class="line">    return multiply(2, value)</span><br></pre></td></tr></table></figure>
+<p>对于上面这种场景，我们可以使用 <code>functools</code> 模块里的 <a href="https://docs.python.org/3.6/library/functools.html#functools.partial" target="_blank" rel="noopener"><code>partial()</code></a> 函数来简化它。</p>
+<p><code>partial(func, *args, **kwargs)</code> 基于传入的函数与可变（位置/关键字）参数来构造一个新函数。<strong>所有对新函数的调用，都会在合并了当前调用参数与构造参数后，代理给原始函数处理。</strong></p>
+<p>利用 <code>partial</code> 函数，上面的 <code>double</code> 函数定义可以被修改为单行表达式，更简洁也更直接。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import functools</span><br><span class="line"></span><br><span class="line">double = functools.partial(multiply, 2)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>建议阅读：<a href="https://docs.python.org/3.6/library/functools.html#functools.partial" target="_blank" rel="noopener">partial 函数官方文档</a></p>
+</blockquote>
+<h3 id="12-使用-product扁平化多层嵌套循环"><a href="#12-使用-product扁平化多层嵌套循环" class="headerlink" title="12 使用 product扁平化多层嵌套循环"></a>12 使用 <code>product</code>扁平化多层嵌套循环</h3><p>虽然我们都知道<em>“扁平的代码比嵌套的好”</em>。但有时针对某类需求，似乎一定得写多层嵌套循环才行。比如下面这段：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def find_twelve(num_list1, num_list2, num_list3):</span><br><span class="line">    &quot;&quot;&quot;从 3 个数字列表中，寻找是否存在和为 12 的 3 个数</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    for num1 in num_list1:</span><br><span class="line">        for num2 in num_list2:</span><br><span class="line">            for num3 in num_list3:</span><br><span class="line">                if num1 + num2 + num3 == 12:</span><br><span class="line">                    return num1, num2, num3</span><br></pre></td></tr></table></figure>
+<p>对于这种需要嵌套遍历多个对象的多层循环代码，我们可以使用 <a href="https://docs.python.org/3.6/library/itertools.html#itertools.product" target="_blank" rel="noopener">product()</a> 函数来优化它。<code>product()</code> 可以接收多个可迭代对象，然后根据它们的笛卡尔积不断生成结果。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from itertools import product</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def find_twelve_v2(num_list1, num_list2, num_list3):</span><br><span class="line">    for num1, num2, num3 in product(num_list1, num_list2, num_list3):</span><br><span class="line">        if num1 + num2 + num3 == 12:</span><br><span class="line">            return num1, num2, num3</span><br></pre></td></tr></table></figure>
+<p>相比之前的代码，使用 <code>product()</code> 的函数只用了一层 for 循环就完成了任务，代码变得更精炼了。</p>
+<h3 id="13-使用-islice实现循环内隔行处理"><a href="#13-使用-islice实现循环内隔行处理" class="headerlink" title="13 使用 islice实现循环内隔行处理"></a>13 使用 <code>islice</code>实现循环内隔行处理</h3><p>有一份包含 Reddit 帖子标题的外部数据文件，里面的内容格式是这样的：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">python-guide: Python best practices guidebook, written for humans.</span><br><span class="line">---</span><br><span class="line">Python 2 Death Clock</span><br><span class="line">---</span><br><span class="line">Run any Python Script with an Alexa Voice Command</span><br><span class="line">---</span><br><span class="line">&lt;... ...&gt;</span><br></pre></td></tr></table></figure>
+<p>可能是为了美观，在这份文件里的每两个标题之间，都有一个 <code>&quot;---&quot;</code> 分隔符。现在，我们需要获取文件里所有的标题列表，所以在遍历文件内容的过程中，必须跳过这些无意义的分隔符。</p>
+<p>参考之前对 <code>enumerate()</code> 函数的了解，我们可以通过在循环内加一段基于当前循环序号的 <code>if</code> 判断来做到这一点：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def parse_titles(filename):</span><br><span class="line">    &quot;&quot;&quot;从隔行数据文件中读取 reddit 主题名称</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    with open(filename, &apos;r&apos;) as fp:</span><br><span class="line">        for i, line in enumerate(fp):</span><br><span class="line">            # 跳过无意义的 &apos;---&apos; 分隔符</span><br><span class="line">            if i % 2 == 0:</span><br><span class="line">                yield line.strip()</span><br></pre></td></tr></table></figure>
+<p>但对于这类在循环内进行隔行处理的需求来说，如果使用 itertools 里的 <a href="https://docs.python.org/3.6/library/itertools.html#itertools.islice" target="_blank" rel="noopener">islice()</a> 函数修饰被循环对象，可以让循环体代码变得更简单直接。</p>
+<p><code>islice(seq, start, end, step)</code> 函数和数组切片操作<em>（ list[start:stop:step] ）</em>有着几乎一模一样的参数。如果需要在循环内部进行隔行处理的话，只要设置第三个递进步长参数 step 值为 2 即可<em>（默认为 1）</em>。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from itertools import islice</span><br><span class="line"></span><br><span class="line">def parse_titles_v2(filename):</span><br><span class="line">    with open(filename, &apos;r&apos;) as fp:</span><br><span class="line">        # 设置 step=2，跳过无意义的 &apos;---&apos; 分隔符</span><br><span class="line">        for line in islice(fp, 0, None, 2):</span><br><span class="line">            yield line.strip()</span><br></pre></td></tr></table></figure>
+<h3 id="14-使用-takewhile-替代-break-语句"><a href="#14-使用-takewhile-替代-break-语句" class="headerlink" title="14 使用 takewhile 替代 break 语句"></a>14 使用 <code>takewhile</code> 替代 <code>break</code> 语句</h3><p>有时，我们需要在每次循环开始时，判断循环是否需要提前结束。比如下面这样：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for user in users:</span><br><span class="line">    # 当第一个不合格的用户出现后，不再进行后面的处理</span><br><span class="line">    if not is_qualified(user):</span><br><span class="line">        break</span><br><span class="line"></span><br><span class="line">    # 进行处理 ... ...</span><br></pre></td></tr></table></figure>
+<p>对于这类需要提前中断的循环，我们可以使用 <a href="https://docs.python.org/3.6/library/itertools.html#itertools.takewhile" target="_blank" rel="noopener">takewhile()</a> 函数来简化它。<code>takewhile(predicate, iterable)</code> 会在迭代 <code>iterable</code> 的过程中不断使用当前对象作为参数调用 <code>predicate</code> 函数并测试返回结果，如果函数返回值为真，则生成当前对象，循环继续。否则立即中断当前循环。</p>
+<p>使用 <code>takewhile</code> 的代码样例：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from itertools import takewhile</span><br><span class="line"></span><br><span class="line">for user in takewhile(is_qualified, users):</span><br><span class="line">    # 进行处理 ... ...</span><br></pre></td></tr></table></figure>
+<p>itertools 里面还有一些其他有意思的工具函数，他们都可以用来和循环搭配使用，比如使用 chain 函数扁平化双层嵌套循环、使用 zip_longest 函数一次同时循环多个对象等等。</p>
+<p><a href="https://docs.python.org/3.6/library/itertools.html" target="_blank" rel="noopener">itertools — Functions creating iterators for efficient looping</a></p>
+<p><strong>Infinite iterators:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Iterator</th>
+<th style="text-align:left">Arguments</th>
+<th style="text-align:left">Results</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.count" target="_blank" rel="noopener"><code>count()</code></a></td>
+<td style="text-align:left">start, [step]</td>
+<td style="text-align:left">start, start+step, start+2*step, …</td>
+<td style="text-align:left"><code>count(10) --&gt; 10 11 12 13 14 ...</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.cycle" target="_blank" rel="noopener"><code>cycle()</code></a></td>
+<td style="text-align:left">p</td>
+<td style="text-align:left">p0, p1, … plast, p0, p1, …</td>
+<td style="text-align:left"><code>cycle(&#39;ABCD&#39;) --&gt; A B C D A B C D ...</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.repeat" target="_blank" rel="noopener"><code>repeat()</code></a></td>
+<td style="text-align:left">elem [,n]</td>
+<td style="text-align:left">elem, elem, elem, … endlessly or up to n times</td>
+<td style="text-align:left"><code>repeat(10, 3) --&gt; 10 10 10</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Iterators terminating on the shortest input sequence:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Iterator</th>
+<th style="text-align:left">Arguments</th>
+<th style="text-align:left">Results</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.accumulate" target="_blank" rel="noopener"><code>accumulate()</code></a></td>
+<td style="text-align:left">p [,func]</td>
+<td style="text-align:left">p0, p0+p1, p0+p1+p2, …</td>
+<td style="text-align:left"><code>accumulate([1,2,3,4,5]) --&gt; 1 3 6 10 15</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.chain" target="_blank" rel="noopener"><code>chain()</code></a></td>
+<td style="text-align:left">p, q, …</td>
+<td style="text-align:left">p0, p1, … plast, q0, q1, …</td>
+<td style="text-align:left"><code>chain(&#39;ABC&#39;, &#39;DEF&#39;) --&gt; A B C D E F</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.chain.from_iterable" target="_blank" rel="noopener"><code>chain.from_iterable()</code></a></td>
+<td style="text-align:left">iterable</td>
+<td style="text-align:left">p0, p1, … plast, q0, q1, …</td>
+<td style="text-align:left"><code>chain.from_iterable([&#39;ABC&#39;, &#39;DEF&#39;]) --&gt; A B C D E F</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.compress" target="_blank" rel="noopener"><code>compress()</code></a></td>
+<td style="text-align:left">data, selectors</td>
+<td style="text-align:left">(d[0] if s[0]), (d[1] if s[1]), …</td>
+<td style="text-align:left"><code>compress(&#39;ABCDEF&#39;, [1,0,1,0,1,1]) --&gt; A C E F</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.dropwhile" target="_blank" rel="noopener"><code>dropwhile()</code></a></td>
+<td style="text-align:left">pred, seq</td>
+<td style="text-align:left">seq[n], seq[n+1], starting when pred fails</td>
+<td style="text-align:left"><code>dropwhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 6 4 1</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.filterfalse" target="_blank" rel="noopener"><code>filterfalse()</code></a></td>
+<td style="text-align:left">pred, seq</td>
+<td style="text-align:left">elements of seq where pred(elem) is false</td>
+<td style="text-align:left"><code>filterfalse(lambda x: x%2, range(10)) --&gt; 0 2 4 6 8</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.groupby" target="_blank" rel="noopener"><code>groupby()</code></a></td>
+<td style="text-align:left">iterable[, key]</td>
+<td style="text-align:left">sub-iterators grouped by value of key(v)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.islice" target="_blank" rel="noopener"><code>islice()</code></a></td>
+<td style="text-align:left">seq, [start,] stop [, step]</td>
+<td style="text-align:left">elements from seq[start:stop:step]</td>
+<td style="text-align:left"><code>islice(&#39;ABCDEFG&#39;, 2, None) --&gt; C D E F G</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.starmap" target="_blank" rel="noopener"><code>starmap()</code></a></td>
+<td style="text-align:left">func, seq</td>
+<td style="text-align:left">func(<em>seq[0]), func(</em>seq[1]), …</td>
+<td style="text-align:left"><code>starmap(pow, [(2,5), (3,2), (10,3)]) --&gt; 32 9 1000</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.takewhile" target="_blank" rel="noopener"><code>takewhile()</code></a></td>
+<td style="text-align:left">pred, seq</td>
+<td style="text-align:left">seq[0], seq[1], until pred fails</td>
+<td style="text-align:left"><code>takewhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 1 4</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.tee" target="_blank" rel="noopener"><code>tee()</code></a></td>
+<td style="text-align:left">it, n</td>
+<td style="text-align:left">it1, it2, … itn splits one iterator into n</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.zip_longest" target="_blank" rel="noopener"><code>zip_longest()</code></a></td>
+<td style="text-align:left">p, q, …</td>
+<td style="text-align:left">(p[0], q[0]), (p[1], q[1]), …</td>
+<td style="text-align:left"><code>zip_longest(&#39;ABCD&#39;, &#39;xy&#39;, fillvalue=&#39;-&#39;) --&gt; Ax By C- D-</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Combinatoric iterators:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Iterator</th>
+<th style="text-align:left">Arguments</th>
+<th style="text-align:left">Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.product" target="_blank" rel="noopener"><code>product()</code></a></td>
+<td style="text-align:left">p, q, … [repeat=1]</td>
+<td style="text-align:left">cartesian product, equivalent to a nested for-loop</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.permutations" target="_blank" rel="noopener"><code>permutations()</code></a></td>
+<td style="text-align:left">p[, r]</td>
+<td style="text-align:left">r-length tuples, all possible orderings, no repeated elements</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.combinations" target="_blank" rel="noopener"><code>combinations()</code></a></td>
+<td style="text-align:left">p, r</td>
+<td style="text-align:left">r-length tuples, in sorted order, no repeated elements</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://docs.python.org/3.6/library/itertools.html#itertools.combinations_with_replacement" target="_blank" rel="noopener"><code>combinations_with_replacement()</code></a></td>
+<td style="text-align:left">p, r</td>
+<td style="text-align:left">r-length tuples, in sorted order, with repeated elements</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>product(&#39;ABCD&#39;, repeat=2)</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><code>AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>permutations(&#39;ABCD&#39;, 2)</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><code>AB AC AD BA BC BD CA CB CD DA DB DC</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>combinations(&#39;ABCD&#39;, 2)</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><code>AB AC AD BC BD CD</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>combinations_with_replacement(&#39;ABCD&#39;, 2)</code></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><code>AA AB AC AD BB BC BD CC CD DD</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-尝试用类来实现装饰器"><a href="#15-尝试用类来实现装饰器" class="headerlink" title="15 尝试用类来实现装饰器"></a>15 尝试用类来实现装饰器</h3><p>绝大多数装饰器都是基于函数和 <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming" target="_blank" rel="noopener">闭包</a>) 实现的，但这并非制造装饰器的唯一方式。事实上，Python 对某个对象是否能通过装饰器（<code>@decorator</code>）形式使用只有一个要求：<strong>decorator 必须是一个“可被调用（callable）的对象</strong>。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 使用 callable 可以检测某个对象是否“可被调用”</span><br><span class="line">&gt;&gt;&gt; def foo(): pass</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; type(foo)</span><br><span class="line">&lt;class &apos;function&apos;&gt;</span><br><span class="line">&gt;&gt;&gt; callable(foo)</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+<p>函数自然是“可被调用”的对象。但除了函数外，我们也可以让任何一个类（class）变得“可被调用”（callable）。办法很简单，只要自定义类的 <code>__call__</code> 魔法方法即可。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Foo:</span><br><span class="line">    def __call__(self):</span><br><span class="line">        print(&quot;Hello, __call___&quot;)</span><br><span class="line"></span><br><span class="line">foo = Foo()</span><br><span class="line"></span><br><span class="line"># OUTPUT: True</span><br><span class="line">print(callable(foo))</span><br><span class="line"># 调用 foo 实例</span><br><span class="line"># OUTPUT: Hello, __call__</span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+<p>基于这个特性，我们可以很方便的使用类来实现装饰器。</p>
+<p>下面这段代码，会定义一个名为 <code>@delay(duration)</code> 的装饰器，使用它装饰过的函数在每次执行前，都会等待额外的 <code>duration</code> 秒。同时，我们也希望为用户提供无需等待马上执行的 <code>eager_call</code> 接口。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">import functools</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class DelayFunc:</span><br><span class="line">    def __init__(self,  duration, func):</span><br><span class="line">        self.duration = duration</span><br><span class="line">        self.func = func</span><br><span class="line"></span><br><span class="line">    def __call__(self, *args, **kwargs):</span><br><span class="line">        print(f&apos;Wait for &#123;self.duration&#125; seconds...&apos;)</span><br><span class="line">        time.sleep(self.duration)</span><br><span class="line">        return self.func(*args, **kwargs)</span><br><span class="line"></span><br><span class="line">    def eager_call(self, *args, **kwargs):</span><br><span class="line">        print(&apos;Call without delay&apos;)</span><br><span class="line">        return self.func(*args, **kwargs)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def delay(duration):</span><br><span class="line">    &quot;&quot;&quot;装饰器：推迟某个函数的执行。同时提供 .eager_call 方法立即执行</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # 此处为了避免定义额外函数，直接使用 functools.partial 帮助构造</span><br><span class="line">    # DelayFunc 实例</span><br><span class="line">    return functools.partial(DelayFunc, duration)</span><br></pre></td></tr></table></figure>
+<p>如何使用装饰器的样例代码：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@delay(duration=2)</span><br><span class="line">def add(a, b):</span><br><span class="line">    return a + b</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 这次调用将会延迟 2 秒</span><br><span class="line">add(1, 2)</span><br><span class="line"># 这次调用将会立即执行</span><br><span class="line">add.eager_call(1, 2)</span><br></pre></td></tr></table></figure>
+<p><code>@delay(duration)</code> 就是一个基于类来实现的装饰器。当然，如果你非常熟悉 Python 里的函数和闭包，上面的 <code>delay</code> 装饰器其实也完全可以只用函数来实现。所以，为什么我们要用类来做这件事呢？</p>
+<p>与纯函数相比，我觉得使用类实现的装饰器在<strong>特定场景</strong>下有几个优势：</p>
+<ul>
+<li>实现有状态的装饰器时，操作类属性比操作闭包内变量更符合直觉、不易出错</li>
+<li>实现为函数扩充接口的装饰器时，使用类包装函数，比直接为函数对象追加属性更易于维护</li>
+<li>更容易实现一个同时兼容装饰器与上下文管理器协议的对象（参考 <a href="https://docs.python.org/3/library/unittest.mock.html#unittest.mock.patch" target="_blank" rel="noopener">unitest.mock.patch</a>）</li>
+</ul>
+<h3 id="16-使用-wrapt-模块编写更扁平的装饰器"><a href="#16-使用-wrapt-模块编写更扁平的装饰器" class="headerlink" title="16 使用 wrapt 模块编写更扁平的装饰器"></a>16 使用 wrapt 模块编写更扁平的装饰器</h3><p>在写装饰器的过程中，你有没有碰到过什么不爽的事情？不管你有没有，反正我有。我经常在写代码的时候，被下面两件事情搞得特别难受：</p>
+<ol>
+<li>实现带参数的装饰器时，层层嵌套的函数代码特别难写、难读</li>
+<li>因为函数和类方法的不同，为前者写的装饰器经常没法直接套用在后者上</li>
+</ol>
+<p>比如，在下面的例子里，我实现了一个生成随机数并注入为函数参数的装饰器。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def provide_number(min_num, max_num):</span><br><span class="line">    &quot;&quot;&quot;装饰器：随机生成一个在 [min_num, max_num] 范围的整数，追加为函数的第一个位置参数</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    def wrapper(func):</span><br><span class="line">        def decorated(*args, **kwargs):</span><br><span class="line">            num = random.randint(min_num, max_num)</span><br><span class="line">            # 将 num 作为第一个参数追加后调用函数</span><br><span class="line">            return func(num, *args, **kwargs)</span><br><span class="line">        return decorated</span><br><span class="line">    return wrapper</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@provide_number(1, 100)</span><br><span class="line">def print_random_number(num):</span><br><span class="line">    print(num)</span><br><span class="line"></span><br><span class="line"># 输出 1-100 的随机整数</span><br><span class="line"># OUTPUT: 72</span><br><span class="line">print_random_number()</span><br></pre></td></tr></table></figure>
+<p><code>@provide_number</code> 装饰器功能看上去很不错，但它有着我在前面提到的两个问题：<strong>嵌套层级深、无法在类方法上使用。</strong>如果直接用它去装饰类方法，会出现下面的情况：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Foo:</span><br><span class="line">    @provide_number(1, 100)</span><br><span class="line">    def print_random_number(self, num):</span><br><span class="line">        print(num)</span><br><span class="line"></span><br><span class="line"># OUTPUT: &lt;__main__.Foo object at 0x104047278&gt;</span><br><span class="line">Foo().print_random_number()</span><br></pre></td></tr></table></figure>
+<p><code>Foo</code> 类实例中的 <code>print_random_number</code> 方法将会输出类实例 <code>self</code> ，而不是我们期望的随机数 <code>num</code>。</p>
+<p>之所以会出现这个结果，是因为类方法<em>（method）</em>和函数<em>（function）</em>二者在工作机制上有着细微不同。如果要修复这个问题，<code>provider_number</code> 装饰器在修改类方法的位置参数时，必须聪明的跳过藏在 <code>*args</code> 里面的类实例 <code>self</code> 变量，才能正确的将 <code>num</code> 作为第一个参数注入。</p>
+<p>这时，就应该是 <a href="https://pypi.org/project/wrapt/" target="_blank" rel="noopener">wrapt</a> 模块闪亮登场的时候了。<code>wrapt</code> 模块是一个专门帮助你编写装饰器的工具库。利用它，我们可以非常方便的改造 <code>provide_number</code> 装饰器，完美解决<em>“嵌套层级深”</em>和<em>“无法通用”</em>两个问题，</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import wrapt</span><br><span class="line"></span><br><span class="line">def provide_number(min_num, max_num):</span><br><span class="line">    @wrapt.decorator</span><br><span class="line">    def wrapper(wrapped, instance, args, kwargs):</span><br><span class="line">        # 参数含义：</span><br><span class="line">        #</span><br><span class="line">        # - wrapped：被装饰的函数或类方法</span><br><span class="line">        # - instance：</span><br><span class="line">        #   - 如果被装饰者为普通类方法，该值为类实例</span><br><span class="line">        #   - 如果被装饰者为 classmethod 类方法，该值为类</span><br><span class="line">        #   - 如果被装饰者为类/函数/静态方法，该值为 None</span><br><span class="line">        #</span><br><span class="line">        # - args：调用时的位置参数（注意没有 * 符号）</span><br><span class="line">        # - kwargs：调用时的关键字参数（注意没有 ** 符号）</span><br><span class="line">        #</span><br><span class="line">        num = random.randint(min_num, max_num)</span><br><span class="line">        # 无需关注 wrapped 是类方法或普通函数，直接在头部追加参数</span><br><span class="line">        args = (num,) + args</span><br><span class="line">        return wrapped(*args, **kwargs)</span><br><span class="line">    return wrapper</span><br><span class="line">    </span><br><span class="line">&lt;... 应用装饰器部分代码省略 ...&gt;</span><br><span class="line">    </span><br><span class="line"># OUTPUT: 48</span><br><span class="line">Foo().print_random_number()</span><br></pre></td></tr></table></figure>
+<p>使用 <code>wrapt</code> 模块编写的装饰器，相比原来拥有下面这些优势：</p>
+<ul>
+<li>嵌套层级少：使用 <a href="mailto:`@wrapt.decorator" target="_blank" rel="noopener">`@wrapt.decorator</a>` 可以将两层嵌套减少为一层</li>
+<li>更简单：处理位置与关键字参数时，可以忽略类实例等特殊情况</li>
+<li>更灵活：针对 <code>instance</code> 值进行条件判断后，更容易让装饰器变得通用</li>
+</ul>
+<h3 id="17-使用-pathlib-模块改写代码"><a href="#17-使用-pathlib-模块改写代码" class="headerlink" title="17 使用 pathlib 模块改写代码"></a>17 使用 pathlib 模块改写代码</h3><p>为了让文件处理变得更简单，Python 在 3.4 版本引入了一个新的标准库模块：<a href="https://docs.python.org/3/library/pathlib.html" target="_blank" rel="noopener">pathlib</a>。它基于面向对象思想设计，封装了非常多与文件操作相关的功能。如果使用它来改写上面的代码，结果会大不相同。</p>
+<p>使用 pathlib 模块后的代码：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from pathlib import Path</span><br><span class="line"></span><br><span class="line">def unify_ext_with_pathlib(path):</span><br><span class="line">    for fpath in Path(path).glob(&apos;*.txt&apos;):</span><br><span class="line">        fpath.rename(fpath.with_suffix(&apos;.csv&apos;))</span><br></pre></td></tr></table></figure>
+<p>和旧代码相比，新函数只需要两行代码就完成了工作。而这两行代码主要做了这么几件事：</p>
+<ol>
+<li>首先使用 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" target="_blank" rel="noopener">Path(path)</a> 将字符串路径转换为 <code>Path</code> 对象</li>
+<li>调用 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob" target="_blank" rel="noopener">.glob(‘*.txt’)</a> 对路径下所有内容进行模式匹配并以生成器方式返回，结果仍然是 <code>Path</code> 对象，所以我们可以接着做后面的操作</li>
+<li>使用 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_suffix" target="_blank" rel="noopener">.with_suffix(‘.csv’)</a> 直接获取使用新后缀名的文件全路径</li>
+<li>调用 <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.rename" target="_blank" rel="noopener">.rename(target)</a> 完成重命名</li>
+</ol>
+<p>相比 <code>os</code> 和 <code>os.path</code>，引入 <code>pathlib</code> 模块后的代码明显更精简，也更有整体统一感。所有文件相关的操作都是一站式完成。</p>
+<p>其他用法</p>
+<p>除此之外，pathlib 模块还提供了很多有趣的用法。比如使用 <code>/</code> 运算符来组合文件路径：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 😑 旧朋友：使用 os.path 模块</span><br><span class="line">&gt;&gt;&gt; import os.path</span><br><span class="line">&gt;&gt;&gt; os.path.join(&apos;/tmp&apos;, &apos;foo.txt&apos;)</span><br><span class="line">&apos;/tmp/foo.txt&apos;</span><br><span class="line"></span><br><span class="line"># ✨ 新潮流：使用 / 运算符</span><br><span class="line">&gt;&gt;&gt; from pathlib import Path</span><br><span class="line">&gt;&gt;&gt; Path(&apos;/tmp&apos;) / &apos;foo.txt&apos;</span><br><span class="line">PosixPath(&apos;/tmp/foo.txt&apos;)</span><br></pre></td></tr></table></figure>
+<p>或者使用 <code>.read_text()</code> 来快速读取文件内容：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 标准做法，使用 with open(...) 打开文件</span><br><span class="line">&gt;&gt;&gt; with open(&apos;foo.txt&apos;) as file:</span><br><span class="line">...     print(file.read())</span><br><span class="line">...</span><br><span class="line">foo</span><br><span class="line"></span><br><span class="line"># 使用 pathlib 可以让这件事情变得更简单</span><br><span class="line">&gt;&gt;&gt; from pathlib import Path</span><br><span class="line">&gt;&gt;&gt; print(Path(&apos;foo.txt&apos;).read_text())</span><br><span class="line">foo</span><br></pre></td></tr></table></figure>
+<p>除了我在文章里介绍的这些，pathlib 模块还提供了非常多有用的方法，强烈建议去 官方文档 详细了解一下。</p>
+<p>如果上面这些都不足以让你动心，那么我再多给你一个使用 pathlib 的理由：<a href="https://www.python.org/dev/peps/pep-0519/" target="_blank" rel="noopener">PEP-519</a> 里定义了一个专门用于“文件路径”的新对象协议，这意味着从该 PEP 生效后的 Python 3.6 版本起，pathlib 里的 Path 对象，可以和以前绝大多数只接受字符串路径的标准库函数兼容使用：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; p = Path(&apos;/tmp&apos;)</span><br><span class="line"># 可以直接对 Path 类型对象 p 进行 join</span><br><span class="line">&gt;&gt;&gt; os.path.join(p, &apos;foo.txt&apos;)</span><br><span class="line">&apos;/tmp/foo.txt&apos;</span><br></pre></td></tr></table></figure>
+<p>所以，无需犹豫，赶紧把 pathlib 模块用起来吧。</p>
+<blockquote>
+<p><strong>Hint:</strong> 如果你使用的是更早的 Python 版本，可以尝试安装 <a href="https://pypi.org/project/pathlib2/" target="_blank" rel="noopener">pathlib2</a> 模块 。</p>
+</blockquote>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Python/">Python</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/03/11/Configure-vscode-for-cpp/">
+                <span class="level-item">Visual Studio Code配置C/C++编译运行环境</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://www.cyprestar.com/2019/12/02/Pythonic-Readding-Note/';
+        this.page.identifier = '2019/12/02/Pythonic-Readding-Note/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'thesharing' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="is-rounded" src="/images/avatar.png" alt="Zhilong">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Zhilong
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Student
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Beijing, China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            3
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            9
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/thesharing/" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="http://github.com/thesharing/">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="StackOverflow" href="http://stackoverflow.com/users/3467196/thesharing?tab=profile">
+                
+                <i class="fab fa-stack-overflow"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Steam" href="http://steamcommunity.com/id/cyprestar/">
+                
+                <i class="fab fa-steam"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Instagram" href="http://www.instagram.com/cyprestar/">
+                
+                <i class="fab fa-instagram"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Weibo" href=" http://weibo.com/sharinginworld/">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/cyprestar/">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Twitter" href="http://twitter.com/cyprestar/">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="http://github.com/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">GitHub - Thesharing</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://leetcode.com/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">LeetCode - Thesharing</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">leetcode.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://www.zhihu.com/people/Thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">知乎 - 柏星</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.zhihu.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.douban.com/people/thesharing/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">豆瓣 - cyprestar</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.douban.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://blog.zhengzi.me/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">政子的博客</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">blog.zhengzi.me</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.danmakupie.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">弹幕派</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.danmakupie.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/BoP2016/" style="font-size: 10px;">BoP2016</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/Configuration/" style="font-size: 10px;">Configuration</a> <a href="/tags/Electron/" style="font-size: 10px;">Electron</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/VSCode/" style="font-size: 10px;">VSCode</a> <a href="/tags/WPF/" style="font-size: 10px;">WPF</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow  is-sticky">
+            
+            
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-02T11:12:02.000Z">2019-12-02</time></div>
+                    <a href="/2019/12/02/Pythonic-Readding-Note/" class="title has-link-black-ter is-size-6 has-text-weight-normal">《Python 工匠：善用变量来改善代码质量》摘录</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-03-10T17:39:21.000Z">2019-03-11</time></div>
+                    <a href="/2019/03/11/Configure-vscode-for-cpp/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Visual Studio Code配置C/C++编译运行环境</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-06T07:35:42.000Z">2019-02-06</time></div>
+                    <a href="/2019/02/06/An-always-on-top-window-based-on-electron/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Electron上实现始终置顶且可调整大小的二维码窗口</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/DanmakuPie/">DanmakuPie</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T03:00:09.000Z">2018-08-15</time></div>
+                    <a href="/2018/08/15/Install-CUDA-on-Ubuntu-Server/" class="title has-link-black-ter is-size-6 has-text-weight-normal">在Ubuntu Server上配置CUDA环境</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-02-26T09:55:09.000Z">2018-02-26</time></div>
+                    <a href="/2018/02/26/Write-Markdown-with-Formulas/" class="title has-link-black-ter is-size-6 has-text-weight-normal">用Markdown写公式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Basic/">Basic</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Basic/">
+            <span class="level-start">
+                <span class="level-item">Basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Creative/">
+            <span class="level-start">
+                <span class="level-item">Creative</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/DanmakuPie/">
+            <span class="level-start">
+                <span class="level-item">DanmakuPie</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/BoP2016/">
+                        <span class="tag">BoP2016</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/C/">
+                        <span class="tag">C++</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Configuration/">
+                        <span class="tag">Configuration</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Electron/">
+                        <span class="tag">Electron</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Markdown/">
+                        <span class="tag">Markdown</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/VSCode/">
+                        <span class="tag">VSCode</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/WPF/">
+                        <span class="tag">WPF</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.png" alt="《Python 工匠：善用变量来改善代码质量》摘录" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Zhilong&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
